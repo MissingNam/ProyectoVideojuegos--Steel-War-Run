@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cn1lgd5kd123p"]
+
+[ext_resource type="Script" uid="uid://b2gctrc1kyme1" path="res://Scripts/player_arm.gd" id="1_tpk7k"]
+[ext_resource type="Texture2D" uid="uid://34cv6arm3jab" path="res://Assets/ProtagonistRelated/ProtagonistaHands.png" id="2_3yk3u"]
+
+[node name="Player_arm" type="Node2D" unique_id=1294577465]
+script = ExtResource("1_tpk7k")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1460783629]
+texture_filter = 1
+position = Vector2(0, 1)
+scale = Vector2(0.917, 1)
+texture = ExtResource("2_3yk3u")
+offset = Vector2(12, 5)
+
+[node name="WeaponSprite" type="Sprite2D" parent="." unique_id=1721374893]
+z_index = -1
+texture_filter = 1
+position = Vector2(14, 8)

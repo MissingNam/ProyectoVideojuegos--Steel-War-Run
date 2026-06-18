@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dm6k2u5r21wep"]
+
+[ext_resource type="PackedScene" uid="uid://byp2dnikt85ob" path="res://Scenes/PlayerRelated/player.tscn" id="1_vcrnd"]
+[ext_resource type="PackedScene" uid="uid://bb2fo6s0d5hyk" path="res://Scenes/EnemySpawner.tscn" id="2_fk6t8"]
+[ext_resource type="PackedScene" uid="uid://bkys48xhc2j1v" path="res://Scenes/level_progress.tscn" id="2_vcrnd"]
+[ext_resource type="PackedScene" uid="uid://bttxsjbqkrq77" path="res://Scenes/Scenario/UpgradeMenu.tscn" id="3_o8412"]
+[ext_resource type="PackedScene" uid="uid://c5omuy160eptw" path="res://Scenes/loot_box.tscn" id="4_k0ud8"]
+[ext_resource type="PackedScene" uid="uid://dqh1e7or1cacw" path="res://Scenes/Scenario/ChunkRelated/chunk_manager.tscn" id="7_88f4q"]
+
+[node name="Scenario" type="Node2D" unique_id=1107656438]
+
+[node name="Player" parent="." unique_id=253443307 instance=ExtResource("1_vcrnd")]
+position = Vector2(570, 320)
+
+[node name="EnemySpawner2" parent="Player" unique_id=350958665 instance=ExtResource("2_fk6t8")]
+
+[node name="UpgradeMenu" parent="." unique_id=336708653 instance=ExtResource("3_o8412")]
+
+[node name="LevelProgress" parent="." unique_id=651357887 instance=ExtResource("2_vcrnd")]
+
+[node name="LootBox" parent="." unique_id=1874588072 instance=ExtResource("4_k0ud8")]
+position = Vector2(470, 278)
+
+[node name="LootBox2" parent="." unique_id=2110439976 instance=ExtResource("4_k0ud8")]
+position = Vector2(655, 390.00003)
+
+[node name="LootBox3" parent="." unique_id=878721616 instance=ExtResource("4_k0ud8")]
+position = Vector2(653, 270)
+
+[node name="LootBox4" parent="." unique_id=2070808103 instance=ExtResource("4_k0ud8")]
+position = Vector2(469.00003, 393.00003)
+
+[node name="ChunkManager" parent="." unique_id=1426727953 instance=ExtResource("7_88f4q")]

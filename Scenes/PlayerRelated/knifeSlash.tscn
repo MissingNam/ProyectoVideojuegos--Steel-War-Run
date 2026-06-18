@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://bgibe40skaggv"]
+
+[ext_resource type="Script" uid="uid://rcqqty6jubnx" path="res://Scripts/knife_slash.gd" id="1_qo42f"]
+[ext_resource type="Texture2D" uid="uid://bk8eytvyuwx47" path="res://Assets/ProtagonistRelated/Slash/pixel_art_sword_slash_sprites1.png" id="2_d8hac"]
+[ext_resource type="Texture2D" uid="uid://cc3irgme3uejy" path="res://Assets/ProtagonistRelated/Slash/pixel_art_sword_slash_sprites2.png" id="3_tpvfn"]
+[ext_resource type="Texture2D" uid="uid://cmdnhjbwocavu" path="res://Assets/ProtagonistRelated/Slash/pixel_art_sword_slash_sprites3.png" id="4_mnrdv"]
+[ext_resource type="Texture2D" uid="uid://4b7jaq37gmfw" path="res://Assets/ProtagonistRelated/Slash/pixel_art_sword_slash_sprites4.png" id="5_fuiok"]
+[ext_resource type="Texture2D" uid="uid://cvp4do2tlrrxq" path="res://Assets/ProtagonistRelated/Slash/pixel_art_sword_slash_sprites5.png" id="6_ufc5r"]
+[ext_resource type="Texture2D" uid="uid://ds4qbdsnneb3t" path="res://Assets/ProtagonistRelated/Slash/pixel_art_sword_slash_sprites6.png" id="7_ijop2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fxx0k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_d8hac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tpvfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mnrdv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fuiok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ufc5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ijop2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0dtr5"]
+radius = 35.014282
+
+[node name="KnifeSlash" type="Area2D" unique_id=1682332030]
+script = ExtResource("1_qo42f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=501578129]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_fxx0k")
+frame_progress = 0.2707383
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2083147333]
+shape = SubResource("CircleShape2D_0dtr5")
+debug_color = Color(1, 0, 0, 0.41960785)
+
+[node name="Timer" type="Timer" parent="." unique_id=960008601]
+wait_time = 0.5
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

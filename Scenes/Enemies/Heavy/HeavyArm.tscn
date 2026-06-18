@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://elcpysraijdg"]
+
+[ext_resource type="Script" uid="uid://d24y4aqs8f0eq" path="res://Scripts/heavy_arm.gd" id="1_u5a1q"]
+[ext_resource type="Texture2D" uid="uid://b45e6ff0rdv1f" path="res://Assets/EnemyRelated/HeavyEnemy/HeavyHand.png" id="2_3q7vm"]
+
+[node name="HeavyArm" type="Node2D" unique_id=307669899]
+script = ExtResource("1_u5a1q")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1170092544]
+texture_filter = 1
+texture = ExtResource("2_3q7vm")
+offset = Vector2(10, 0)

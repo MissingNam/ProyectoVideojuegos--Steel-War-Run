@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bttxsjbqkrq77"]
+
+[ext_resource type="Script" uid="uid://chq4joihp7jmg" path="res://Scripts/upgrade_menu.gd" id="1_oa8d4"]
+
+[node name="UpgradeMenu" type="CanvasLayer" unique_id=336708653]
+script = ExtResource("1_oa8d4")
+
+[node name="Button1" type="Button" parent="." unique_id=1685355548]
+offset_left = 99.0
+offset_top = 135.0
+offset_right = 276.0
+offset_bottom = 430.0
+
+[node name="Button2" type="Button" parent="." unique_id=1753103966]
+offset_left = 433.0
+offset_top = 129.0
+offset_right = 620.0
+offset_bottom = 431.0
+
+[node name="Button3" type="Button" parent="." unique_id=1931293754]
+offset_left = 743.0
+offset_top = 134.0
+offset_right = 930.0
+offset_bottom = 417.0
+
+[connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

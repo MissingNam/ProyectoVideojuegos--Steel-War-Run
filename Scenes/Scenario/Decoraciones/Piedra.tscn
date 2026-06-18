@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dk3vp4efv3c3f"]
+
+[ext_resource type="Script" uid="uid://c8gx35uod4mc3" path="res://Scripts/cactus.gd" id="1_qqpov"]
+[ext_resource type="Texture2D" uid="uid://ce1h4wl05wqd5" path="res://Assets/Decoration/rock.png" id="2_0hwmd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_naryq"]
+size = Vector2(51, 41)
+
+[node name="Piedra" type="StaticBody2D" unique_id=2022234594]
+texture_filter = 1
+script = ExtResource("1_qqpov")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1512298521]
+position = Vector2(2, 0)
+shape = SubResource("RectangleShape2D_naryq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=356957817]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_0hwmd")

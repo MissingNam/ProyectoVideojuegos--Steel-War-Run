@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://b3opgybjqqx2s"]
+
+[ext_resource type="Texture2D" uid="uid://b044dvtyy2p0d" path="res://Assets/EnemyRelated/BasicEnemy/BasicEnemy1.png" id="1_60jb5"]
+[ext_resource type="Script" uid="uid://hf3cfthm3fcq" path="res://Scripts/basic_enemy.gd" id="1_vj441"]
+[ext_resource type="Texture2D" uid="uid://wn6fydqg3vo2" path="res://Assets/EnemyRelated/BasicEnemy/BasicEnemy2.png" id="2_oh6y8"]
+[ext_resource type="Texture2D" uid="uid://di458rc01qm6x" path="res://Assets/EnemyRelated/BasicEnemy/BasicEnemy3.png" id="3_vj441"]
+[ext_resource type="Texture2D" uid="uid://do77di6fkr3t5" path="res://Assets/EnemyRelated/BasicEnemy/BasicEnemy4.png" id="4_reiwa"]
+[ext_resource type="PackedScene" uid="uid://bxpp8nbgxl63d" path="res://Scenes/Enemies/BasicEnemy/BasicEnemyHand.tscn" id="6_reiwa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gc2vv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_60jb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_oh6y8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vj441")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_reiwa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t2hff"]
+size = Vector2(23, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_40qms"]
+size = Vector2(21, 28)
+
+[node name="BasicEnemy" type="CharacterBody2D" unique_id=1757690099 groups=["Enemies"]]
+script = ExtResource("1_vj441")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1961710628]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_gc2vv")
+frame_progress = 0.72781533
+
+[node name="BasicEnemyHand" parent="." unique_id=1540455042 instance=ExtResource("6_reiwa")]
+position = Vector2(8, 4)
+scale = Vector2(0.75, 0.75)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1549979087]
+position = Vector2(-1.5, 2)
+shape = SubResource("RectangleShape2D_t2hff")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1148170270]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1284692348]
+position = Vector2(-1.5, 2)
+shape = SubResource("RectangleShape2D_40qms")
+debug_color = Color(0.9882353, 0, 0, 0.41960785)
+
+[node name="Timer" type="Timer" parent="." unique_id=1724864887]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

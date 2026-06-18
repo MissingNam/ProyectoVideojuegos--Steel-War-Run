@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://byp2dnikt85ob"]
+
+[ext_resource type="Script" uid="uid://v1m1tjok1qny" path="res://Scripts/player.gd" id="1_x3wgy"]
+[ext_resource type="Texture2D" uid="uid://wcb2wq34l7r2" path="res://Assets/ProtagonistRelated/Protagonista.png" id="2_3smsa"]
+[ext_resource type="PackedScene" uid="uid://ck8cp5ptban24" path="res://Scenes/PlayerRelated/player_bullet.tscn" id="2_ny0ry"]
+[ext_resource type="Texture2D" uid="uid://co6hk7gwvbsfy" path="res://Assets/ProtagonistRelated/ProtagonistaWalk/Protagonista_Walk1.png" id="3_8erm5"]
+[ext_resource type="Texture2D" uid="uid://0yw7e81uki8n" path="res://Assets/ProtagonistRelated/ProtagonistaWalk/Protagonista_Walk2.png" id="4_f1ek2"]
+[ext_resource type="Texture2D" uid="uid://cqyof23abqbbd" path="res://Assets/ProtagonistRelated/ProtagonistaWalk/Protagonista_Walk3.png" id="5_tx1dd"]
+[ext_resource type="Texture2D" uid="uid://tepfuxadoty8" path="res://Assets/ProtagonistRelated/ProtagonistaWalk/Protagonista_Walk4.png" id="6_gymyn"]
+[ext_resource type="PackedScene" uid="uid://cn1lgd5kd123p" path="res://Scenes/PlayerRelated/player_arm.tscn" id="7_n3pt7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pu2lt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3smsa")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8erm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f1ek2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tx1dd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gymyn")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3wgy"]
+size = Vector2(17, 32)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3smsa"]
+radius = 8.0
+
+[node name="Player" type="CharacterBody2D" unique_id=253443307 groups=["Player"]]
+script = ExtResource("1_x3wgy")
+player_bullet = ExtResource("2_ny0ry")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2068250466]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_pu2lt")
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1763597045]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_x3wgy")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1928337867]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=537718077]
+position = Vector2(-2, 0)
+shape = SubResource("CapsuleShape2D_3smsa")
+debug_color = Color(1, 0, 0.1086965, 0.41960785)
+
+[node name="Player_arm" parent="." unique_id=1294577465 instance=ExtResource("7_n3pt7")]
+position = Vector2(-1, 2)
+scale = Vector2(0.75, 0.75)
+
+[node name="Timer" type="Timer" parent="." unique_id=1907941359]
+one_shot = true
+autostart = true
+
+[node name="IFrameTimer" type="Timer" parent="." unique_id=20199066]
+one_shot = true
+autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=760601592]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="IFrameTimer" to="." method="_on_i_frame_timer_timeout"]

@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dj58ra16yfgen"]
+
+[ext_resource type="Script" uid="uid://cbo2lkt1toclu" path="res://Scripts/basic_enemy_bullet.gd" id="1_j3ckn"]
+[ext_resource type="Texture2D" uid="uid://bs1sker0vxxd7" path="res://Assets/EnemyRelated/BasicEnemy/BasicEnemyBullet/Bullet1.png" id="2_513p2"]
+[ext_resource type="Texture2D" uid="uid://crcaup8w8gecp" path="res://Assets/EnemyRelated/BasicEnemy/BasicEnemyBullet/Bullet2.png" id="3_0gat7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ukcqs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_513p2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0gat7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qpw2t"]
+radius = 4.0
+
+[node name="BasicEnemyBullet" type="Area2D" unique_id=1811219951]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_j3ckn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=165088025]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ukcqs")
+frame = 1
+frame_progress = 0.7014224
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=33058874]
+shape = SubResource("CircleShape2D_qpw2t")
+debug_color = Color(0.99607843, 0, 0, 0.41960785)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=857651972]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

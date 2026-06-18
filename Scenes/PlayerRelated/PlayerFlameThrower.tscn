@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://cj7pebk8psrdx"]
+
+[ext_resource type="Script" uid="uid://cj0yd0g0587mw" path="res://Scripts/player_flame_thrower.gd" id="1_u2vxy"]
+[ext_resource type="Texture2D" uid="uid://b34hymar2vsm" path="res://Assets/ProtagonistRelated/FlameThrowerFire/fire_shot7.png" id="2_usofd"]
+[ext_resource type="Texture2D" uid="uid://dci2vpqb4rgxo" path="res://Assets/ProtagonistRelated/FlameThrowerFire/fire_shot1.png" id="3_a6mwk"]
+[ext_resource type="Texture2D" uid="uid://jruxtknsathl" path="res://Assets/ProtagonistRelated/FlameThrowerFire/fire_shot2.png" id="4_p5xbp"]
+[ext_resource type="Texture2D" uid="uid://dj6ko6csbos8k" path="res://Assets/ProtagonistRelated/FlameThrowerFire/fire_shot3.png" id="5_kjcdc"]
+[ext_resource type="Texture2D" uid="uid://bsnwrrkr3kms6" path="res://Assets/ProtagonistRelated/FlameThrowerFire/fire_shot4.png" id="6_mnnb2"]
+[ext_resource type="Texture2D" uid="uid://csciflonj1p2" path="res://Assets/ProtagonistRelated/FlameThrowerFire/fire_shot5.png" id="7_5xtyf"]
+[ext_resource type="Texture2D" uid="uid://dypua7muvbwm1" path="res://Assets/ProtagonistRelated/FlameThrowerFire/fire_shot6.png" id="8_61i3g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l0mwn"]
+radius = 17.117243
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3mcrb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_usofd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_a6mwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_p5xbp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kjcdc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mnnb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5xtyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_61i3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_usofd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="PlayerFlameThrower" type="Area2D" unique_id=237628581]
+script = ExtResource("1_u2vxy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1696250245]
+shape = SubResource("CircleShape2D_l0mwn")
+debug_color = Color(1, 0, 0, 0.41960785)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=711669673]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_3mcrb")
+frame_progress = 0.49632365
+
+[node name="RemoveTimer" type="Timer" parent="." unique_id=1810722263]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="RemoveTimer" to="." method="_on_remove_timer_timeout"]

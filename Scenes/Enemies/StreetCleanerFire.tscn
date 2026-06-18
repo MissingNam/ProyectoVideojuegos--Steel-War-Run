@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://cl84s86ejrqle"]
+
+[ext_resource type="Script" uid="uid://hdmixrh26ysv" path="res://Scripts/street_cleaner_fire.gd" id="1_o77p8"]
+[ext_resource type="Texture2D" uid="uid://b34hymar2vsm" path="res://Assets/ProtagonistRelated/FlameThrowerFire/fire_shot7.png" id="2_11d8o"]
+[ext_resource type="Texture2D" uid="uid://dci2vpqb4rgxo" path="res://Assets/ProtagonistRelated/FlameThrowerFire/fire_shot1.png" id="3_vo28q"]
+[ext_resource type="Texture2D" uid="uid://jruxtknsathl" path="res://Assets/ProtagonistRelated/FlameThrowerFire/fire_shot2.png" id="4_whq7t"]
+[ext_resource type="Texture2D" uid="uid://dj6ko6csbos8k" path="res://Assets/ProtagonistRelated/FlameThrowerFire/fire_shot3.png" id="5_r1lt5"]
+[ext_resource type="Texture2D" uid="uid://bsnwrrkr3kms6" path="res://Assets/ProtagonistRelated/FlameThrowerFire/fire_shot4.png" id="6_x3y1f"]
+[ext_resource type="Texture2D" uid="uid://csciflonj1p2" path="res://Assets/ProtagonistRelated/FlameThrowerFire/fire_shot5.png" id="7_apkkx"]
+[ext_resource type="Texture2D" uid="uid://dypua7muvbwm1" path="res://Assets/ProtagonistRelated/FlameThrowerFire/fire_shot6.png" id="8_5ha2s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m16kn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_11d8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vo28q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_whq7t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_r1lt5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_x3y1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_apkkx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5ha2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_11d8o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_piwhl"]
+radius = 14.142136
+
+[node name="StreetCleanerFire" type="Area2D" unique_id=773400211]
+script = ExtResource("1_o77p8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1845816107]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_m16kn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=907783252]
+shape = SubResource("CircleShape2D_piwhl")
+debug_color = Color(1, 1, 0, 0.41960785)
+
+[node name="RemoveTimer" type="Timer" parent="." unique_id=1681335148]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[node name="SwitchColorTimer" type="Timer" parent="." unique_id=1300421441]
+wait_time = 0.5
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="RemoveTimer" to="." method="_on_remove_timer_timeout"]
+[connection signal="timeout" from="SwitchColorTimer" to="." method="_on_switch_color_timer_timeout"]

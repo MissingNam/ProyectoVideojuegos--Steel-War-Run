@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://bkys48xhc2j1v"]
+
+[ext_resource type="Script" uid="uid://go1eudd854ya" path="res://Scripts/level_progress.gd" id="1_6ix7s"]
+
+[node name="LevelProgress" type="CanvasLayer" unique_id=651357887 groups=["XPGUI"]]
+script = ExtResource("1_6ix7s")
+
+[node name="Control" type="Control" parent="." unique_id=1371588692]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LevelLabel" type="Label" parent="Control" unique_id=896884587]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Nivel: 1"
+
+[node name="XPBar" type="ProgressBar" parent="Control" unique_id=675530267]
+layout_mode = 0
+offset_top = 21.0
+offset_right = 206.0
+offset_bottom = 48.0
+show_percentage = false
+
+[node name="HealthBar" type="ProgressBar" parent="Control" unique_id=73340268]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 57.0
+offset_right = 205.0
+offset_bottom = 84.0
+fill_mode = 1
+show_percentage = false
+
+[node name="PistolaLabel" type="Label" parent="Control" unique_id=1084125838]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 103.0
+offset_right = 110.0
+offset_bottom = 126.0
+text = "Pistola: "
+
+[node name="EscopetaLabel" type="Label" parent="Control" unique_id=565929416]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 126.0
+offset_right = 111.0
+offset_bottom = 149.0
+text = "Escopeta: "
+
+[node name="FlamaLabel" type="Label" parent="Control" unique_id=532922450]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 149.0
+offset_right = 61.0
+offset_bottom = 172.0
+text = "LanzaLlamas: "
+
+[node name="MisilLabel" type="Label" parent="Control" unique_id=828989085]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 170.0
+offset_right = 108.0
+offset_bottom = 193.0
+text = "Bazooka:"

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b0mhgjocjtd6a"]
+
+[ext_resource type="Script" uid="uid://dcejbco10veqk" path="res://Scripts/missile.gd" id="1_3yf48"]
+[ext_resource type="Texture2D" uid="uid://bjqr5gtrat5jr" path="res://Assets/rocket.png" id="2_0tsf4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfoha"]
+size = Vector2(33, 11)
+
+[node name="Missile" type="Area2D" unique_id=2116488503]
+z_index = -2
+script = ExtResource("1_3yf48")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2127071722]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_tfoha")
+debug_color = Color(0.99215686, 0, 0, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1473139176]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_0tsf4")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=704238988]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

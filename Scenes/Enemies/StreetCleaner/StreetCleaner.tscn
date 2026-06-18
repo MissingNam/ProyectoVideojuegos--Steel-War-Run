@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://cytehdkjlhqxv"]
+
+[ext_resource type="Texture2D" uid="uid://cpwqfbcvqm0i3" path="res://Assets/EnemyRelated/StreetCleaner/StreetCleaner1.png" id="1_7ep1d"]
+[ext_resource type="Script" uid="uid://b517154ma5cqm" path="res://Scripts/street_cleaner.gd" id="1_rmi1u"]
+[ext_resource type="Texture2D" uid="uid://ca50d40aflroa" path="res://Assets/EnemyRelated/StreetCleaner/StreetCleaner2.png" id="2_nukdk"]
+[ext_resource type="Texture2D" uid="uid://wbb33e6u623k" path="res://Assets/EnemyRelated/StreetCleaner/StreetCleaner3.png" id="3_rmi1u"]
+[ext_resource type="Texture2D" uid="uid://cec4aw6ul3pm0" path="res://Assets/EnemyRelated/StreetCleaner/StreetCleaner4.png" id="4_s02ra"]
+[ext_resource type="Texture2D" uid="uid://du6ungl466y2o" path="res://Assets/EnemyRelated/StreetCleaner/StreetCleaner5.png" id="5_gmyfx"]
+[ext_resource type="PackedScene" uid="uid://uoa51f5v1q5i" path="res://Scenes/Enemies/StreetCleaner/StreetCleanerArm.tscn" id="7_s02ra"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dr5jo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7ep1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_nukdk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rmi1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_s02ra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gmyfx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gmyfx"]
+size = Vector2(15, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dr5jo"]
+size = Vector2(9, 29)
+
+[node name="StreetCleaner" type="CharacterBody2D" unique_id=549640858]
+script = ExtResource("1_rmi1u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=701830992]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_dr5jo")
+frame = 4
+frame_progress = 0.93558943
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=567221127]
+position = Vector2(-2.5, 0.5)
+shape = SubResource("RectangleShape2D_gmyfx")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1967406784]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=529907432]
+position = Vector2(-2.5, 0.5)
+shape = SubResource("RectangleShape2D_dr5jo")
+debug_color = Color(1, 0, 0, 0.41960785)
+
+[node name="StreetCleanerArm" parent="." unique_id=1511810286 instance=ExtResource("7_s02ra")]
+position = Vector2(-2, 0)
+scale = Vector2(0.75, 0.75)
+
+[node name="Timer" type="Timer" parent="." unique_id=118680589]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
