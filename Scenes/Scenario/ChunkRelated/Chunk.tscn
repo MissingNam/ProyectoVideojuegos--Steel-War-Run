@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ud2u4syjcx73"]
 
-[ext_resource type="Script" uid="uid://bbcbhuh25uq18" path="res://Scripts/chunk.gd" id="1_irin6"]
+[ext_resource type="Script" uid="uid://bbcbhuh25uq18" path="res://Scripts/Map/chunk.gd" id="1_irin6"]
 [ext_resource type="PackedScene" uid="uid://c5omuy160eptw" path="res://Scenes/loot_box.tscn" id="2_oyjl5"]
 [ext_resource type="PackedScene" uid="uid://dk3vp4efv3c3f" path="res://Scenes/Scenario/Decoraciones/Piedra.tscn" id="3_3fa6y"]
 [ext_resource type="PackedScene" uid="uid://dmvr87u5dwcpo" path="res://Scenes/Scenario/Decoraciones/Cactus.tscn" id="4_8hymr"]

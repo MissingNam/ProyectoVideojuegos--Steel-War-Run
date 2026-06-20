@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cytehdkjlhqxv"]
 
 [ext_resource type="Texture2D" uid="uid://cpwqfbcvqm0i3" path="res://Assets/EnemyRelated/StreetCleaner/StreetCleaner1.png" id="1_7ep1d"]
-[ext_resource type="Script" uid="uid://b517154ma5cqm" path="res://Scripts/street_cleaner.gd" id="1_rmi1u"]
+[ext_resource type="Script" uid="uid://b517154ma5cqm" path="res://Scripts/Enemies/street_cleaner.gd" id="1_rmi1u"]
 [ext_resource type="Texture2D" uid="uid://ca50d40aflroa" path="res://Assets/EnemyRelated/StreetCleaner/StreetCleaner2.png" id="2_nukdk"]
 [ext_resource type="Texture2D" uid="uid://wbb33e6u623k" path="res://Assets/EnemyRelated/StreetCleaner/StreetCleaner3.png" id="3_rmi1u"]
 [ext_resource type="Texture2D" uid="uid://cec4aw6ul3pm0" path="res://Assets/EnemyRelated/StreetCleaner/StreetCleaner4.png" id="4_s02ra"]

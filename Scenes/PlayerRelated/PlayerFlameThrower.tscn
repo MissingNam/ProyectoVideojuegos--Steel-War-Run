@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cj7pebk8psrdx"]
 
-[ext_resource type="Script" uid="uid://cj0yd0g0587mw" path="res://Scripts/player_flame_thrower.gd" id="1_u2vxy"]
+[ext_resource type="Script" uid="uid://cj0yd0g0587mw" path="res://Scripts/Player/player_flame_thrower.gd" id="1_u2vxy"]
 [ext_resource type="Texture2D" uid="uid://b34hymar2vsm" path="res://Assets/ProtagonistRelated/FlameThrowerFire/fire_shot7.png" id="2_usofd"]
 [ext_resource type="Texture2D" uid="uid://dci2vpqb4rgxo" path="res://Assets/ProtagonistRelated/FlameThrowerFire/fire_shot1.png" id="3_a6mwk"]
 [ext_resource type="Texture2D" uid="uid://jruxtknsathl" path="res://Assets/ProtagonistRelated/FlameThrowerFire/fire_shot2.png" id="4_p5xbp"]

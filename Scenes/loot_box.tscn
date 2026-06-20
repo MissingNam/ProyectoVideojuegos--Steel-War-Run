@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c5omuy160eptw"]
 
-[ext_resource type="Script" uid="uid://tdmjvhn2eile" path="res://Scripts/loot_box.gd" id="1_rpvfx"]
+[ext_resource type="Script" uid="uid://tdmjvhn2eile" path="res://Scripts/Map/loot_box.gd" id="1_rpvfx"]
 [ext_resource type="Texture2D" uid="uid://bwhgyh16le4q7" path="res://Assets/LootBox/FlameThrowerTank.png" id="2_brxr8"]
 [ext_resource type="Texture2D" uid="uid://bafrfmx2s7hh1" path="res://Assets/LootBox/MedicBox.png" id="3_xl1x4"]
 [ext_resource type="Texture2D" uid="uid://bp4ch6xn2jftm" path="res://Assets/LootBox/Missile.png" id="4_rrt23"]

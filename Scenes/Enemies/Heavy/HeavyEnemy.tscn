@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cfy8y8kcijacs"]
 
-[ext_resource type="Script" uid="uid://oet17153uxud" path="res://Scripts/heavy_enemy.gd" id="1_pcsg0"]
+[ext_resource type="Script" uid="uid://oet17153uxud" path="res://Scripts/Enemies/heavy_enemy.gd" id="1_pcsg0"]
 [ext_resource type="Texture2D" uid="uid://35ioar805y2t" path="res://Assets/EnemyRelated/HeavyEnemy/Heavy1.png" id="2_35014"]
 [ext_resource type="Texture2D" uid="uid://crpuij3gl3y2c" path="res://Assets/EnemyRelated/HeavyEnemy/Heavy2.png" id="3_g0q6j"]
 [ext_resource type="Texture2D" uid="uid://c2lc86l3ertdf" path="res://Assets/EnemyRelated/HeavyEnemy/Heavy3.png" id="4_oy1bg"]

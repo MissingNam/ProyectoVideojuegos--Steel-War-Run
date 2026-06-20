@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://wa0616yxqm7n"]
 
-[ext_resource type="Script" uid="uid://d24y4aqs8f0eq" path="res://Scripts/heavy_arm.gd" id="1_jxj1a"]
+[ext_resource type="Script" uid="uid://d24y4aqs8f0eq" path="res://Scripts/Enemies/heavy_arm.gd" id="1_jxj1a"]
 [ext_resource type="Texture2D" uid="uid://c4xpjcat6o5eg" path="res://Assets/EnemyRelated/Sniper/Franco.png" id="2_34ryu"]
 
 [node name="SniperArm" type="Node2D" unique_id=1825468162]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b0mhgjocjtd6a"]
 
-[ext_resource type="Script" uid="uid://dcejbco10veqk" path="res://Scripts/missile.gd" id="1_3yf48"]
+[ext_resource type="Script" uid="uid://dcejbco10veqk" path="res://Scripts/Player/missile.gd" id="1_3yf48"]
 [ext_resource type="Texture2D" uid="uid://bjqr5gtrat5jr" path="res://Assets/rocket.png" id="2_0tsf4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tfoha"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dre2ref3afucx"]
 
 [ext_resource type="Texture2D" uid="uid://qf7dsplre701" path="res://Assets/MetalGearHubris/MetalGearCannon2.png" id="1_lompy"]
-[ext_resource type="Script" uid="uid://doyryshkiuptd" path="res://Scripts/hubris_cannon.gd" id="1_x0ymp"]
+[ext_resource type="Script" uid="uid://doyryshkiuptd" path="res://Scripts/Hubris/hubris_cannon.gd" id="1_x0ymp"]
 [ext_resource type="Texture2D" uid="uid://lv0fj1sqr75m" path="res://Assets/MetalGearHubris/Overcharge/MetalGearCannonOvercharge1.png" id="3_poj70"]
 [ext_resource type="Texture2D" uid="uid://bb2k6vkjhcpki" path="res://Assets/MetalGearHubris/MetalGearCannonCharge2.png" id="3_vfxrq"]
 [ext_resource type="Texture2D" uid="uid://cu7ee32euo0lg" path="res://Assets/MetalGearHubris/Overcharge/MetalGearCannonOvercharge2.png" id="4_ai4ru"]

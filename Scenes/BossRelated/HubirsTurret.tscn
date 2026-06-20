@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c0gqqf7dsshc8"]
 
 [ext_resource type="Texture2D" uid="uid://byiivgrm5f7jc" path="res://Assets/MetalGearHubris/MetalGearTurret2.png" id="1_dkndt"]
-[ext_resource type="Script" uid="uid://d4ap7pi4vp4hl" path="res://Scripts/Hubirs_Turret.gd" id="2_dkndt"]
+[ext_resource type="Script" uid="uid://d4ap7pi4vp4hl" path="res://Scripts/Hubris/Hubirs_Turret.gd" id="2_dkndt"]
 
 [node name="HubirsTurret" type="Node2D" unique_id=469442064]
 texture_filter = 1

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c0m87eqh4dt50"]
 
-[ext_resource type="Script" uid="uid://rqti6gqpngbk" path="res://Scripts/sniper.gd" id="1_jrine"]
+[ext_resource type="Script" uid="uid://rqti6gqpngbk" path="res://Scripts/Enemies/sniper.gd" id="1_jrine"]
 [ext_resource type="Texture2D" uid="uid://cpcqhpkx7bgqj" path="res://Assets/EnemyRelated/Sniper/SniperBox.png" id="2_b1jqj"]
 [ext_resource type="PackedScene" uid="uid://wa0616yxqm7n" path="res://Scenes/Enemies/Sniper/SniperArm.tscn" id="3_rkqmk"]
 

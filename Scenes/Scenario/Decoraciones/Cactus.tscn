@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dmvr87u5dwcpo"]
 
-[ext_resource type="Script" uid="uid://c8gx35uod4mc3" path="res://Scripts/cactus.gd" id="1_nb21d"]
+[ext_resource type="Script" uid="uid://c8gx35uod4mc3" path="res://Scripts/Map/cactus.gd" id="1_nb21d"]
 [ext_resource type="Texture2D" uid="uid://dvhh22j7x2ght" path="res://Assets/Decoration/cactus.png" id="2_pu8r4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lr8ld"]

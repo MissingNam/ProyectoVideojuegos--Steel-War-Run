@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://uoa51f5v1q5i"]
 
-[ext_resource type="Script" uid="uid://boxikbdp71e68" path="res://Scripts/street_cleaner_arm.gd" id="1_ldgn0"]
+[ext_resource type="Script" uid="uid://boxikbdp71e68" path="res://Scripts/Enemies/street_cleaner_arm.gd" id="1_ldgn0"]
 [ext_resource type="Texture2D" uid="uid://v8bt1siuv4vi" path="res://Assets/EnemyRelated/StreetCleaner/StreetCleanerHand.png" id="2_8i362"]
 
 [node name="StreetCleanerArm" type="Node2D" unique_id=1511810286]

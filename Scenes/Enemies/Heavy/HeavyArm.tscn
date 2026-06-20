@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://elcpysraijdg"]
 
-[ext_resource type="Script" uid="uid://d24y4aqs8f0eq" path="res://Scripts/heavy_arm.gd" id="1_u5a1q"]
+[ext_resource type="Script" uid="uid://d24y4aqs8f0eq" path="res://Scripts/Enemies/heavy_arm.gd" id="1_u5a1q"]
 [ext_resource type="Texture2D" uid="uid://b45e6ff0rdv1f" path="res://Assets/EnemyRelated/HeavyEnemy/HeavyHand.png" id="2_3q7vm"]
 
 [node name="HeavyArm" type="Node2D" unique_id=307669899]

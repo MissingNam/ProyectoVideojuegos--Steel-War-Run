@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://scork0td20vx"]
 
 [ext_resource type="Texture2D" uid="uid://c28xw0npvebjn" path="res://Assets/EnemyRelated/Sniper/Alarm.png" id="1_738ma"]
-[ext_resource type="Script" uid="uid://c8l07shdatmds" path="res://Scripts/sniper_alarm.gd" id="1_ugat2"]
+[ext_resource type="Script" uid="uid://c8l07shdatmds" path="res://Scripts/Enemies/sniper_alarm.gd" id="1_ugat2"]
 
 [node name="SniperAlarm" type="Node2D" unique_id=1050146562]
 scale = Vector2(0.5, 0.5)

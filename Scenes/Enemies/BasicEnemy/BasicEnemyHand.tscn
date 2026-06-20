@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bxpp8nbgxl63d"]
 
-[ext_resource type="Script" uid="uid://jshijyheat2m" path="res://Scripts/basic_enemy_hand.gd" id="1_pl5fk"]
+[ext_resource type="Script" uid="uid://jshijyheat2m" path="res://Scripts/Enemies/basic_enemy_hand.gd" id="1_pl5fk"]
 [ext_resource type="Texture2D" uid="uid://bqhr2rd2tkfrs" path="res://Assets/EnemyRelated/BasicEnemy/BasicEnemyHand.png" id="2_8ax8n"]
 
 [node name="BasicEnemyHand" type="Node2D" unique_id=1540455042]

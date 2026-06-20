@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bttxsjbqkrq77"]
 
-[ext_resource type="Script" uid="uid://chq4joihp7jmg" path="res://Scripts/upgrade_menu.gd" id="1_oa8d4"]
+[ext_resource type="Script" uid="uid://chq4joihp7jmg" path="res://Scripts/Map/upgrade_menu.gd" id="1_oa8d4"]
 
 [node name="UpgradeMenu" type="CanvasLayer" unique_id=336708653]
 script = ExtResource("1_oa8d4")

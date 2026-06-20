@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dj58ra16yfgen"]
 
-[ext_resource type="Script" uid="uid://cbo2lkt1toclu" path="res://Scripts/basic_enemy_bullet.gd" id="1_j3ckn"]
+[ext_resource type="Script" uid="uid://cbo2lkt1toclu" path="res://Scripts/Enemies/basic_enemy_bullet.gd" id="1_j3ckn"]
 [ext_resource type="Texture2D" uid="uid://bs1sker0vxxd7" path="res://Assets/EnemyRelated/BasicEnemy/BasicEnemyBullet/Bullet1.png" id="2_513p2"]
 [ext_resource type="Texture2D" uid="uid://crcaup8w8gecp" path="res://Assets/EnemyRelated/BasicEnemy/BasicEnemyBullet/Bullet2.png" id="3_0gat7"]
 

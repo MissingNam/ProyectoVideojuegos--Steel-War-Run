@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cl84s86ejrqle"]
 
-[ext_resource type="Script" uid="uid://hdmixrh26ysv" path="res://Scripts/street_cleaner_fire.gd" id="1_o77p8"]
+[ext_resource type="Script" uid="uid://hdmixrh26ysv" path="res://Scripts/Enemies/street_cleaner_fire.gd" id="1_o77p8"]
 [ext_resource type="Texture2D" uid="uid://b34hymar2vsm" path="res://Assets/ProtagonistRelated/FlameThrowerFire/fire_shot7.png" id="2_11d8o"]
 [ext_resource type="Texture2D" uid="uid://dci2vpqb4rgxo" path="res://Assets/ProtagonistRelated/FlameThrowerFire/fire_shot1.png" id="3_vo28q"]
 [ext_resource type="Texture2D" uid="uid://jruxtknsathl" path="res://Assets/ProtagonistRelated/FlameThrowerFire/fire_shot2.png" id="4_whq7t"]

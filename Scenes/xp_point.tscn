@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bst4p45vumbap"]
 
 [ext_resource type="Texture2D" uid="uid://c8q3shhojh42" path="res://Assets/XP_point/XP_point1.png" id="1_m431s"]
-[ext_resource type="Script" uid="uid://t5nw7xr3uy1b" path="res://Scripts/xp_point.gd" id="1_nkw0o"]
+[ext_resource type="Script" uid="uid://t5nw7xr3uy1b" path="res://Scripts/Enemies/xp_point.gd" id="1_nkw0o"]
 [ext_resource type="Texture2D" uid="uid://b3pq3ireps5ee" path="res://Assets/XP_point/XP_point2.png" id="2_nkw0o"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q15qj"]

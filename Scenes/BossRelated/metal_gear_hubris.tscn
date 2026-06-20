@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://enbsr8m07gbv"]
 
-[ext_resource type="Script" uid="uid://bf2ucpcbe0hac" path="res://Scripts/metal_gear_hubris.gd" id="1_4aexw"]
+[ext_resource type="Script" uid="uid://bf2ucpcbe0hac" path="res://Scripts/Hubris/metal_gear_hubris.gd" id="1_4aexw"]
 [ext_resource type="Texture2D" uid="uid://dr5hjeetd51iu" path="res://Assets/MetalGearHubris/Full/MetalGearHubrisFull1.png" id="1_875te"]
 [ext_resource type="Texture2D" uid="uid://dkiut1r875cvo" path="res://Assets/MetalGearHubris/Full/MetalGearHubrisFull2.png" id="2_fuj8a"]
 [ext_resource type="Texture2D" uid="uid://cwfa7p7dnjhfg" path="res://Assets/MetalGearHubris/Full/MetalGearHubrisFull3.png" id="3_fv4ij"]

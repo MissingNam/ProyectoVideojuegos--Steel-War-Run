@@ -20,6 +20,8 @@ config/icon="res://icon.svg"
 PlayerBulletMaker="*uid://demwcavj1mt8d"
 EnemyBulletMaker="*uid://d2dcj7ty8k7j2"
 GlobalGamePlayVariables="*uid://uhyhec3rdmc0"
+AudioManager="*uid://cg8xhbc6geyu4"
+MusicManager="*uid://c835lk7kirw04"
 
 [global_group]
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d3ud6tuva3ofb"]
 
-[ext_resource type="Script" uid="uid://chy1gyn4o4os6" path="res://Scripts/Hubrislaser.gd" id="1_7yu5l"]
+[ext_resource type="Script" uid="uid://chy1gyn4o4os6" path="res://Scripts/Hubris/Hubrislaser.gd" id="1_7yu5l"]
 [ext_resource type="Texture2D" uid="uid://4jlgsrrclnub" path="res://Assets/MetalGearHubris/MetalGearLaser/MetalGearLaser1.png" id="2_1puiu"]
 [ext_resource type="Texture2D" uid="uid://dmmu0vekhmif" path="res://Assets/MetalGearHubris/MetalGearLaser/MetalGearLaser2.png" id="3_1ky7s"]
 [ext_resource type="Texture2D" uid="uid://brnwjn0q36e5l" path="res://Assets/MetalGearHubris/MetalGearLaser/MetalGearLaser3.png" id="4_c6c7v"]
