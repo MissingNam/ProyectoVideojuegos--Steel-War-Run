@@ -5,15 +5,17 @@
 [ext_resource type="PackedScene" uid="uid://br4u8k1lpb7tm" path="res://Scenes/Scenario/over_menu.tscn" id="3_o24hu"]
 [ext_resource type="PackedScene" uid="uid://bttxsjbqkrq77" path="res://Scenes/Scenario/UpgradeMenu.tscn" id="3_o8412"]
 [ext_resource type="PackedScene" uid="uid://djrvh3psi0x4u" path="res://Scenes/Scenario/pauseMenu.tscn" id="3_qurfv"]
-[ext_resource type="PackedScene" uid="uid://bkys48xhc2j1v" path="res://Scenes/level_progress.tscn" id="4_88f4q"]
 [ext_resource type="PackedScene" uid="uid://c5omuy160eptw" path="res://Scenes/Items/loot_box.tscn" id="4_k0ud8"]
+[ext_resource type="PackedScene" uid="uid://bkys48xhc2j1v" path="res://Scenes/Scenario/level_progress.tscn" id="6_12ivn"]
 [ext_resource type="PackedScene" uid="uid://dqh1e7or1cacw" path="res://Scenes/Scenario/ChunkRelated/chunk_manager.tscn" id="7_88f4q"]
 [ext_resource type="Script" uid="uid://mr167m7y7wkp" path="res://Scripts/camera.gd" id="7_qurfv"]
+[ext_resource type="Script" uid="uid://bw35vw1kbf33h" path="res://Scripts/floor.gd" id="8_o24hu"]
+[ext_resource type="Texture2D" uid="uid://b41qhdroynwrq" path="res://Assets/Decoration/sand.png" id="8_qurfv"]
 
 [node name="Scenario" type="Node2D" unique_id=1107656438]
 
 [node name="Player" parent="." unique_id=253443307 instance=ExtResource("1_vcrnd")]
-position = Vector2(570, 320)
+position = Vector2(576, 320)
 
 [node name="EnemySpawner2" parent="Player" unique_id=350958665 instance=ExtResource("2_fk6t8")]
 
@@ -23,7 +25,7 @@ position = Vector2(570, 320)
 
 [node name="UpgradeMenu" parent="." unique_id=336708653 instance=ExtResource("3_o8412")]
 
-[node name="LevelProgress" parent="." unique_id=651357887 instance=ExtResource("4_88f4q")]
+[node name="LevelProgress" parent="." unique_id=651357887 instance=ExtResource("6_12ivn")]
 
 [node name="LootBox" parent="." unique_id=1874588072 instance=ExtResource("4_k0ud8")]
 position = Vector2(470, 278)
@@ -43,3 +45,271 @@ position = Vector2(469.00003, 393.00003)
 position = Vector2(570, 320)
 zoom = Vector2(2, 2)
 script = ExtResource("7_qurfv")
+
+[node name="Floor" type="Node2D" parent="." unique_id=939036907]
+position = Vector2(576, 320)
+script = ExtResource("8_o24hu")
+
+[node name="Sand1" type="TextureRect" parent="Floor" unique_id=126085101]
+z_index = -10
+offset_right = 128.0
+offset_bottom = 128.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand2" type="TextureRect" parent="Floor" unique_id=1346743633]
+z_index = -10
+offset_left = 128.0
+offset_right = 256.0
+offset_bottom = 128.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand3" type="TextureRect" parent="Floor" unique_id=1387135622]
+z_index = -10
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 256.0
+offset_bottom = 256.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand4" type="TextureRect" parent="Floor" unique_id=1839455169]
+z_index = -10
+offset_top = 128.0
+offset_right = 128.0
+offset_bottom = 256.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand5" type="TextureRect" parent="Floor" unique_id=50268986]
+z_index = -10
+offset_left = -128.0
+offset_top = 128.0
+offset_bottom = 256.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand6" type="TextureRect" parent="Floor" unique_id=99654554]
+z_index = -10
+offset_left = -128.0
+offset_bottom = 128.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand7" type="TextureRect" parent="Floor" unique_id=1070047709]
+z_index = -10
+offset_left = -256.0
+offset_top = 128.0
+offset_right = -128.0
+offset_bottom = 256.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand8" type="TextureRect" parent="Floor" unique_id=476567588]
+z_index = -10
+offset_left = -256.0
+offset_right = -128.0
+offset_bottom = 128.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand9" type="TextureRect" parent="Floor" unique_id=1357145339]
+z_index = -10
+offset_left = -256.0
+offset_top = -128.0
+offset_right = -128.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand10" type="TextureRect" parent="Floor" unique_id=2121057473]
+z_index = -10
+offset_left = -256.0
+offset_top = -256.0
+offset_right = -128.0
+offset_bottom = -128.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand11" type="TextureRect" parent="Floor" unique_id=841171330]
+z_index = -10
+offset_left = -128.0
+offset_top = -256.0
+offset_bottom = -128.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand12" type="TextureRect" parent="Floor" unique_id=458731387]
+z_index = -10
+offset_left = -128.0
+offset_top = -128.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand13" type="TextureRect" parent="Floor" unique_id=216828204]
+z_index = -10
+offset_top = -128.0
+offset_right = 128.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand14" type="TextureRect" parent="Floor" unique_id=656335721]
+z_index = -10
+offset_left = 128.0
+offset_top = -128.0
+offset_right = 256.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand15" type="TextureRect" parent="Floor" unique_id=1462279819]
+z_index = -10
+offset_top = -256.0
+offset_right = 128.0
+offset_bottom = -128.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand16" type="TextureRect" parent="Floor" unique_id=1489650234]
+z_index = -10
+offset_left = 128.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = -128.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand17" type="TextureRect" parent="Floor" unique_id=1593454274]
+z_index = -10
+offset_left = 256.0
+offset_top = -256.0
+offset_right = 384.0
+offset_bottom = -128.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand18" type="TextureRect" parent="Floor" unique_id=1927346427]
+z_index = -10
+offset_left = 256.0
+offset_top = -128.0
+offset_right = 384.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand19" type="TextureRect" parent="Floor" unique_id=570076677]
+z_index = -10
+offset_left = 256.0
+offset_right = 384.0
+offset_bottom = 128.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand20" type="TextureRect" parent="Floor" unique_id=783946441]
+z_index = -10
+offset_left = 256.0
+offset_top = 128.0
+offset_right = 384.0
+offset_bottom = 256.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand21" type="TextureRect" parent="Floor" unique_id=1973588438]
+z_index = -10
+offset_left = -384.0
+offset_top = 128.0
+offset_right = -256.0
+offset_bottom = 256.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand25" type="TextureRect" parent="Floor" unique_id=78842599]
+z_index = -10
+offset_left = -384.0
+offset_top = 256.0
+offset_right = -256.0
+offset_bottom = 384.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand26" type="TextureRect" parent="Floor" unique_id=200125599]
+z_index = -10
+offset_left = -256.0
+offset_top = 256.0
+offset_right = -128.0
+offset_bottom = 384.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand27" type="TextureRect" parent="Floor" unique_id=387082709]
+z_index = -10
+offset_left = -128.0
+offset_top = 256.0
+offset_bottom = 384.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand28" type="TextureRect" parent="Floor" unique_id=407245788]
+z_index = -10
+offset_top = 256.0
+offset_right = 128.0
+offset_bottom = 384.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand29" type="TextureRect" parent="Floor" unique_id=306721964]
+z_index = -10
+offset_left = 128.0
+offset_top = 256.0
+offset_right = 256.0
+offset_bottom = 384.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand30" type="TextureRect" parent="Floor" unique_id=1847702209]
+z_index = -10
+offset_left = 256.0
+offset_top = 256.0
+offset_right = 384.0
+offset_bottom = 384.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand31" type="TextureRect" parent="Floor" unique_id=476517017]
+z_index = -10
+offset_left = 256.0
+offset_top = -384.0
+offset_right = 384.0
+offset_bottom = -256.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand32" type="TextureRect" parent="Floor" unique_id=1057867101]
+z_index = -10
+offset_left = 128.0
+offset_top = -384.0
+offset_right = 256.0
+offset_bottom = -256.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand33" type="TextureRect" parent="Floor" unique_id=1029965886]
+z_index = -10
+offset_top = -384.0
+offset_right = 128.0
+offset_bottom = -256.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand34" type="TextureRect" parent="Floor" unique_id=295760449]
+z_index = -10
+offset_left = -128.0
+offset_top = -384.0
+offset_bottom = -256.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand35" type="TextureRect" parent="Floor" unique_id=1325866912]
+z_index = -10
+offset_left = -256.0
+offset_top = -384.0
+offset_right = -128.0
+offset_bottom = -256.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand36" type="TextureRect" parent="Floor" unique_id=296807723]
+z_index = -10
+offset_left = -384.0
+offset_top = -384.0
+offset_right = -256.0
+offset_bottom = -256.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand22" type="TextureRect" parent="Floor" unique_id=676449378]
+z_index = -10
+offset_left = -384.0
+offset_right = -256.0
+offset_bottom = 128.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand23" type="TextureRect" parent="Floor" unique_id=1857091365]
+z_index = -10
+offset_left = -384.0
+offset_top = -128.0
+offset_right = -256.0
+texture = ExtResource("8_qurfv")
+
+[node name="Sand24" type="TextureRect" parent="Floor" unique_id=1901026319]
+z_index = -10
+offset_left = -384.0
+offset_top = -256.0
+offset_right = -256.0
+offset_bottom = -128.0
+texture = ExtResource("8_qurfv")
