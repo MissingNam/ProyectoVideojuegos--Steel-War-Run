@@ -51,7 +51,7 @@ player_bullet = ExtResource("2_ny0ry")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_pu2lt")
 animation = &"Idle"
-frame_progress = 0.9307673
+frame_progress = 0.7152496
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1763597045]
 position = Vector2(-1, 2.5)
