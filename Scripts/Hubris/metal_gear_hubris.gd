@@ -40,6 +40,7 @@ func hubris_take_damage(damage: float):
 		sprite.play("Fase2")
 	if(health <= 0):
 		queue_free()
+		GlobalGamePlayVariables.bosses += 1
 		var mejoras = GlobalGamePlayVariables.generate_upgrade_options()
 		GlobalGamePlayVariables.activeHubris = false
 		GlobalGamePlayVariables.level_up_triggered.emit(mejoras)

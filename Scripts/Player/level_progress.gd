@@ -35,7 +35,7 @@ func _ready() -> void:
 	hp_style = healthBar.get_theme_stylebox("fill").duplicate()
 	hp_style.bg_color = Color.from_rgba8(90, 255, 100)
 	healthBar.add_theme_stylebox_override("fill", hp_style)
-
+	GlobalGamePlayVariables.updateUi.connect(update_ui)
 	update_ui()
 	update_health()
 
@@ -50,6 +50,6 @@ func update_ammo():
 	misilLabel.text = str(GlobalGamePlayVariables.player_RocketBullet)
 	
 func update_ui():
-	levelLabel.text = "Nivel: "+str(GlobalGamePlayVariables.level)
+	levelLabel.text = "Nivel: "+ str(GlobalGamePlayVariables.level)
 	xpBar.max_value = GlobalGamePlayVariables.xp_to_next_level
 	xpBar.value = GlobalGamePlayVariables.player_xp

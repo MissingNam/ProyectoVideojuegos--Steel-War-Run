@@ -26,6 +26,7 @@ func take_damage(damage: float) -> void:
 	health -= damage
 	if(health <= 0.0):
 		createXP()
+		GlobalGamePlayVariables.kills += 1
 		queue_free()
 
 func _physics_process(_delta: float) -> void:
@@ -61,11 +62,11 @@ func _physics_process(_delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	if(!player_ref): return
-	var to_player = player_ref.global_position - global_position
-	var distance = to_player.length()
+	var distance = global_position.distance_to(player_ref.global_position)
 	if(distance <= 400):
 		EnemyBulletMaker.createBasicBullet(global_position,bullet_speed)
 		cooldown.start(randf_range(1.0,3.5))
+		print("Shoot") 
 	else:
 		cooldown.start(1.0)
 	pass 
@@ -77,4 +78,5 @@ func createXP():
 	get_tree().root.add_child(xp)
 
 func _on_dead_timer_timeout() -> void:
+	
 	queue_free()

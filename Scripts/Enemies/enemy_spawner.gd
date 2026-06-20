@@ -128,7 +128,7 @@ func spawnBoss():
 			spawn_radius_min,
 			spawn_radius_max
 		)
-	var angle = randf() * TAU
+	var angle = 180
 	var offset = Vector2.RIGHT.rotated(angle) * distance
 	enemy.global_position = global_position + offset
 	get_tree().current_scene.add_child(enemy)

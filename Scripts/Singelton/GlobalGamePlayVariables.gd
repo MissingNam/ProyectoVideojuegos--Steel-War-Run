@@ -1,6 +1,9 @@
 extends Node
 
 signal level_up_triggered(options: Array)
+signal gamePaused()
+signal playerDied()
+signal updateUi()
 
 # Jugador
 var level : int = 1
@@ -13,7 +16,7 @@ var player_shotGunBullet: int = 0
 var chunkRandSeed = Time.get_time_dict_from_system()
 var maxPlayerhealth: int = 3
 var PlayerHealth : int = 0
-var i_frames : int = 0.5
+var i_frames : float = 0.5
 
 #Multiplicadores de Armas:
 var gunDamageMultiplier: float = 1.0
@@ -24,6 +27,12 @@ var flamethrowerDamageMultiplier: float = 1.0
 var flamethrowerFirerateMultiplier: float = 0.0
 var missileDamageMultiplier: float = 1.0
 var missileFirerateMultiplier: float = 0.0
+
+#Contadores
+var kills: int = 0
+var totalXp : int = 0
+var bosses : int = 0
+
 
 var activeHubris = false
 
@@ -38,11 +47,13 @@ func _ready():
 	
 	
 func playerHealthAlterated():
+	if(!xpGUI): xpGUI = get_tree().get_first_node_in_group("XPGUI")
 	xpGUI.update_health()
 
 func addExpirience(exp : int):
+	totalXp += exp
 	player_xp += exp
-	if(xpGUI): xpGUI.update_ui()
+	updateUi.emit()
 	if player_xp >= xp_to_next_level:
 		player_xp -= xp_to_next_level
 		level += 1
@@ -53,6 +64,7 @@ func addExpirience(exp : int):
 		get_tree().paused = true
 
 func actualizeAmmo():
+	if(!xpGUI): xpGUI = get_tree().get_first_node_in_group("XPGUI")
 	xpGUI.update_ammo()
 	
 func getRandSeed():
@@ -106,3 +118,32 @@ func apply_upgrade(option: Dictionary) -> void:
 			var var_name = option["variable"]
 			set(var_name, get(var_name) + option["amount"])
 	get_tree().paused = false
+
+func pauseGame():
+	gamePaused.emit()
+	
+func player_died():
+	playerDied.emit()
+
+func restartVariables():
+	level = 1
+	player_xp= 0
+	xp_to_next_level= 10
+	player_BasicBullet= 10
+	player_FlameBullet= 0
+	player_RocketBullet= 0
+	player_shotGunBullet = 0
+	chunkRandSeed = Time.get_time_dict_from_system()
+	maxPlayerhealth = 3
+	PlayerHealth = 0
+	i_frames = 0.5
+	#Multiplicadores de Armas:
+	gunDamageMultiplier = 1.0
+	gunFirerateMultiplier = 0.0
+	shotgunDamageMultiplier = 1.0
+	shotgunFirerateMultiplier = 0.0
+	flamethrowerDamageMultiplier = 1.0
+	flamethrowerFirerateMultiplier= 0.0
+	missileDamageMultiplier = 1.0
+	missileFirerateMultiplier = 0.0
+	activeHubris = false

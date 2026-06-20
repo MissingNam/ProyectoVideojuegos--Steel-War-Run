@@ -10,7 +10,8 @@ var sfx_library = {
 	"ding": preload("res://SFX/ding.mp3"),
 	"pDamage": preload("res://SFX/damage.mp3"),
 	"hubirsLaser": preload("res://SFX/hubrisLaser.mp3"),
-	"dead": preload("res://SFX/DeadSound.mp3")
+	"dead": preload("res://SFX/DeadSound.mp3"),
+	"impact": preload("res://SFX/Impact.mp3")
 }
 
 # Pool de reproductores
@@ -19,6 +20,7 @@ var reproductores: Array[AudioStreamPlayer] = []
 const POOL_SIZE = 20 #Aumentar si se satura muy rapido
 
 func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	for i in POOL_SIZE:
 		var p = AudioStreamPlayer.new()
 		add_child(p)

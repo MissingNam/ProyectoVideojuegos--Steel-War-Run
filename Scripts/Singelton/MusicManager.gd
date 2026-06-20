@@ -14,6 +14,7 @@ var boss_music = {
 }
 
 var reproducer : AudioStreamPlayer
+var stopMusic = false
 
 func _ready() -> void:
 	reproducer = AudioStreamPlayer.new()
@@ -24,14 +25,22 @@ func _ready() -> void:
 
 
 func _process(_delta:float) -> void:
-	if not reproducer.playing and not GlobalGamePlayVariables.activeHubris:
-		reproducer.stream = music_library[randi_range(1,4)]
-		reproducer.play()
-	elif not reproducer.playing and GlobalGamePlayVariables.activeHubris:
-		reproducer.stream = boss_music[randi_range(0,1)]
-		reproducer.play()
-	else:
-		pass
+	if(!stopMusic):
+		if not reproducer.playing and not GlobalGamePlayVariables.activeHubris:
+			reproducer.stream = music_library[randi_range(1,4)]
+			reproducer.play()
+		elif not reproducer.playing and GlobalGamePlayVariables.activeHubris:
+			reproducer.stream = boss_music[randi_range(0,1)]
+			reproducer.play()
+		else:
+			pass
 
 func stop():
 	reproducer.stop()
+	
+func pauseMusic():
+	stop()
+	stopMusic = true
+	
+func resumeMusic():
+	stopMusic = false

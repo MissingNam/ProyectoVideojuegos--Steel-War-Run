@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://cd67apicgxpsr"]
+
+[ext_resource type="FontFile" uid="uid://dv5wpjkntgtvt" path="res://Assets/Fonts/SoundWaveRacing-Regular.otf" id="1_02ybj"]
+[ext_resource type="Script" uid="uid://disgwlgpyxwr4" path="res://Scripts/Map/main_menu.gd" id="1_kehbi"]
+[ext_resource type="Texture2D" uid="uid://d1tbncc06oxj6" path="res://Assets/Buttons/Normal.png" id="2_kehbi"]
+[ext_resource type="Texture2D" uid="uid://teorg2uv0h0f" path="res://Assets/Buttons/Pressed.png" id="3_wrsc1"]
+[ext_resource type="Texture2D" uid="uid://dc2heqanyn3cm" path="res://Assets/Buttons/Selected.png" id="4_h2q0p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_f7ayc"]
+font = ExtResource("1_02ybj")
+font_size = 90
+font_color = Color(0.6979369, 0.67562723, 0.39338568, 1)
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 21
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_w617h"]
+font = ExtResource("1_02ybj")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[node name="MainMenu" type="Control" unique_id=1173018208]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_kehbi")
+
+[node name="Label" type="Label" parent="." unique_id=329936171]
+texture_filter = 1
+layout_mode = 0
+offset_left = 19.0
+offset_top = 21.0
+offset_right = 791.0
+offset_bottom = 139.0
+text = "STEEL WAR RUN"
+label_settings = SubResource("LabelSettings_f7ayc")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1718054129]
+layout_mode = 0
+offset_right = 1267.0
+offset_bottom = 947.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=771050885]
+layout_mode = 0
+offset_left = 696.0
+offset_top = 231.0
+offset_right = 1208.0
+offset_bottom = 899.0
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Start" type="TextureButton" parent="VBoxContainer" unique_id=1562412827]
+layout_mode = 2
+texture_normal = ExtResource("2_kehbi")
+texture_pressed = ExtResource("3_wrsc1")
+texture_hover = ExtResource("4_h2q0p")
+texture_disabled = ExtResource("3_wrsc1")
+texture_focused = ExtResource("4_h2q0p")
+
+[node name="StartLabel" type="Label" parent="VBoxContainer/Start" unique_id=1760557072]
+texture_filter = 1
+layout_mode = 0
+offset_left = 166.0
+offset_top = 31.0
+offset_right = 347.0
+offset_bottom = 97.0
+text = "START"
+label_settings = SubResource("LabelSettings_w617h")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Controls" type="TextureButton" parent="VBoxContainer" unique_id=1533637581]
+layout_mode = 2
+texture_normal = ExtResource("2_kehbi")
+texture_pressed = ExtResource("3_wrsc1")
+texture_hover = ExtResource("4_h2q0p")
+texture_disabled = ExtResource("3_wrsc1")
+texture_focused = ExtResource("4_h2q0p")
+
+[node name="StartLabel" type="Label" parent="VBoxContainer/Controls" unique_id=1825514266]
+texture_filter = 1
+layout_mode = 0
+offset_left = 107.0
+offset_top = 32.0
+offset_right = 395.0
+offset_bottom = 98.0
+text = "CONTROLS"
+label_settings = SubResource("LabelSettings_w617h")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Scores" type="TextureButton" parent="VBoxContainer" unique_id=658990756]
+layout_mode = 2
+texture_normal = ExtResource("2_kehbi")
+texture_pressed = ExtResource("3_wrsc1")
+texture_hover = ExtResource("4_h2q0p")
+texture_disabled = ExtResource("3_wrsc1")
+texture_focused = ExtResource("4_h2q0p")
+
+[node name="StartLabel" type="Label" parent="VBoxContainer/Scores" unique_id=840621223]
+texture_filter = 1
+layout_mode = 0
+offset_left = 143.0
+offset_top = 32.0
+offset_right = 362.0
+offset_bottom = 98.0
+text = "SCORES"
+label_settings = SubResource("LabelSettings_w617h")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Exit" type="TextureButton" parent="VBoxContainer" unique_id=617688232]
+layout_mode = 2
+texture_normal = ExtResource("2_kehbi")
+texture_pressed = ExtResource("3_wrsc1")
+texture_hover = ExtResource("4_h2q0p")
+texture_disabled = ExtResource("3_wrsc1")
+texture_focused = ExtResource("4_h2q0p")
+
+[node name="StartLabel" type="Label" parent="VBoxContainer/Exit" unique_id=1478523100]
+texture_filter = 1
+layout_mode = 0
+offset_left = 143.0
+offset_top = 32.0
+offset_right = 362.0
+offset_bottom = 98.0
+text = "EXIT"
+label_settings = SubResource("LabelSettings_w617h")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DramaticEffectTimer" type="Timer" parent="." unique_id=1857550548]
+one_shot = true
+
+[connection signal="mouse_entered" from="VBoxContainer/Start" to="." method="_on_start_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/Controls" to="." method="_on_controls_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/Controls" to="." method="_on_controls_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/Scores" to="." method="_on_scores_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/Scores" to="." method="_on_scores_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/Exit" to="." method="_on_exit_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="timeout" from="DramaticEffectTimer" to="." method="_on_dramatic_effect_timer_timeout"]

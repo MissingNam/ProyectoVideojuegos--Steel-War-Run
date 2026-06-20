@@ -27,6 +27,7 @@ func take_damage(damage: float) -> void:
 	health -= damage
 	if(health <= 0.0):
 		createXP()
+		GlobalGamePlayVariables.kills += 1
 		queue_free()
 
 func _physics_process(delta: float) -> void:

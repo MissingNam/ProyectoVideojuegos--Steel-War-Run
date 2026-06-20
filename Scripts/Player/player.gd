@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 class_name Player
+signal game_paused()
 
 @onready var sprite = $AnimatedSprite2D
 @onready var arm = $Player_arm
@@ -96,6 +97,10 @@ func _input(event):
 		GlobalGamePlayVariables.player_RocketBullet += 1000
 		GlobalGamePlayVariables.maxPlayerhealth += 100
 		player_cured(100)
+		
+	if event.is_action_pressed("pause"):
+		GlobalGamePlayVariables.pauseGame()
+		
 
 func _process(_delta: float) -> void:
 	arm.playerCurrentWeapon = currentGun
@@ -131,6 +136,7 @@ func player_take_damage(damage: float):
 
 		if hitpoints <= 0:
 			AudioManager.play_sfx("dead",3.0)
+			GlobalGamePlayVariables.player_died()
 			queue_free()
 
 func shootBasic():
