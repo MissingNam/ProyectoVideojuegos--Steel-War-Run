@@ -6,7 +6,7 @@ signal level_up_triggered(options: Array)
 var level : int = 1
 var player_xp : int = 0
 var xp_to_next_level : int = 10
-var player_BasicBullet: int = 0
+var player_BasicBullet: int = 10
 var player_FlameBullet: int = 0
 var player_RocketBullet: int = 0
 var player_shotGunBullet: int = 0
@@ -24,6 +24,8 @@ var flamethrowerDamageMultiplier: float = 1.0
 var flamethrowerFirerateMultiplier: float = 0.0
 var missileDamageMultiplier: float = 1.0
 var missileFirerateMultiplier: float = 0.0
+
+var activeHubris = false
 
 const WEAPON_NAMES := ["Basic", "Shotgun", "Flamethrower", "Rocketlauncher"]
 const WEAPON_VAR_PREFIX := ["gun", "shotgun", "flamethrower", "missile"]

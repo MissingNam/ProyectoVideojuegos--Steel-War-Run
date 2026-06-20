@@ -12,7 +12,7 @@ class_name streetcleaner
 const SPEED = 75.0
 const JUMP_VELOCITY = -400.0
 
-var speed = 200
+var speed = 150
 var orbit_distance = randf_range(50,150)
 
 var health : float = 1.0 * (1.05 * (GlobalGamePlayVariables.level - 4))

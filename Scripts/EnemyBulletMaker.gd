@@ -4,7 +4,8 @@ extends Node
 @export var basicBullet = preload("res://Scenes/Enemies/BasicEnemyBullet.tscn")
 @export var streetFire = preload("res://Scenes/Enemies/StreetCleanerFire.tscn")
 func _ready():
-	player_ref = get_tree().get_nodes_in_group("Player")[0]
+	
+	player_ref = get_tree().get_first_node_in_group("Player")
 
 # Called when the node enters the scene tree for the first time.
 func createBasicBullet(location : Vector2, speed : float = 1):

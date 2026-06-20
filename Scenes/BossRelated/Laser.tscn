@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://d3ud6tuva3ofb"]
+
+[ext_resource type="Script" uid="uid://chy1gyn4o4os6" path="res://Scripts/Hubrislaser.gd" id="1_7yu5l"]
+[ext_resource type="Texture2D" uid="uid://4jlgsrrclnub" path="res://Assets/MetalGearHubris/MetalGearLaser/MetalGearLaser1.png" id="2_1puiu"]
+[ext_resource type="Texture2D" uid="uid://dmmu0vekhmif" path="res://Assets/MetalGearHubris/MetalGearLaser/MetalGearLaser2.png" id="3_1ky7s"]
+[ext_resource type="Texture2D" uid="uid://brnwjn0q36e5l" path="res://Assets/MetalGearHubris/MetalGearLaser/MetalGearLaser3.png" id="4_c6c7v"]
+[ext_resource type="Texture2D" uid="uid://6h3m7gvn3gl8" path="res://Assets/MetalGearHubris/MetalGearLaser/MetalGearLaser4.png" id="5_ecr3q"]
+[ext_resource type="Texture2D" uid="uid://c7w2chs3nk24d" path="res://Assets/MetalGearHubris/MetalGearLaser/MetalGearLaser5.png" id="6_gx6ts"]
+[ext_resource type="Texture2D" uid="uid://d3gfqufo7tmyt" path="res://Assets/MetalGearHubris/MetalGearLaser/MetalGearLaser6.png" id="7_qossl"]
+[ext_resource type="Texture2D" uid="uid://h38rn4wpokey" path="res://Assets/MetalGearHubris/MetalGearLaser/MetalGearLaser7.png" id="8_li60l"]
+[ext_resource type="Texture2D" uid="uid://d0ku3rwluv1la" path="res://Assets/MetalGearHubris/MetalGearLaser/MetalGearLaser8.png" id="9_avl0a"]
+[ext_resource type="Texture2D" uid="uid://ppbvib2d5e8v" path="res://Assets/MetalGearHubris/MetalGearLaser/MetalGearLaser10.png" id="10_jabsa"]
+[ext_resource type="Texture2D" uid="uid://b6nn5qesoxiqf" path="res://Assets/MetalGearHubris/MetalGearLaser/MetalGearLaser9.png" id="11_ahgci"]
+[ext_resource type="Texture2D" uid="uid://dgjbtxvi6atl6" path="res://Assets/MetalGearHubris/MetalGearLaser/MetalGearLaser11.png" id="12_oo8et"]
+[ext_resource type="Texture2D" uid="uid://bi7paj1d8i717" path="res://Assets/MetalGearHubris/MetalGearLaser/MetalGearLaser12.png" id="13_83yda"]
+[ext_resource type="Texture2D" uid="uid://ck8l6dorediv5" path="res://Assets/MetalGearHubris/MetalGearLaser/MetalGearLaser13.png" id="14_nkgrh"]
+[ext_resource type="Texture2D" uid="uid://dw45wq64k4cmj" path="res://Assets/MetalGearHubris/MetalGearLaser/MetalGearLaser14.png" id="15_j3ddp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_875hc"]
+size = Vector2(1790, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_65esx"]
+animations = [{
+"frames": [{
+"duration": 1.5,
+"texture": ExtResource("2_1puiu")
+}, {
+"duration": 1.5,
+"texture": ExtResource("3_1ky7s")
+}, {
+"duration": 1.5,
+"texture": ExtResource("4_c6c7v")
+}, {
+"duration": 1.5,
+"texture": ExtResource("5_ecr3q")
+}, {
+"duration": 1.5,
+"texture": ExtResource("6_gx6ts")
+}, {
+"duration": 1.5,
+"texture": ExtResource("7_qossl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_li60l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_avl0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jabsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ahgci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_oo8et")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_83yda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_nkgrh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_j3ddp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="Laser" type="Area2D" unique_id=293392068]
+texture_filter = 1
+script = ExtResource("1_7yu5l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1051303807]
+position = Vector2(896, 1)
+shape = SubResource("RectangleShape2D_875hc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=566090800]
+position = Vector2(1, 0)
+scale = Vector2(7.0039063, 1)
+sprite_frames = SubResource("SpriteFrames_65esx")
+frame = 1
+offset = Vector2(128, 0)
+
+[node name="Timer" type="Timer" parent="." unique_id=525858767]
+wait_time = 0.3
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -4,6 +4,7 @@ extends Node2D
 @export var streetcleaner: PackedScene = preload("res://Scenes/Enemies/StreetCleaner/StreetCleaner.tscn")
 @export var heavy: PackedScene = preload("res://Scenes/Enemies/Heavy/HeavyEnemy.tscn")
 @export var sniper : PackedScene = preload("res://Scenes/Enemies/Sniper/Sniper.tscn")
+@export var metalGear : PackedScene = preload("res://Scenes/BossRelated/metal_gear_hubris.tscn")
 
 @export var spawn_radius_min := 1000.0
 @export var spawn_radius_max := 1400.0
@@ -59,9 +60,16 @@ func get_enemy_weights() -> Dictionary:
 			"heavy": 15,
 			"sniper": 10
 		}
+		
+
 
 
 func choose_enemy() -> String:
+	if(GlobalGamePlayVariables.level >= 15 and not GlobalGamePlayVariables.activeHubris):
+		var chance = randi_range(0,100)
+		if(chance >= 95):
+			return "hubris"
+				
 	var weights = get_enemy_weights()
 	var total_weight = 0
 	for weight in weights.values():
@@ -87,6 +95,8 @@ func spawn_enemy():
 			enemy_scene = heavy
 		"sniper":
 			enemy_scene = sniper
+		"hubris":
+			enemy_scene = metalGear
 	var enemy = enemy_scene.instantiate()
 	var distance : float
 	if enemy_type == "sniper":
@@ -111,6 +121,17 @@ func _on_spawn_timer_timeout():
 	if enemy_count >= get_max_enemies():
 		return
 	spawn_enemy()
+	
+func spawnBoss():
+	var enemy = metalGear.instantiate()
+	var distance = randf_range(
+			spawn_radius_min,
+			spawn_radius_max
+		)
+	var angle = randf() * TAU
+	var offset = Vector2.RIGHT.rotated(angle) * distance
+	enemy.global_position = global_position + offset
+	get_tree().current_scene.add_child(enemy)
 
 
 func _on_cleanup_timer_timeout():

@@ -28,6 +28,9 @@ func _on_body_entered(body):
 	if body.has_method("player_take_damage"):
 		blowUp()
 		queue_free()
+	if(body.has_method("hubris_take_damage")):
+		blowUp()
+		queue_free()
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free()

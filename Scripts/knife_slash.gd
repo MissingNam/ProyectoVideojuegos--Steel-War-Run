@@ -28,4 +28,6 @@ func _on_timer_timeout() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("take_damage"):
 		body.take_damage(damage)
+	if(body.has_method("hubris_take_damage")):
+		body.hubris_take_damage(damage)
 	pass # Replace with function body.

@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://enbsr8m07gbv"]
+
+[ext_resource type="Script" uid="uid://bf2ucpcbe0hac" path="res://Scripts/metal_gear_hubris.gd" id="1_4aexw"]
+[ext_resource type="Texture2D" uid="uid://dr5hjeetd51iu" path="res://Assets/MetalGearHubris/Full/MetalGearHubrisFull1.png" id="1_875te"]
+[ext_resource type="Texture2D" uid="uid://dkiut1r875cvo" path="res://Assets/MetalGearHubris/Full/MetalGearHubrisFull2.png" id="2_fuj8a"]
+[ext_resource type="Texture2D" uid="uid://cwfa7p7dnjhfg" path="res://Assets/MetalGearHubris/Full/MetalGearHubrisFull3.png" id="3_fv4ij"]
+[ext_resource type="Texture2D" uid="uid://r1ypvv4kev6e" path="res://Assets/MetalGearHubris/Full/MetalGearHubrisFull4.png" id="4_4aexw"]
+[ext_resource type="Texture2D" uid="uid://dvvcr34ruuca1" path="res://Assets/MetalGearHubris/Half/MetalGearHubirsHalf1.png" id="5_fv4ij"]
+[ext_resource type="Texture2D" uid="uid://b5706dv1lcit1" path="res://Assets/MetalGearHubris/Half/MetalGearHubirsHalf2.png" id="6_4aexw"]
+[ext_resource type="PackedScene" uid="uid://c0gqqf7dsshc8" path="res://Scenes/BossRelated/HubirsTurret.tscn" id="8_3fkwf"]
+[ext_resource type="PackedScene" uid="uid://dre2ref3afucx" path="res://Scenes/BossRelated/HubrisCannon.tscn" id="9_ryw20"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3fkwf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_875te")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fuj8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fv4ij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4aexw")
+}],
+"loop": true,
+"name": &"Fase1",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_fv4ij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4aexw")
+}],
+"loop": true,
+"name": &"Fase2",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_twogs"]
+size = Vector2(165, 148)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ryw20"]
+size = Vector2(427, 208)
+
+[node name="MetalGearHubris" type="CharacterBody2D" unique_id=769466230]
+texture_filter = 1
+script = ExtResource("1_4aexw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=705393214]
+position = Vector2(0, 38)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_3fkwf")
+animation = &"Fase1"
+frame = 1
+frame_progress = 0.82925737
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=237281256]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=192682297]
+position = Vector2(-0.5, 45)
+shape = SubResource("RectangleShape2D_twogs")
+
+[node name="HubirsTurret" parent="." unique_id=469442064 instance=ExtResource("8_3fkwf")]
+position = Vector2(80, 133)
+
+[node name="HubirsTurret2" parent="." unique_id=1401641117 instance=ExtResource("8_3fkwf")]
+position = Vector2(-86, 132.00002)
+
+[node name="HubrisCannon" parent="." unique_id=874033910 instance=ExtResource("9_ryw20")]
+position = Vector2(191, 124)
+
+[node name="HubrisCannon2" parent="." unique_id=1789538998 instance=ExtResource("9_ryw20")]
+position = Vector2(-193, 122)
+
+[node name="NormalHitbox" type="CollisionShape2D" parent="." unique_id=471649390]
+position = Vector2(-1, 32)
+shape = SubResource("RectangleShape2D_ryw20")
+debug_color = Color(0.47843137, 0.22352941, 0.31764707, 0.41960785)

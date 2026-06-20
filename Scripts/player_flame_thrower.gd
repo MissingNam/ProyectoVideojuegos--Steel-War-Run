@@ -21,6 +21,9 @@ func _process(delta: float) -> void:
 func _on_body_entered(body):
 	if body.has_method("take_damage"):
 		body.take_damage(damage)
+	if(body.has_method("hubris_take_damage")):
+		body.hubris_take_damage(damage)
+		queue_free()
 
 func _on_remove_timer_timeout() -> void:
 	queue_free()
@@ -28,3 +31,6 @@ func _on_remove_timer_timeout() -> void:
 func _on_body_exited(body: Node2D) -> void:
 	if body.has_method("take_damage"):
 		body.take_damage(damage)
+	if(body.has_method("hubris_take_damage")):
+		body.hubris_take_damage(damage)
+		queue_free()

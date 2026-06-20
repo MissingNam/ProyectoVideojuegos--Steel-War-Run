@@ -75,6 +75,15 @@ func _input(event):
 	if(event.is_action_pressed("weapon3")): currentGun = "Flamethrower"
 	if(event.is_action_pressed("weapon4")): currentGun = "Rocketlauncher"
 	if(event.is_action_pressed("weapon5")): currentGun = "Knife"
+	
+	if(event.is_action_pressed("SpawnBoss")):
+		get_tree().get_first_node_in_group("EnemySpawner").spawnBoss()
+		GlobalGamePlayVariables.player_BasicBullet += 1000
+		GlobalGamePlayVariables.player_shotGunBullet += 1000
+		GlobalGamePlayVariables.player_FlameBullet += 1000
+		GlobalGamePlayVariables.player_RocketBullet += 1000
+		GlobalGamePlayVariables.maxPlayerhealth += 100
+		player_cured(100)
 
 
 func _process(delta: float) ->void:
