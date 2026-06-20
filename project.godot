@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SteelWarRun"
-run/main_scene="uid://dm6k2u5r21wep"
+run/main_scene="uid://cd67apicgxpsr"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
