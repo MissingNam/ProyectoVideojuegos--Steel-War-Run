@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bkys48xhc2j1v"]
 
-[ext_resource type="Script" uid="uid://go1eudd854ya" path="res://Scripts/level_progress.gd" id="1_6ix7s"]
+[ext_resource type="Script" uid="uid://go1eudd854ya" path="res://Scripts/Player/level_progress.gd" id="1_6ix7s"]
 [ext_resource type="Texture2D" uid="uid://b252h3fiexhph" path="res://Assets/GUI/WeaponIcons.png" id="2_c7jxv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_c7jxv"]

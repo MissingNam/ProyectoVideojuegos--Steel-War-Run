@@ -3,8 +3,9 @@ extends Node
 
 var music_library = {
 	1: preload("res://Music/4S.mp3"),
-	2: preload("res://Music/SandsOfTide.mp3"),
-	3: preload("res://Music/Steel War Run OST Backgrounds.wav")
+	2: preload("res://Music/Darkness.mp3"),
+	3: preload("res://Music/Steel War Run OST Backgrounds.wav"),
+	4: preload("res://Music/Desert.mp3")
 }
 
 var boss_music = {
@@ -17,14 +18,14 @@ var reproducer : AudioStreamPlayer
 func _ready() -> void:
 	reproducer = AudioStreamPlayer.new()
 	add_child(reproducer)
-	reproducer.stream = music_library[randi_range(1,3)]
+	reproducer.stream = music_library[randi_range(1,4)]
 	reproducer.volume_db = 0.0
 	reproducer.play()
 
 
 func _process(_delta:float) -> void:
 	if not reproducer.playing and not GlobalGamePlayVariables.activeHubris:
-		reproducer.stream = music_library[randi_range(1,3)]
+		reproducer.stream = music_library[randi_range(1,4)]
 		reproducer.play()
 	elif not reproducer.playing and GlobalGamePlayVariables.activeHubris:
 		reproducer.stream = boss_music[randi_range(0,1)]

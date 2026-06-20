@@ -21,6 +21,8 @@ PlayerBulletMaker="*uid://demwcavj1mt8d"
 EnemyBulletMaker="*uid://d2dcj7ty8k7j2"
 GlobalGamePlayVariables="*uid://uhyhec3rdmc0"
 ParticlesSpawner="*uid://cfni13rfqbfgu"
+MusicManager="*uid://c835lk7kirw04"
+AudioManager="*uid://cg8xhbc6geyu4"
 
 [display]
 

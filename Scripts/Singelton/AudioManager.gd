@@ -9,7 +9,8 @@ var sfx_library = {
 	"explotion": preload("res://SFX/Explotion.wav"),
 	"ding": preload("res://SFX/ding.mp3"),
 	"pDamage": preload("res://SFX/damage.mp3"),
-	"hubirsLaser": preload("res://SFX/hubrisLaser.mp3")
+	"hubirsLaser": preload("res://SFX/hubrisLaser.mp3"),
+	"dead": preload("res://SFX/DeadSound.mp3")
 }
 
 # Pool de reproductores

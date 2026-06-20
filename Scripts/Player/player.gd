@@ -89,6 +89,7 @@ func _input(event):
 
 	if event.is_action_pressed("SpawnBoss"):
 		get_tree().get_first_node_in_group("EnemySpawner").spawnBoss()
+		MusicManager.stop()
 		GlobalGamePlayVariables.player_BasicBullet += 1000
 		GlobalGamePlayVariables.player_shotGunBullet += 1000
 		GlobalGamePlayVariables.player_FlameBullet += 1000
@@ -120,6 +121,7 @@ func player_cured(regain: int):
 
 func player_take_damage(damage: float):
 	if !iFrames:
+		AudioManager.play_sfx("pDamage",4.0)
 		hitpoints -= damage
 		iframeTimer.start(GlobalGamePlayVariables.i_frames)
 		sprite.modulate.a = 0.5
@@ -128,10 +130,12 @@ func player_take_damage(damage: float):
 		GlobalGamePlayVariables.playerHealthAlterated()
 
 		if hitpoints <= 0:
+			AudioManager.play_sfx("dead",3.0)
 			queue_free()
 
 func shootBasic():
 	canShoot = false
+	AudioManager.play_sfx("gun")
 	cooldown = 0.5 - clamp((0.5 * GlobalGamePlayVariables.gunFirerateMultiplier), 0.0, 0.5)
 
 	var location = arm.weaponSprite.global_position
@@ -145,6 +149,7 @@ func shootBasic():
 
 func shootShotGun():
 	canShoot = false
+	AudioManager.play_sfx("shotgun")
 	cooldown = 1.0 - clamp((1.0 * GlobalGamePlayVariables.shotgunFirerateMultiplier), 0.0, 1.0)
 
 	var location = arm.weaponSprite.global_position
@@ -157,6 +162,7 @@ func shootShotGun():
 	cooldownTimer.start(cooldown)
 
 func shootFire():
+	AudioManager.play_sfx("flame")
 	canShoot = false
 	cooldown = 0.1
 
@@ -171,6 +177,7 @@ func shootFire():
 
 func shootMissile():
 	canShoot = false
+	AudioManager.play_sfx("launch")
 	cooldown = 3.5 - clamp((3.5 * GlobalGamePlayVariables.missileFirerateMultiplier), 0.0, 3.5)
 
 	var location = arm.weaponSprite.global_position
