@@ -8,7 +8,7 @@ class_name heavy
 @onready var hitbox = $Hitbox
 @onready var player_ref : Player
 @onready var cooldown = $Timer
-@export var xpParticle = preload("res://Scenes/xp_point.tscn")
+@export var xpParticle = preload("res://Scenes/Items/xp_point.tscn")
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0

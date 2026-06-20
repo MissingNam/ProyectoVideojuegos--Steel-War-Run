@@ -34,7 +34,7 @@ height = 28.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vj441"]
 radius = 9.0
 
-[node name="BasicEnemy" type="CharacterBody2D" unique_id=1757690099 groups=["Enemies", "Human", "Organic"]]
+[node name="BasicEnemy" type="CharacterBody2D" unique_id=1757690099 groups=["Enemies"]]
 script = ExtResource("1_vj441")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1961710628]

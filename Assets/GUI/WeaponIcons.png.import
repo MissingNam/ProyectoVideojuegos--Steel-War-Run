@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy5jjmolf54dw"
-path="res://.godot/imported/RegularBullets.png-807a4c065b9da92eee8a7e8be13af178.ctex"
+uid="uid://b252h3fiexhph"
+path="res://.godot/imported/WeaponIcons.png-e546ad1382a2ea1c74e66b9e65ebfeb6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/LootBox/RegularBullets.png"
-dest_files=["res://.godot/imported/RegularBullets.png-807a4c065b9da92eee8a7e8be13af178.ctex"]
+source_file="res://Assets/GUI/WeaponIcons.png"
+dest_files=["res://.godot/imported/WeaponIcons.png-e546ad1382a2ea1c74e66b9e65ebfeb6.ctex"]
 
 [params]
 

@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://bkys48xhc2j1v"]
+
+[ext_resource type="Script" uid="uid://go1eudd854ya" path="res://Scripts/level_progress.gd" id="1_6ix7s"]
+[ext_resource type="Texture2D" uid="uid://b252h3fiexhph" path="res://Assets/GUI/WeaponIcons.png" id="2_c7jxv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_c7jxv"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_2m7un"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_8em7b"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_0tx7a"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_4huum"]
+font_size = 30
+
+[node name="LevelProgress" type="CanvasLayer" unique_id=651357887 groups=["XPGUI"]]
+script = ExtResource("1_6ix7s")
+
+[node name="Control" type="Control" parent="." unique_id=1371588692]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LevelLabel" type="Label" parent="Control" unique_id=896884587]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 14.0
+offset_right = 122.0
+offset_bottom = 56.0
+text = "Nivel: 1"
+label_settings = SubResource("LabelSettings_c7jxv")
+
+[node name="HealthLabel" type="Label" parent="Control" unique_id=814690128]
+layout_mode = 0
+offset_left = 1141.0
+offset_top = 14.0
+offset_right = 1248.0
+offset_bottom = 56.0
+text = "Vida"
+label_settings = SubResource("LabelSettings_c7jxv")
+horizontal_alignment = 2
+
+[node name="XPBar" type="ProgressBar" parent="Control" unique_id=675530267]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 18.0
+offset_right = 371.0
+offset_bottom = 58.0
+show_percentage = false
+
+[node name="HealthBar" type="ProgressBar" parent="Control" unique_id=73340268]
+layout_mode = 0
+offset_left = 930.0
+offset_top = 18.0
+offset_right = 1170.0
+offset_bottom = 58.0
+fill_mode = 1
+show_percentage = false
+
+[node name="PistolaLabel" type="Label" parent="Control" unique_id=1084125838]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 76.0
+offset_right = 234.0
+offset_bottom = 118.0
+text = "0"
+label_settings = SubResource("LabelSettings_2m7un")
+
+[node name="EscopetaLabel" type="Label" parent="Control" unique_id=565929416]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 126.0
+offset_right = 234.0
+offset_bottom = 168.0
+text = "0"
+label_settings = SubResource("LabelSettings_8em7b")
+
+[node name="MisilLabel" type="Label" parent="Control" unique_id=828989085]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 175.0
+offset_right = 233.0
+offset_bottom = 217.0
+text = "0"
+label_settings = SubResource("LabelSettings_0tx7a")
+
+[node name="FlamaLabel" type="Label" parent="Control" unique_id=532922450]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 225.0
+offset_right = 234.0
+offset_bottom = 267.0
+text = "0"
+label_settings = SubResource("LabelSettings_4huum")
+
+[node name="WeaponIcons" type="TextureRect" parent="." unique_id=526349740]
+offset_left = 17.0
+offset_top = 74.0
+offset_right = 909.25183
+offset_bottom = 1644.3632
+scale = Vector2(0.15466486, 0.15466486)
+texture = ExtResource("2_c7jxv")

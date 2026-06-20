@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://d2n8wnhevbcx4"]
+
+[ext_resource type="Script" uid="uid://c0k25aunwb2uy" path="res://Scripts/blood.gd" id="1_rgh2v"]
+
+[node name="Blood" type="Node2D" unique_id=2039935596]
+script = ExtResource("1_rgh2v")
+
+[node name="Blood" type="CPUParticles2D" parent="." unique_id=736224918]
+emitting = false
+amount = 20
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+lifetime_randomness = 1.0
+direction = Vector2(0, -5)
+spread = 30.0
+gravity = Vector2(0, 490)
+initial_velocity_min = 50.0
+initial_velocity_max = 120.0
+scale_amount_max = 3.0
+color = Color(0.78431374, 0.078431375, 0.078431375, 1)
+
+[node name="Timer" type="Timer" parent="." unique_id=1110946587]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

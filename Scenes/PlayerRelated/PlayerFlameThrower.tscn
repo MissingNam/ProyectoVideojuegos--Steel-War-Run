@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dypua7muvbwm1" path="res://Assets/ProtagonistRelated/FlameThrowerFire/fire_shot6.png" id="8_61i3g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l0mwn"]
-radius = 17.117243
+radius = 5.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3mcrb"]
 animations = [{
@@ -44,15 +44,16 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="PlayerFlameThrower" type="Area2D" unique_id=237628581]
+[node name="PlayerFlameThrower" type="Area2D" unique_id=237628581 groups=["Flame"]]
 script = ExtResource("1_u2vxy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1696250245]
 shape = SubResource("CircleShape2D_l0mwn")
-debug_color = Color(1, 0, 0, 0.41960785)
+debug_color = Color(1, 0, 0, 0.15686275)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=711669673]
 texture_filter = 1
+scale = Vector2(0.3794277, 0.3794277)
 sprite_frames = SubResource("SpriteFrames_3mcrb")
 frame_progress = 0.49632365
 

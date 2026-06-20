@@ -2,7 +2,7 @@ extends Node
 
 @export var basicB = preload("res://Scenes/PlayerRelated/player_bullet.tscn")
 @export var flame = preload("res://Scenes/PlayerRelated/PlayerFlameThrower.tscn")
-@export var missile = preload("res://Scenes/Missile.tscn")
+@export var missile = preload("res://Scenes/PlayerRelated/Missile.tscn")
 @export var slash = preload("res://Scenes/PlayerRelated/knifeSlash.tscn")
 
 func createBasicPlayerBullet(location : Vector2, angle : Vector2): 

@@ -7,6 +7,7 @@ func _ready():
 	GlobalGamePlayVariables.level_up_triggered.connect(_on_level_up)
 	hide()
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	
 
 func _on_level_up(options: Array) -> void:
 	current_options = options

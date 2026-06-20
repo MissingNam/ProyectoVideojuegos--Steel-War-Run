@@ -22,7 +22,7 @@ animations = [{
 radius = 4.0
 
 [node name="BasicEnemyBullet" type="Area2D" unique_id=1811219951]
-scale = Vector2(1.5, 1.5)
+scale = Vector2(0.9000007, 0.9000007)
 script = ExtResource("1_j3ckn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=165088025]

@@ -12,11 +12,12 @@ func _process(delta):
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free()
 
-
 func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("take_damage"):
 		body.take_damage(damage)
 		queue_free()
-	if(body.has_method("hubris_take_damage")):
+	if body.has_method("hubris_take_damage"):
 		body.hubris_take_damage(damage)
 		queue_free()
+	if body.is_in_group("Human"):
+		ParticlesSpawner.create_blood(global_position)
