@@ -37,7 +37,7 @@ size = Vector2(15, 31)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dr5jo"]
 size = Vector2(9, 29)
 
-[node name="StreetCleaner" type="CharacterBody2D" unique_id=549640858]
+[node name="StreetCleaner" type="CharacterBody2D" unique_id=549640858 groups=["Enemies", "Human", "Organic"]]
 script = ExtResource("1_rmi1u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=701830992]

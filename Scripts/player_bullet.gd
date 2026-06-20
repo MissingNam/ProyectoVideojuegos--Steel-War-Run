@@ -19,5 +19,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("hubris_take_damage"):
 		body.hubris_take_damage(damage)
 		queue_free()
-	if body.is_in_group("Human"):
+	if body.is_in_group("Human") and !body.is_in_group("Player"):
 		ParticlesSpawner.create_blood(global_position)
+	if body.is_in_group("Cactus"):
+		ParticlesSpawner.create_cactus_particles(body.global_position)

@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://c407wo4w48rhr"]
+
+[ext_resource type="Texture2D" uid="uid://df34epjrmewea" path="res://Assets/Decoration/cactus_particle.png" id="1_l5is4"]
+[ext_resource type="Script" uid="uid://184o6dmxkl60" path="res://Scripts/cactus_particles.gd" id="1_ph4yb"]
+
+[node name="CactusParticles" type="Node2D" unique_id=346014857]
+script = ExtResource("1_ph4yb")
+
+[node name="Particles" type="CPUParticles2D" parent="." unique_id=323524832]
+position = Vector2(0, -23)
+emitting = false
+amount = 3
+texture = ExtResource("1_l5is4")
+lifetime = 0.7
+one_shot = true
+explosiveness = 1.0
+lifetime_randomness = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(7.435, 23.835)
+direction = Vector2(0, -1)
+spread = 30.0
+gravity = Vector2(0, 490)
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+angular_velocity_min = -500.0
+angular_velocity_max = 500.0
+scale_amount_min = 0.15
+scale_amount_max = 0.15
+
+[node name="DeleteTimer" type="Timer" parent="." unique_id=518123155]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="DeleteTimer" to="." method="_on_delete_timer_timeout"]

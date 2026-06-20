@@ -22,7 +22,7 @@ func _on_body_entered(body):
 	if body.has_method("hubris_take_damage"):
 		body.hubris_take_damage(damage)
 		queue_free()
-	if body.is_in_group("Organic"):
+	if body.is_in_group("Organic") and !body.is_in_group("Player") and !body.has_node("Fire"):
 		ParticlesSpawner.create_fire(body)
 		
 func _on_remove_timer_timeout() -> void:
