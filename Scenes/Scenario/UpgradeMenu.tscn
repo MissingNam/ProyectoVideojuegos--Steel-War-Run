@@ -6,22 +6,23 @@
 script = ExtResource("1_oa8d4")
 
 [node name="Button1" type="Button" parent="." unique_id=1685355548]
-offset_left = 99.0
-offset_top = 135.0
-offset_right = 276.0
-offset_bottom = 430.0
+offset_left = 512.0
+offset_top = 224.0
+offset_right = 768.0
+offset_bottom = 352.0
+autowrap_mode = 2
 
 [node name="Button2" type="Button" parent="." unique_id=1753103966]
-offset_left = 433.0
-offset_top = 129.0
-offset_right = 620.0
-offset_bottom = 431.0
+offset_left = 512.0
+offset_top = 384.0
+offset_right = 768.0
+offset_bottom = 512.0
 
 [node name="Button3" type="Button" parent="." unique_id=1931293754]
-offset_left = 743.0
-offset_top = 134.0
-offset_right = 930.0
-offset_bottom = 417.0
+offset_left = 512.0
+offset_top = 544.0
+offset_right = 768.0
+offset_bottom = 672.0
 
 [connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

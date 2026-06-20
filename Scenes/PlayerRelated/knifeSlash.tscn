@@ -29,13 +29,10 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("7_ijop2")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 10.0
 }]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_0dtr5"]
-radius = 35.014282
 
 [node name="KnifeSlash" type="Area2D" unique_id=1682332030]
 script = ExtResource("1_qo42f")
@@ -43,14 +40,15 @@ script = ExtResource("1_qo42f")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=501578129]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_fxx0k")
-frame_progress = 0.2707383
+frame = 3
+frame_progress = 0.14202219
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2083147333]
-shape = SubResource("CircleShape2D_0dtr5")
-debug_color = Color(1, 0, 0, 0.41960785)
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=1354246255]
+modulate = Color(1, 0, 0, 0.15686275)
+polygon = PackedVector2Array(-29, -15, -15, -23, 10, -24, 25, -16, 29, -7, 27, 2, 16, 11, 2, 13, -14, 11, -29, 4)
 
 [node name="Timer" type="Timer" parent="." unique_id=960008601]
-wait_time = 0.5
+wait_time = 0.3
 autostart = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

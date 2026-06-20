@@ -10,8 +10,6 @@ func _ready():
 	sprite.play("default")
 	rotation = direction.angle()
 	
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	scale.x += 0.07
 	scale.y += 0.07
@@ -21,10 +19,12 @@ func _process(delta: float) -> void:
 func _on_body_entered(body):
 	if body.has_method("take_damage"):
 		body.take_damage(damage)
-	if(body.has_method("hubris_take_damage")):
+	if body.has_method("hubris_take_damage"):
 		body.hubris_take_damage(damage)
 		queue_free()
-
+	if body.is_in_group("Organic") and !body.is_in_group("Player") and !body.has_node("Fire"):
+		ParticlesSpawner.create_fire(body)
+		
 func _on_remove_timer_timeout() -> void:
 	queue_free()
 

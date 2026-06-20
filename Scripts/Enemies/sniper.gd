@@ -7,7 +7,7 @@ class_name sniper
 @onready var pointTimer = $PointingTimer
 @onready var player_ref = Player
 @onready var arm = $SniperArm
-@export var xpParticle = preload("res://Scenes/xp_point.tscn")
+@export var xpParticle = preload("res://Scenes/Items/xp_point.tscn")
 
 const SPEED = 300.0
 var alarma_activa

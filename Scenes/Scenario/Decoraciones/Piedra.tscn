@@ -1,19 +1,16 @@
 [gd_scene format=3 uid="uid://dk3vp4efv3c3f"]
 
-[ext_resource type="Script" uid="uid://c8gx35uod4mc3" path="res://Scripts/Map/cactus.gd" id="1_qqpov"]
+[ext_resource type="Script" uid="uid://c4f8f6jmylo3v" path="res://Scripts/piedra.gd" id="1_qqpov"]
 [ext_resource type="Texture2D" uid="uid://ce1h4wl05wqd5" path="res://Assets/Decoration/rock.png" id="2_0hwmd"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_naryq"]
-size = Vector2(51, 41)
-
-[node name="Piedra" type="StaticBody2D" unique_id=2022234594]
+[node name="Piedra" type="StaticBody2D" unique_id=2022234594 groups=["Rock"]]
 texture_filter = 1
 script = ExtResource("1_qqpov")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1512298521]
-position = Vector2(2, 0)
-shape = SubResource("RectangleShape2D_naryq")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=356957817]
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_0hwmd")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=1492426150]
+position = Vector2(2, 0)
+polygon = PackedVector2Array(-8, -23, 4, -19, 10, -19, 23, -14, 23, 8, 17, 13, 11, 13, 9, 12, 9, 20, 0, 24, -6, 24, -10, 21, -10, 16, -13, 18, -28, 6, -28, -14)

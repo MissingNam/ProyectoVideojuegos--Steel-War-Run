@@ -1,14 +1,13 @@
 extends StaticBody2D
 
-
 @onready var sprite = $AnimatedSprite2D
+@onready var coll = $CollisionShape2D
 var loot : String = "Basic"
 var amount : int
 var broken : bool = false
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	sprite.play("default")
+	sprite.play("Box")
 	var index = randi_range(0,5)
 	match index:
 		0: loot = "Basic"
@@ -28,6 +27,7 @@ func _ready() -> void:
 		amount = 1
 
 func take_damage(damage: float) -> void:
+	coll.set_deferred("disabled", true)
 	match (loot):
 		"Basic": sprite.play("Regular")
 		"ShotGun": sprite.play("ShootGun")
@@ -36,7 +36,7 @@ func take_damage(damage: float) -> void:
 		"Health": sprite.play("Medic")
 		"Upgrade": sprite.play("Upgrade")
 	broken = true
-
+	ParticlesSpawner.create_box_particles(global_position)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if(body.is_in_group("Player") and broken == true):

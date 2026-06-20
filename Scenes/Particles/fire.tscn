@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cv4jpo5eowc6f"]
+
+[ext_resource type="Script" uid="uid://c8261mf4supjm" path="res://Scripts/fire.gd" id="1_8ncsx"]
+
+[sub_resource type="Curve" id="Curve_fetqo"]
+_limits = [0.5, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1.5698344), 0.0, -1.7516875, 0, 0, Vector2(1, 0.5), -1.1479594, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_fetqo"]
+offsets = PackedFloat32Array(0, 0.11764706, 0.26989618, 0.51557094, 0.7301038, 0.8685121, 1)
+colors = PackedColorArray(1, 0.95500004, 0.55, 1, 1, 0.70949996, 0.17000002, 1, 1, 0.48433334, 0.089999974, 1, 0.76, 0.11399998, 0, 1, 0.53, 0.070666656, 0, 1, 0.23, 0.1426, 0.1426, 1, 0.13, 0.13, 0.13, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ncsx"]
+
+[node name="Fire" type="Node2D" unique_id=1425615584 groups=["Fire"]]
+script = ExtResource("1_8ncsx")
+
+[node name="FireParticles" type="CPUParticles2D" parent="." unique_id=1999313749]
+z_index = 1
+amount = 150
+lifetime = 0.4
+lifetime_randomness = 1.0
+emission_shape = 1
+emission_sphere_radius = 9.87
+gravity = Vector2(0, -490)
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_fetqo")
+color_ramp = SubResource("Gradient_fetqo")
+
+[node name="HitBox" type="Area2D" parent="." unique_id=2060116815]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=242697633]
+shape = SubResource("CircleShape2D_8ncsx")
+debug_color = Color(1, 1, 0, 0.15686275)
+
+[node name="DeleteTimer" type="Timer" parent="." unique_id=1881939188]
+wait_time = 3.0
+
+[node name="HitCooldown" type="Timer" parent="." unique_id=1138982640]
+
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
+[connection signal="timeout" from="DeleteTimer" to="." method="_on_delete_timer_timeout"]
+[connection signal="timeout" from="HitCooldown" to="." method="_on_hit_cooldown_timeout"]

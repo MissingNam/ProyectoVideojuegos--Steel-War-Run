@@ -20,12 +20,20 @@ config/icon="res://icon.svg"
 PlayerBulletMaker="*uid://demwcavj1mt8d"
 EnemyBulletMaker="*uid://d2dcj7ty8k7j2"
 GlobalGamePlayVariables="*uid://uhyhec3rdmc0"
-AudioManager="*uid://cg8xhbc6geyu4"
-MusicManager="*uid://c835lk7kirw04"
+ParticlesSpawner="*uid://cfni13rfqbfgu"
+
+[display]
+
+window/size/viewport_width=1267
+window/size/viewport_height=950
 
 [global_group]
 
 Enemies=""
+Organic=""
+Human=""
+Cactus=""
+Rock=""
 
 [input]
 
@@ -87,6 +95,8 @@ SpawnBoss={
 
 [physics]
 
+common/physics_ticks_per_second=180
+common/max_physics_steps_per_frame=16
 3d/physics_engine="Jolt Physics"
 
 [rendering]

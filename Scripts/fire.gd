@@ -1,0 +1,18 @@
+extends Node2D
+
+func _ready() -> void:
+	$DeleteTimer.start()
+	$HitCooldown.start()
+
+func _on_delete_timer_timeout() -> void:
+	queue_free()
+
+func _on_hit_cooldown_timeout() -> void:
+	if get_parent().has_method("take_damage"):
+		get_parent().take_damage(1)
+	if get_parent().has_method("player_take_damage"):
+		get_parent().player_take_damage(1)
+
+func _on_hit_box_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Organic") and !body.has_node("Fire"):
+		ParticlesSpawner.create_fire(body)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bafrfmx2s7hh1"
-path="res://.godot/imported/MedicBox.png-1b775aa7c967a35d495b9f865a915526.ctex"
+uid="uid://dryhq4aquq3mx"
+path="res://.godot/imported/box_particle.png-e72a0af03b4c8d1007ff0d21560fd9e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/LootBox/MedicBox.png"
-dest_files=["res://.godot/imported/MedicBox.png-1b775aa7c967a35d495b9f865a915526.ctex"]
+source_file="res://Assets/LootBox/box_particle.png"
+dest_files=["res://.godot/imported/box_particle.png-e72a0af03b4c8d1007ff0d21560fd9e0.ctex"]
 
 [params]
 

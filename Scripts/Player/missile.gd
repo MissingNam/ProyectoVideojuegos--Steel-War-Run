@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var explosion = preload("res://Scenes/MissileExplosion.tscn")
+@export var explosion = preload("res://Scenes/PlayerRelated/MissileExplosion.tscn")
 
 var speed = 500.0
 var direction := Vector2.ZERO

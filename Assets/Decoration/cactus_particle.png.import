@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca8yfehs8ky06"
-path="res://.godot/imported/UpgradeBox1.png-79991797c94b2fb8f8c23370b315cec1.ctex"
+uid="uid://df34epjrmewea"
+path="res://.godot/imported/cactus_particle.png-bcbe37cbbaf01eaadb90a477a66336b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/LootBox/UpgradeBox1.png"
-dest_files=["res://.godot/imported/UpgradeBox1.png-79991797c94b2fb8f8c23370b315cec1.ctex"]
+source_file="res://Assets/Decoration/cactus_particle.png"
+dest_files=["res://.godot/imported/cactus_particle.png-bcbe37cbbaf01eaadb90a477a66336b7.ctex"]
 
 [params]
 

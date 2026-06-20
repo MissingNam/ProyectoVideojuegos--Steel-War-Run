@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dytiq5ecshv08"]
+
+[ext_resource type="Texture2D" uid="uid://dryhq4aquq3mx" path="res://Assets/LootBox/box_particle.png" id="1_6gf82"]
+[ext_resource type="Script" uid="uid://d15s7qwfof4if" path="res://Scripts/box_particles.gd" id="1_vk25s"]
+
+[node name="BoxParticles" type="Node2D" unique_id=371132567]
+script = ExtResource("1_vk25s")
+
+[node name="Particles" type="CPUParticles2D" parent="." unique_id=1924810900]
+z_index = 1
+emitting = false
+amount = 3
+texture = ExtResource("1_6gf82")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+lifetime_randomness = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(10, 10)
+direction = Vector2(0, -1)
+spread = 30.0
+gravity = Vector2(0, 490)
+initial_velocity_min = 50.0
+initial_velocity_max = 120.0
+angular_velocity_min = -500.0
+angular_velocity_max = 500.0
+scale_amount_min = 0.2
+scale_amount_max = 0.2
+
+[node name="DeleteTimer" type="Timer" parent="." unique_id=700330870]
+
+[connection signal="timeout" from="DeleteTimer" to="." method="_on_delete_timer_timeout"]

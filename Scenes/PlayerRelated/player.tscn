@@ -34,16 +34,16 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walking",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3wgy"]
-size = Vector2(17, 32)
+size = Vector2(14, 27)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3smsa"]
-radius = 8.0
+radius = 7.0
 
-[node name="Player" type="CharacterBody2D" unique_id=253443307 groups=["Player"]]
+[node name="Player" type="CharacterBody2D" unique_id=253443307 groups=["Human", "Organic", "Player"]]
 script = ExtResource("1_x3wgy")
 player_bullet = ExtResource("2_ny0ry")
 
@@ -51,15 +51,16 @@ player_bullet = ExtResource("2_ny0ry")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_pu2lt")
 animation = &"Idle"
+frame_progress = 0.7152496
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1763597045]
-position = Vector2(-1.5, 0)
+position = Vector2(-1, 2.5)
 shape = SubResource("RectangleShape2D_x3wgy")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1928337867]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=537718077]
-position = Vector2(-2, 0)
+position = Vector2(-1, 1)
 shape = SubResource("CapsuleShape2D_3smsa")
 debug_color = Color(1, 0, 0.1086965, 0.41960785)
 
@@ -74,8 +75,6 @@ autostart = true
 [node name="IFrameTimer" type="Timer" parent="." unique_id=20199066]
 one_shot = true
 autostart = true
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=760601592]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="IFrameTimer" to="." method="_on_i_frame_timer_timeout"]

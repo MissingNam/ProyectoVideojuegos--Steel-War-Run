@@ -4,14 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://bjqr5gtrat5jr" path="res://Assets/rocket.png" id="2_0tsf4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tfoha"]
-size = Vector2(33, 11)
+size = Vector2(12, 10)
 
 [node name="Missile" type="Area2D" unique_id=2116488503]
 z_index = -2
 script = ExtResource("1_3yf48")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2127071722]
-position = Vector2(0.5, -0.5)
+position = Vector2(9, 0)
 shape = SubResource("RectangleShape2D_tfoha")
 debug_color = Color(0.99215686, 0, 0, 0.41960785)
 
