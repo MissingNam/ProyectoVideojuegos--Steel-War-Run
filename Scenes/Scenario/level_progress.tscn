@@ -44,10 +44,10 @@ label_settings = SubResource("LabelSettings_c7jxv")
 
 [node name="HealthLabel" type="Label" parent="Control" unique_id=814690128]
 layout_mode = 0
-offset_left = 1141.0
-offset_top = 14.0
-offset_right = 1248.0
-offset_bottom = 56.0
+offset_left = 1132.0
+offset_top = 12.0
+offset_right = 1239.0
+offset_bottom = 54.0
 text = "vida"
 label_settings = SubResource("LabelSettings_c7jxv")
 horizontal_alignment = 2
@@ -62,10 +62,10 @@ show_percentage = false
 
 [node name="HealthBar" type="ProgressBar" parent="Control" unique_id=73340268]
 layout_mode = 0
-offset_left = 828.0
-offset_top = 9.0
-offset_right = 1133.0
-offset_bottom = 49.0
+offset_left = 811.0
+offset_top = 8.0
+offset_right = 1116.0
+offset_bottom = 48.0
 fill_mode = 1
 show_percentage = false
 
