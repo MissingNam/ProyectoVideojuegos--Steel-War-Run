@@ -38,22 +38,24 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 12.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_piwhl"]
-radius = 14.142136
+radius = 5.0
 
 [node name="StreetCleanerFire" type="Area2D" unique_id=773400211]
 script = ExtResource("1_o77p8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1845816107]
 texture_filter = 1
+scale = Vector2(0.379, 0.379)
 sprite_frames = SubResource("SpriteFrames_m16kn")
+frame_progress = 0.84923536
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=907783252]
 shape = SubResource("CircleShape2D_piwhl")
-debug_color = Color(1, 1, 0, 0.41960785)
+debug_color = Color(1, 0, 0, 0.15686275)
 
 [node name="RemoveTimer" type="Timer" parent="." unique_id=1681335148]
 wait_time = 0.5

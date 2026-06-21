@@ -6,6 +6,15 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tfoha"]
 size = Vector2(12, 10)
 
+[sub_resource type="Curve" id="Curve_aecd7"]
+_limits = [1.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1.6071428), 0.0, -1.1012802, 0, 0, Vector2(0.52380955, 1), -1.1452093, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_aecd7"]
+offsets = PackedFloat32Array(0, 0.096885815, 0.3529412, 0.5467128, 0.7543253, 1)
+colors = PackedColorArray(1, 0.916, 0.58000004, 1, 1, 0.688, 0.22000003, 1, 1, 0.4666667, 0, 1, 0.93, 0.34100002, 0, 1, 0.7, 0.22166666, 0, 1, 0.32, 0.047999993, 0, 1)
+
 [node name="Missile" type="Area2D" unique_id=2116488503]
 z_index = -2
 script = ExtResource("1_3yf48")
@@ -21,6 +30,23 @@ scale = Vector2(2, 2)
 texture = ExtResource("2_0tsf4")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=704238988]
+
+[node name="Particles" type="CPUParticles2D" parent="." unique_id=1141895704]
+z_index = -1
+position = Vector2(-12, 0)
+amount = 128
+lifetime_randomness = 1.0
+emission_shape = 1
+emission_sphere_radius = 4.75
+direction = Vector2(-1, 0)
+spread = 30.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 150.0
+scale_amount_min = 1.5
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_aecd7")
+color_ramp = SubResource("Gradient_aecd7")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
