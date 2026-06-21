@@ -1,6 +1,5 @@
 extends Node
 
-
 var sfx_library = {
 	"gun": preload("res://SFX/pistol_shot.wav"),
 	"shotgun": preload("res://SFX/shotgun_shot.wav"),

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://3bhp4juaa2tk"]
+
+[ext_resource type="Script" uid="uid://dwt03rqa5a5mh" path="res://Scripts/rock_particles.gd" id="1_4pqvw"]
+[ext_resource type="Texture2D" uid="uid://dxbuv4hcyxm23" path="res://Assets/Decoration/rock_particle.png" id="1_kep0s"]
+
+[node name="RockParticles" type="Node2D" unique_id=824539404]
+script = ExtResource("1_4pqvw")
+
+[node name="Particles" type="CPUParticles2D" parent="." unique_id=553530699]
+z_index = 1
+emitting = false
+amount = 3
+texture = ExtResource("1_kep0s")
+lifetime = 0.7
+one_shot = true
+explosiveness = 1.0
+lifetime_randomness = 0.5
+direction = Vector2(0, -1)
+spread = 30.0
+gravity = Vector2(0, 490)
+initial_velocity_min = 50.0
+initial_velocity_max = 150.0
+angular_velocity_min = -500.0
+angular_velocity_max = 500.0
+scale_amount_min = 0.5
+scale_amount_max = 1.5
+
+[node name="DeleteTimer" type="Timer" parent="." unique_id=1663695934]
+autostart = true
+
+[connection signal="timeout" from="DeleteTimer" to="." method="_on_delete_timer_timeout"]

@@ -9,6 +9,8 @@ var damage: float = 0.2
 func _ready():
 	sprite.play("default")
 	rotation = direction.angle()
+	if direction.x < 0:
+		sprite.flip_v = true
 	
 func _process(delta: float) -> void:
 	scale.x += 0.07

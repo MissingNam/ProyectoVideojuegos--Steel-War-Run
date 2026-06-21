@@ -23,3 +23,5 @@ func _on_body_entered(body: Node2D) -> void:
 		ParticlesSpawner.create_blood(global_position)
 	if body.is_in_group("Cactus"):
 		ParticlesSpawner.create_cactus_particles(body.global_position)
+	if body.is_in_group("Rock"):
+		ParticlesSpawner.create_rock_particles(global_position)

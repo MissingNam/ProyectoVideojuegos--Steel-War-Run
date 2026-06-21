@@ -24,5 +24,10 @@ func _on_body_entered(body: Node2D) -> void:
 		queue_free()
 	if body.is_in_group("Human") and !body.is_in_group("Enemies"):
 		ParticlesSpawner.create_blood(global_position)
+		queue_free()
 	if body.is_in_group("Cactus"):
 		ParticlesSpawner.create_cactus_particles(body.global_position)
+		queue_free()
+	if body.is_in_group("Rock"):
+		ParticlesSpawner.create_rock_particles(global_position)
+		queue_free()

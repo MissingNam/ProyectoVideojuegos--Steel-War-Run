@@ -32,7 +32,7 @@ func beginEnd():
 func _on_menu_button_pressed() -> void:
 	MusicManager.pauseMusic()
 	get_tree().change_scene_to_file("res://Scenes/Scenario/main_menu.tscn")
-
+	
 func _on_menu_button_mouse_entered() -> void:
 	AudioManager.play_sfx("ding")
 
@@ -57,7 +57,7 @@ func showLevel():
 		levelLabel.text = str("level: ",effectCounter)
 		timer.start(0.1)
 	else:
-		AudioManager.play_sfx("impact")
+		AudioManager.play_sfx("impact", -10)
 		score += 100 * effectCounter
 		current = "Xp"
 		effectCounter = 0
