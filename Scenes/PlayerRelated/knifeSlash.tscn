@@ -45,7 +45,7 @@ frame_progress = 0.14202219
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=1354246255]
 modulate = Color(1, 0, 0, 0.15686275)
-polygon = PackedVector2Array(-29, -15, -15, -23, 10, -24, 25, -16, 29, -7, 27, 2, 16, 11, 2, 13, -14, 11, -29, 4)
+polygon = PackedVector2Array(-14, -16, -13, -24, 10, -24, 25, -16, 29, -7, 27, 2, 16, 11, 2, 13, -14, 11, -13, 6, 5, 3, 12, -5, 6, -15)
 
 [node name="Timer" type="Timer" parent="." unique_id=960008601]
 wait_time = 0.3

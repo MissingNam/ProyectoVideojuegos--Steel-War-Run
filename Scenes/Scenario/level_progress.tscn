@@ -35,37 +35,39 @@ offset_bottom = 40.0
 
 [node name="LevelLabel" type="Label" parent="Control" unique_id=896884587]
 layout_mode = 0
-offset_left = 15.0
+offset_left = 16.0
 offset_top = 14.0
-offset_right = 122.0
+offset_right = 176.0
 offset_bottom = 56.0
 text = "nivel: 1"
 label_settings = SubResource("LabelSettings_c7jxv")
+vertical_alignment = 1
 
 [node name="HealthLabel" type="Label" parent="Control" unique_id=814690128]
 layout_mode = 0
-offset_left = 1132.0
-offset_top = 12.0
-offset_right = 1239.0
-offset_bottom = 54.0
+offset_left = 1144.0
+offset_top = 14.0
+offset_right = 1251.0
+offset_bottom = 56.0
 text = "vida"
 label_settings = SubResource("LabelSettings_c7jxv")
 horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="XPBar" type="ProgressBar" parent="Control" unique_id=675530267]
 layout_mode = 0
-offset_left = 191.0
-offset_top = 8.0
-offset_right = 467.0
-offset_bottom = 48.0
+offset_left = 195.0
+offset_top = 12.0
+offset_right = 471.0
+offset_bottom = 52.0
 show_percentage = false
 
 [node name="HealthBar" type="ProgressBar" parent="Control" unique_id=73340268]
 layout_mode = 0
-offset_left = 811.0
-offset_top = 8.0
-offset_right = 1116.0
-offset_bottom = 48.0
+offset_left = 824.0
+offset_top = 12.0
+offset_right = 1129.0
+offset_bottom = 52.0
 fill_mode = 1
 show_percentage = false
 
@@ -77,6 +79,7 @@ offset_right = 234.0
 offset_bottom = 118.0
 text = "0"
 label_settings = SubResource("LabelSettings_2m7un")
+vertical_alignment = 1
 
 [node name="EscopetaLabel" type="Label" parent="Control" unique_id=565929416]
 layout_mode = 0
@@ -86,15 +89,17 @@ offset_right = 234.0
 offset_bottom = 168.0
 text = "0"
 label_settings = SubResource("LabelSettings_8em7b")
+vertical_alignment = 1
 
 [node name="MisilLabel" type="Label" parent="Control" unique_id=828989085]
 layout_mode = 0
-offset_left = 169.0
+offset_left = 170.0
 offset_top = 175.0
-offset_right = 233.0
+offset_right = 234.0
 offset_bottom = 217.0
 text = "0"
 label_settings = SubResource("LabelSettings_0tx7a")
+vertical_alignment = 1
 
 [node name="FlamaLabel" type="Label" parent="Control" unique_id=532922450]
 layout_mode = 0
@@ -104,6 +109,7 @@ offset_right = 234.0
 offset_bottom = 267.0
 text = "0"
 label_settings = SubResource("LabelSettings_4huum")
+vertical_alignment = 1
 
 [node name="WeaponIcons" type="TextureRect" parent="." unique_id=526349740]
 offset_left = 17.0

@@ -18,15 +18,15 @@ var xp_style
 var hp_style : StyleBoxFlat
 
 func _ready() -> void:
-	weaponIcons.modulate.a = 0.6
-	levelLabel.modulate.a = 0.6
-	healthLabel.modulate.a = 0.6
-	xpBar.modulate.a = 0.6
-	healthBar.modulate.a = 0.6
-	gunLabel.modulate.a = 0.6
-	shotLabel.modulate.a = 0.6
-	flameLabel.modulate.a = 0.6
-	misilLabel.modulate.a = 0.6
+	weaponIcons.modulate.a = 0.7
+	levelLabel.modulate.a = 0.7
+	healthLabel.modulate.a = 0.7
+	xpBar.modulate.a = 0.7
+	healthBar.modulate.a = 0.7
+	gunLabel.modulate.a = 0.7
+	shotLabel.modulate.a = 0.7
+	flameLabel.modulate.a = 0.7
+	misilLabel.modulate.a = 0.7
 	
 	xp_style = xpBar.get_theme_stylebox("fill").duplicate()
 	xp_style.bg_color = Color.from_rgba8(255, 255, 80)

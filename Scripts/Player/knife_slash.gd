@@ -11,8 +11,9 @@ func _ready() -> void:
 	scale.x = direction
 
 func _process(_delta: float) -> void:
-	global_position.y = creator.global_position.y 
-	global_position.x = creator.global_position.x + (direction*25)
+	if creator:
+		global_position.y = creator.global_position.y 
+		global_position.x = creator.global_position.x + (direction*25)
 
 func _on_timer_timeout() -> void:
 	queue_free()
