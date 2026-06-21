@@ -6,14 +6,20 @@ extends CanvasLayer
 @onready var BossLabel = $Control/VBoxContainer/BossesLabel
 @onready var ScoreLabel = $Control/ScoreLabel
 @onready var button = $Control/MenuButton
+@onready var highScoreLabel = $Control/HighScore
+@onready var nameButton = $Control/NameButton
+@onready var nameLine = $Control/LineEdit
 
 @onready var timer = $DramaticEffectTimer
 
-@onready var effectCounter : = 0
+var effectCounter : = 0
 var score : int = 0
 var current : String = "Level"
 
 func _ready() -> void:
+	nameButton.disabled = true
+	highScoreLabel.hide()
+	nameLine.hide()
 	GlobalGamePlayVariables.playerDied.connect(beginEnd)
 	button.disabled = true
 	hide()
@@ -26,12 +32,9 @@ func beginEnd():
 func _on_menu_button_pressed() -> void:
 	MusicManager.pauseMusic()
 	get_tree().change_scene_to_file("res://Scenes/Scenario/main_menu.tscn")
-	
-
 
 func _on_menu_button_mouse_entered() -> void:
 	AudioManager.play_sfx("ding")
-
 
 func _on_dramatic_effect_timer_timeout() -> void:
 	match current:
@@ -110,4 +113,18 @@ func showScore():
 	else:
 		AudioManager.play_sfx("impact")
 		button.disabled = false
+		checkLeaderboard()
 		pass
+
+
+func checkLeaderboard():
+	if Leaderboard.is_high_score(score):
+		highScoreLabel.show()
+		nameLine.show()
+		nameButton.disabled = false
+	else:
+		pass
+
+func _on_name_button_pressed() -> void:
+	nameButton.disabled = true
+	Leaderboard.add_score(nameLine.text, score)

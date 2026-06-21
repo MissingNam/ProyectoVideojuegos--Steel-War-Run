@@ -2,20 +2,26 @@
 
 [ext_resource type="Script" uid="uid://go1eudd854ya" path="res://Scripts/Player/level_progress.gd" id="1_6ix7s"]
 [ext_resource type="Texture2D" uid="uid://b252h3fiexhph" path="res://Assets/GUI/WeaponIcons.png" id="2_c7jxv"]
+[ext_resource type="FontFile" uid="uid://bua0kmbit62kl" path="res://Assets/Fonts/Dream MMA.ttf" id="2_ylpr7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_c7jxv"]
+font = ExtResource("2_ylpr7")
 font_size = 30
 
 [sub_resource type="LabelSettings" id="LabelSettings_2m7un"]
+font = ExtResource("2_ylpr7")
 font_size = 30
 
 [sub_resource type="LabelSettings" id="LabelSettings_8em7b"]
+font = ExtResource("2_ylpr7")
 font_size = 30
 
 [sub_resource type="LabelSettings" id="LabelSettings_0tx7a"]
+font = ExtResource("2_ylpr7")
 font_size = 30
 
 [sub_resource type="LabelSettings" id="LabelSettings_4huum"]
+font = ExtResource("2_ylpr7")
 font_size = 30
 
 [node name="LevelProgress" type="CanvasLayer" unique_id=651357887 groups=["XPGUI"]]
@@ -33,7 +39,7 @@ offset_left = 15.0
 offset_top = 14.0
 offset_right = 122.0
 offset_bottom = 56.0
-text = "Nivel: 1"
+text = "nivel: 1"
 label_settings = SubResource("LabelSettings_c7jxv")
 
 [node name="HealthLabel" type="Label" parent="Control" unique_id=814690128]
@@ -42,24 +48,24 @@ offset_left = 1141.0
 offset_top = 14.0
 offset_right = 1248.0
 offset_bottom = 56.0
-text = "Vida"
+text = "vida"
 label_settings = SubResource("LabelSettings_c7jxv")
 horizontal_alignment = 2
 
 [node name="XPBar" type="ProgressBar" parent="Control" unique_id=675530267]
 layout_mode = 0
-offset_left = 131.0
-offset_top = 18.0
-offset_right = 371.0
-offset_bottom = 58.0
+offset_left = 191.0
+offset_top = 8.0
+offset_right = 467.0
+offset_bottom = 48.0
 show_percentage = false
 
 [node name="HealthBar" type="ProgressBar" parent="Control" unique_id=73340268]
 layout_mode = 0
-offset_left = 930.0
-offset_top = 18.0
-offset_right = 1170.0
-offset_bottom = 58.0
+offset_left = 828.0
+offset_top = 9.0
+offset_right = 1133.0
+offset_bottom = 49.0
 fill_mode = 1
 show_percentage = false
 

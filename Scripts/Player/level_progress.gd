@@ -50,6 +50,6 @@ func update_ammo():
 	misilLabel.text = str(GlobalGamePlayVariables.player_RocketBullet)
 	
 func update_ui():
-	levelLabel.text = "Nivel: "+ str(GlobalGamePlayVariables.level)
+	levelLabel.text = "nivel: "+ str(GlobalGamePlayVariables.level)
 	xpBar.max_value = GlobalGamePlayVariables.xp_to_next_level
 	xpBar.value = GlobalGamePlayVariables.player_xp

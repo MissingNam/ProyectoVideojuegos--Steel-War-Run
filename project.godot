@@ -23,6 +23,7 @@ GlobalGamePlayVariables="*uid://uhyhec3rdmc0"
 ParticlesSpawner="*uid://cfni13rfqbfgu"
 MusicManager="*uid://c835lk7kirw04"
 AudioManager="*uid://cg8xhbc6geyu4"
+Leaderboard="*uid://bcxt1cbw6k2nh"
 
 [display]
 

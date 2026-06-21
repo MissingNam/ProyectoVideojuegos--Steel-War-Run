@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://byp2dnikt85ob" path="res://Scenes/PlayerRelated/player.tscn" id="1_vcrnd"]
 [ext_resource type="PackedScene" uid="uid://bb2fo6s0d5hyk" path="res://Scenes/Spawners/EnemySpawner.tscn" id="2_fk6t8"]
+[ext_resource type="PackedScene" uid="uid://bkys48xhc2j1v" path="res://Scenes/Scenario/level_progress.tscn" id="3_12ivn"]
 [ext_resource type="PackedScene" uid="uid://br4u8k1lpb7tm" path="res://Scenes/Scenario/over_menu.tscn" id="3_o24hu"]
 [ext_resource type="PackedScene" uid="uid://bttxsjbqkrq77" path="res://Scenes/Scenario/UpgradeMenu.tscn" id="3_o8412"]
 [ext_resource type="PackedScene" uid="uid://djrvh3psi0x4u" path="res://Scenes/Scenario/pauseMenu.tscn" id="3_qurfv"]
 [ext_resource type="PackedScene" uid="uid://c5omuy160eptw" path="res://Scenes/Items/loot_box.tscn" id="4_k0ud8"]
-[ext_resource type="PackedScene" uid="uid://bkys48xhc2j1v" path="res://Scenes/Scenario/level_progress.tscn" id="6_12ivn"]
 [ext_resource type="PackedScene" uid="uid://dqh1e7or1cacw" path="res://Scenes/Scenario/ChunkRelated/chunk_manager.tscn" id="7_88f4q"]
 [ext_resource type="Script" uid="uid://mr167m7y7wkp" path="res://Scripts/camera.gd" id="7_qurfv"]
 [ext_resource type="Script" uid="uid://bw35vw1kbf33h" path="res://Scripts/floor.gd" id="8_o24hu"]
@@ -19,13 +19,13 @@ position = Vector2(576, 320)
 
 [node name="EnemySpawner2" parent="Player" unique_id=350958665 instance=ExtResource("2_fk6t8")]
 
+[node name="LevelProgress" parent="." unique_id=651357887 instance=ExtResource("3_12ivn")]
+
 [node name="over_menu" parent="." unique_id=128604194 instance=ExtResource("3_o24hu")]
 
 [node name="PauseMenu" parent="." unique_id=1944951561 instance=ExtResource("3_qurfv")]
 
 [node name="UpgradeMenu" parent="." unique_id=336708653 instance=ExtResource("3_o8412")]
-
-[node name="LevelProgress" parent="." unique_id=651357887 instance=ExtResource("6_12ivn")]
 
 [node name="LootBox" parent="." unique_id=1874588072 instance=ExtResource("4_k0ud8")]
 position = Vector2(470, 278)

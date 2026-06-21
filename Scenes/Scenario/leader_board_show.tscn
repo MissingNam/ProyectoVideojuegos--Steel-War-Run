@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://dio0uoolho3qs"]
+
+[ext_resource type="Script" uid="uid://wuyythx6t671" path="res://Scripts/Map/leader_board_show.gd" id="1_870mr"]
+[ext_resource type="Texture2D" uid="uid://b41qhdroynwrq" path="res://Assets/Decoration/sand.png" id="2_0ll6d"]
+[ext_resource type="FontFile" uid="uid://dv5wpjkntgtvt" path="res://Assets/Fonts/SoundWaveRacing-Regular.otf" id="2_jxq6q"]
+[ext_resource type="Texture2D" uid="uid://d1tbncc06oxj6" path="res://Assets/Buttons/Normal.png" id="3_0ll6d"]
+[ext_resource type="FontFile" uid="uid://bua0kmbit62kl" path="res://Assets/Fonts/Dream MMA.ttf" id="3_jxq6q"]
+[ext_resource type="Texture2D" uid="uid://teorg2uv0h0f" path="res://Assets/Buttons/Pressed.png" id="4_08r1n"]
+[ext_resource type="Texture2D" uid="uid://dc2heqanyn3cm" path="res://Assets/Buttons/Selected.png" id="5_w8gyw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vailq"]
+font = ExtResource("2_jxq6q")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_0ll6d"]
+default_font = ExtResource("3_jxq6q")
+default_font_size = 55
+
+[sub_resource type="LabelSettings" id="LabelSettings_a3nj0"]
+font = ExtResource("2_jxq6q")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[node name="LeaderBoardShow" type="Control" unique_id=891135730]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_870mr")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=921399319]
+layout_mode = 0
+offset_right = 1284.0
+offset_bottom = 969.0
+texture = ExtResource("2_0ll6d")
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=749329584]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 21.0
+offset_right = 428.0
+offset_bottom = 87.0
+text = "leaderboard"
+label_settings = SubResource("LabelSettings_vailq")
+
+[node name="ScoreContainer" type="PanelContainer" parent="." unique_id=184306232]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 133.0
+offset_right = 681.0
+offset_bottom = 895.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScoreContainer" unique_id=876536091]
+layout_mode = 2
+theme = SubResource("Theme_0ll6d")
+bbcode_enabled = true
+
+[node name="MenuButton" type="TextureButton" parent="." unique_id=1138902674]
+layout_mode = 0
+offset_left = 721.0
+offset_top = 404.0
+offset_right = 1233.0
+offset_bottom = 532.0
+texture_normal = ExtResource("3_0ll6d")
+texture_pressed = ExtResource("4_08r1n")
+texture_hover = ExtResource("5_w8gyw")
+texture_disabled = ExtResource("4_08r1n")
+texture_focused = ExtResource("5_w8gyw")
+
+[node name="Label" type="Label" parent="MenuButton" unique_id=677880528]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 30.0
+offset_right = 340.0
+offset_bottom = 96.0
+text = "MENU"
+label_settings = SubResource("LabelSettings_a3nj0")
+
+[connection signal="mouse_entered" from="MenuButton" to="." method="_on_menu_button_mouse_entered"]
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

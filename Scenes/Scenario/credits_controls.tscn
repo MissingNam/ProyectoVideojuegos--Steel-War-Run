@@ -1,0 +1,155 @@
+[gd_scene format=3 uid="uid://cdcvmgk1j2kfs"]
+
+[ext_resource type="Script" uid="uid://b6swnmxppr3ss" path="res://Scripts/Map/credits_controls.gd" id="1_2iam1"]
+[ext_resource type="Texture2D" uid="uid://b41qhdroynwrq" path="res://Assets/Decoration/sand.png" id="2_tf71q"]
+[ext_resource type="FontFile" uid="uid://dv5wpjkntgtvt" path="res://Assets/Fonts/SoundWaveRacing-Regular.otf" id="3_n74el"]
+[ext_resource type="FontFile" uid="uid://bua0kmbit62kl" path="res://Assets/Fonts/Dream MMA.ttf" id="4_x4uol"]
+[ext_resource type="Texture2D" uid="uid://d1tbncc06oxj6" path="res://Assets/Buttons/Normal.png" id="5_uupno"]
+[ext_resource type="Texture2D" uid="uid://teorg2uv0h0f" path="res://Assets/Buttons/Pressed.png" id="6_4kunr"]
+[ext_resource type="Texture2D" uid="uid://dc2heqanyn3cm" path="res://Assets/Buttons/Selected.png" id="7_w0bar"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1wnj2"]
+font = ExtResource("3_n74el")
+font_size = 50
+font_color = Color(0.6666667, 0.6862745, 0.39215687, 1)
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_43tuk"]
+font = ExtResource("4_x4uol")
+font_size = 40
+font_color = Color(0.6666667, 0.6862745, 0.39215687, 1)
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_k4jdu"]
+font = ExtResource("4_x4uol")
+font_size = 40
+font_color = Color(0.6862745, 0.6666667, 0.39215687, 1)
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_brhxj"]
+font = ExtResource("4_x4uol")
+font_size = 40
+font_color = Color(0.6862745, 0.6666667, 0.39215687, 1)
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_m1c6b"]
+font = ExtResource("3_n74el")
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_j3f1i"]
+font = ExtResource("3_n74el")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[node name="CreditsControls" type="Control" unique_id=560768704]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2iam1")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=627578705]
+layout_mode = 0
+offset_right = 1271.0
+offset_bottom = 955.0
+texture = ExtResource("2_tf71q")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="Controls" type="Label" parent="." unique_id=977927161]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 20.0
+offset_right = 556.0
+offset_bottom = 86.0
+text = "Controls"
+label_settings = SubResource("LabelSettings_1wnj2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=833207806]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 126.0
+offset_right = 618.0
+offset_bottom = 601.0
+theme_override_constants/separation = 34
+
+[node name="WASD" type="Label" parent="VBoxContainer" unique_id=1644159452]
+layout_mode = 2
+text = "wasd - movement"
+label_settings = SubResource("LabelSettings_43tuk")
+
+[node name="MOUSE" type="Label" parent="VBoxContainer" unique_id=2141992105]
+layout_mode = 2
+text = "mouse left - shoot"
+label_settings = SubResource("LabelSettings_k4jdu")
+
+[node name="WEAPONS" type="Label" parent="VBoxContainer" unique_id=1842146633]
+layout_mode = 2
+text = " 1 - gun
+2 - shotgun
+3 - bazoka
+4 - flamethrower
+5-  knife"
+label_settings = SubResource("LabelSettings_brhxj")
+
+[node name="Creditos" type="Label" parent="." unique_id=291586511]
+layout_mode = 0
+offset_left = 972.0
+offset_top = 20.0
+offset_right = 1517.0
+offset_bottom = 86.0
+text = "Credits"
+label_settings = SubResource("LabelSettings_1wnj2")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=113257585]
+layout_mode = 0
+offset_left = 691.0
+offset_top = 103.0
+offset_right = 1247.0
+offset_bottom = 582.0
+
+[node name="Label" type="Label" parent="VBoxContainer2" unique_id=1189273065]
+layout_mode = 2
+text = "Programing:
+lead - Leonardo
+Support - Esteban
+
+Art:
+Lead - Esteban
+Support - Leonardo
+
+Music and SOund:
+Esteban"
+label_settings = SubResource("LabelSettings_m1c6b")
+horizontal_alignment = 2
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=792757192]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 756.0
+offset_right = 889.0
+offset_bottom = 884.0
+texture_normal = ExtResource("5_uupno")
+texture_pressed = ExtResource("6_4kunr")
+texture_hover = ExtResource("7_w0bar")
+texture_disabled = ExtResource("6_4kunr")
+texture_focused = ExtResource("7_w0bar")
+
+[node name="Label" type="Label" parent="TextureButton" unique_id=287777898]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 30.0
+offset_right = 332.0
+offset_bottom = 96.0
+text = "Menu"
+label_settings = SubResource("LabelSettings_j3f1i")
+
+[connection signal="mouse_entered" from="TextureButton" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
