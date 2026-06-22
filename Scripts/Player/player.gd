@@ -8,6 +8,7 @@ signal game_paused()
 @export var player_bullet: PackedScene
 @onready var cooldownTimer = $Timer
 @onready var iframeTimer = $IFrameTimer
+@onready var scrollTimer = $WeaponScrollTimer
 
 const SPEED = 200.0
 
@@ -16,6 +17,9 @@ var currentGun = "Basic"
 var shootGunPellets = 4
 var hitpoints = 3
 var iFrames = false
+var changedByMouse = false
+var mouseWeapon = 0
+var mouseChangeLimiter = false
 
 var canShoot: bool = true
 
@@ -75,18 +79,23 @@ func _input(event):
 
 	if event.is_action_pressed("weapon1"):
 		currentGun = "Basic"
+		mouseWeapon = 0
 
 	if event.is_action_pressed("weapon2"):
 		currentGun = "Shotgun"
+		mouseWeapon = 1
 
 	if event.is_action_pressed("weapon3"):
 		currentGun = "Rocketlauncher"
+		mouseWeapon = 2
 
 	if event.is_action_pressed("weapon4"):
 		currentGun = "Flamethrower"
+		mouseWeapon = 3
 
 	if event.is_action_pressed("weapon5"):
 		currentGun = "Knife"
+		mouseWeapon = 4
 
 	if event.is_action_pressed("SpawnBoss"):
 		get_tree().get_first_node_in_group("EnemySpawner").spawnBoss()
@@ -100,7 +109,32 @@ func _input(event):
 		
 	if event.is_action_pressed("pause"):
 		GlobalGamePlayVariables.pauseGame()
+
+	if event.is_action("changeWeapondown") and !mouseChangeLimiter:
+		mouseWeapon -= 1
+		if mouseWeapon < 0:
+			mouseWeapon = 4
+		changedByMouse = true
+		mouseChangeLimiter = true
+		scrollTimer.start(0.25)
 		
+	
+	if event.is_action("changeWeaponUp") and !mouseChangeLimiter:
+		mouseWeapon += 1
+		if mouseWeapon > 4:
+			mouseWeapon = 0
+		changedByMouse = true
+		mouseChangeLimiter = true
+		scrollTimer.start(0.25)
+		
+	if(changedByMouse):
+		changedByMouse = false
+		match(mouseWeapon):
+			0: currentGun = "Basic"
+			1: currentGun = "Shotgun"
+			2: currentGun = "Rocketlauncher"
+			3: currentGun = "Flamethrower"
+			4: currentGun = "Knife"
 
 func _process(_delta: float) -> void:
 	arm.playerCurrentWeapon = currentGun
@@ -218,3 +252,7 @@ func _on_timer_timeout() -> void:
 func _on_i_frame_timer_timeout() -> void:
 	iFrames = false
 	sprite.modulate = Color(1, 1, 1)
+
+
+func _on_weapon_scroll_timer_timeout() -> void:
+	mouseChangeLimiter = false

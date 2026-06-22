@@ -76,5 +76,8 @@ autostart = true
 one_shot = true
 autostart = true
 
+[node name="WeaponScrollTimer" type="Timer" parent="." unique_id=1762131374]
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="IFrameTimer" to="." method="_on_i_frame_timer_timeout"]
+[connection signal="timeout" from="WeaponScrollTimer" to="." method="_on_weapon_scroll_timer_timeout"]

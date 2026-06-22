@@ -96,7 +96,10 @@ text = " 1 - gun
 2 - shotgun
 3 - bazoka
 4 - flamethrower
-5-  knife"
+5-  knife
+
+mouse wheel changes
+weapons"
 label_settings = SubResource("LabelSettings_brhxj")
 
 [node name="Creditos" type="Label" parent="." unique_id=291586511]
