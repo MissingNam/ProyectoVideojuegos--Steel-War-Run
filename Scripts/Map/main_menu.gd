@@ -16,6 +16,7 @@ func _on_start_pressed() -> void:
 	MusicManager.pauseMusic()
 	AudioManager.play_sfx("shotgun")
 	toDo = "Play"
+	startButton.disabled = true
 	timer.start(2.0)
 
 

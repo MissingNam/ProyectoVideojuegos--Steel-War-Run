@@ -105,6 +105,11 @@ func _input(event):
 		GlobalGamePlayVariables.player_FlameBullet += 1000
 		GlobalGamePlayVariables.player_RocketBullet += 1000
 		GlobalGamePlayVariables.maxPlayerhealth += 100
+		
+		GlobalGamePlayVariables.gunDamageMultiplier += 5
+		GlobalGamePlayVariables.shotgunDamageMultiplier += 5
+		GlobalGamePlayVariables.flamethrowerDamageMultiplier += 5
+		GlobalGamePlayVariables.missileDamageMultiplier+= 5
 		player_cured(100)
 		
 	if event.is_action_pressed("pause"):

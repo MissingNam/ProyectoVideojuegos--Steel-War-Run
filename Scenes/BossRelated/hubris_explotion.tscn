@@ -1,0 +1,187 @@
+[gd_scene format=3 uid="uid://cdy031clqesbs"]
+
+[ext_resource type="Script" uid="uid://cmdm0l4red8an" path="res://Scripts/Hubris/hubris_explotion.gd" id="1_5npb5"]
+[ext_resource type="Texture2D" uid="uid://36k13s2iu48a" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one1.png" id="1_jtcpi"]
+[ext_resource type="Texture2D" uid="uid://cvboyjn8oa5ht" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one2.png" id="2_5npb5"]
+[ext_resource type="Texture2D" uid="uid://bpqupjwwtpvtf" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one3.png" id="3_r51us"]
+[ext_resource type="Texture2D" uid="uid://bx2cqgar5o4a6" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one4.png" id="4_82ni5"]
+[ext_resource type="Texture2D" uid="uid://27aykfkioato" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one5.png" id="5_hjpk3"]
+[ext_resource type="Texture2D" uid="uid://dovdu5ktvsqfo" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one6.png" id="6_mjfmu"]
+[ext_resource type="Texture2D" uid="uid://jr30dtcqcrvb" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one7.png" id="7_v8hoo"]
+[ext_resource type="Texture2D" uid="uid://pg3oqtfipfbu" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one8.png" id="8_3y3q2"]
+[ext_resource type="Texture2D" uid="uid://bfusrjnnxjnmj" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one9.png" id="9_h6ark"]
+[ext_resource type="Texture2D" uid="uid://c240b4bct74h7" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one10.png" id="10_4dywj"]
+[ext_resource type="Texture2D" uid="uid://dlnmvmvasnnt" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one11.png" id="11_uwfkx"]
+[ext_resource type="Texture2D" uid="uid://nbxi8gy0e6cp" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one12.png" id="12_wkfik"]
+[ext_resource type="Texture2D" uid="uid://c7rrl4pftu4ch" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one13.png" id="13_q4mfd"]
+[ext_resource type="Texture2D" uid="uid://b1xg57hn0ckx4" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one14.png" id="14_rgulm"]
+[ext_resource type="Texture2D" uid="uid://2jn8erapoavr" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one15.png" id="15_wnweq"]
+[ext_resource type="Texture2D" uid="uid://cicshtlv3u81f" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one16.png" id="16_6ga24"]
+[ext_resource type="Texture2D" uid="uid://diic1cuptwcwq" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one17.png" id="17_gwa3m"]
+[ext_resource type="Texture2D" uid="uid://ckss5ujhdhwtm" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one18.png" id="18_1yve4"]
+[ext_resource type="Texture2D" uid="uid://c5i81hi51c16i" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one19.png" id="19_f3qse"]
+[ext_resource type="Texture2D" uid="uid://c2lubcwqkfeok" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one20.png" id="20_btg4k"]
+[ext_resource type="Texture2D" uid="uid://ckoq7adapl7j6" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one21.png" id="21_k12qm"]
+[ext_resource type="Texture2D" uid="uid://4ebi4qp4a4we" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one22.png" id="22_45fvb"]
+[ext_resource type="Texture2D" uid="uid://coo8jjl3wwjiu" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one23.png" id="23_vkqqb"]
+[ext_resource type="Texture2D" uid="uid://bwccq1f8smv0" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one24.png" id="24_7rxo5"]
+[ext_resource type="Texture2D" uid="uid://cs78n6x8j3rsm" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one25.png" id="25_tprej"]
+[ext_resource type="Texture2D" uid="uid://dgch3s2b7q833" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one26.png" id="26_oofvy"]
+[ext_resource type="Texture2D" uid="uid://c1twcgqvoicwm" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one27.png" id="27_1hpce"]
+[ext_resource type="Texture2D" uid="uid://bjh3biganlj76" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one28.png" id="28_ir1cf"]
+[ext_resource type="Texture2D" uid="uid://0m2tgb2aphyn" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one29.png" id="29_x40f7"]
+[ext_resource type="Texture2D" uid="uid://d3ho0v4jk70n4" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one30.png" id="30_g7l5w"]
+[ext_resource type="Texture2D" uid="uid://cmau3m2d50w4a" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one31.png" id="31_42m7o"]
+[ext_resource type="Texture2D" uid="uid://068rp41ayyci" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one32.png" id="32_76yar"]
+[ext_resource type="Texture2D" uid="uid://d0uhcgksq4ewo" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one33.png" id="33_v6qjq"]
+[ext_resource type="Texture2D" uid="uid://pm0numkeerxt" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one34.png" id="34_e4ro5"]
+[ext_resource type="Texture2D" uid="uid://b5nvn7dcjkx3e" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one35.png" id="35_0wnuo"]
+[ext_resource type="Texture2D" uid="uid://db317uvxdvsij" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one36.png" id="36_gm6hv"]
+[ext_resource type="Texture2D" uid="uid://bjuytwvqguybo" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one37.png" id="37_gpnh5"]
+[ext_resource type="Texture2D" uid="uid://b2ego3rbahory" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one38.png" id="38_cr6cj"]
+[ext_resource type="Texture2D" uid="uid://no6e3vx1jgmr" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one39.png" id="39_3fyae"]
+[ext_resource type="Texture2D" uid="uid://dl0dgh6uibre5" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one40.png" id="40_a6205"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l3vmy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jtcpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5npb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_r51us")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_82ni5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hjpk3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mjfmu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_v8hoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_3y3q2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_h6ark")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4dywj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_uwfkx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wkfik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_q4mfd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_rgulm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wnweq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_6ga24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_gwa3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1yve4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_f3qse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_btg4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_k12qm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_45fvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_vkqqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_7rxo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_tprej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_oofvy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_1hpce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ir1cf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_x40f7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_g7l5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_42m7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_76yar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_v6qjq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_e4ro5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_0wnuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_gm6hv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_gpnh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_cr6cj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_3fyae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_a6205")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="HubrisExplotion" type="Node2D" unique_id=792296973]
+script = ExtResource("1_5npb5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=139039630]
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_l3vmy")
+frame = 18
+frame_progress = 0.6412389
+
+[node name="Timer" type="Timer" parent="." unique_id=683603602]
+wait_time = 0.7
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

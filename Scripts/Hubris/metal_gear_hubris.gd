@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var player_ref : Player
 @onready var sprite = $AnimatedSprite2D
+@export var explotion = preload("res://Scenes/BossRelated/hubris_explotion.tscn")
 var move_speed = 2
 
 var health = 1000 * pow(1.05,GlobalGamePlayVariables.level-17)
@@ -37,8 +38,16 @@ func hubris_take_damage(damage: float):
 	health -= damage
 	if(health <= ogHealth/2 and not halfway):
 		halfway = true
+		var explode = explotion.instantiate()
+		explode.global_position = global_position
+		explode.global_position.y += 20
+		get_tree().root.add_child(explode)
 		sprite.play("Fase2")
 	if(health <= 0):
+		var explode = explotion.instantiate()
+		explode.global_position = global_position
+		explode.global_position.y += 20
+		get_tree().root.add_child(explode)
 		queue_free()
 		GlobalGamePlayVariables.bosses += 1
 		var mejoras = GlobalGamePlayVariables.generate_upgrade_options()

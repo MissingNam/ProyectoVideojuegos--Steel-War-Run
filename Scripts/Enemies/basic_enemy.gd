@@ -66,7 +66,6 @@ func _on_timer_timeout() -> void:
 	if(distance <= 400):
 		EnemyBulletMaker.createBasicBullet(global_position,bullet_speed)
 		cooldown.start(randf_range(1.0,3.5))
-		print("Shoot") 
 	else:
 		cooldown.start(1.0)
 	pass 

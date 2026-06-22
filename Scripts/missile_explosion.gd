@@ -8,7 +8,7 @@ var damage: float = 30
 func _ready() -> void:
 	sprite.play("default")
 	collision.shape.radius = 3.5
-	print("EXPLOSION")
+	
 
 func _process(delta: float) -> void:
 	collision.shape.radius += 35*delta
