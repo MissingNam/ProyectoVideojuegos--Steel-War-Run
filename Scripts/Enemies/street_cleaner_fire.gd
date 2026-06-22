@@ -1,6 +1,7 @@
 extends Area2D
 
 @onready var sprite = $AnimatedSprite2D
+@onready var coll = $CollisionShape2D
 
 var speed = 400.0
 var direction := Vector2.ZERO
@@ -10,13 +11,13 @@ var colorFlag : bool = true
 func _ready():
 	sprite.play("default")
 	rotation = direction.angle()
+	coll.shape.radius = 4.8
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	scale.x += 0.07
-	scale.y += 0.07
-	global_position += direction * speed * delta
-	pass
+	scale.x += 5*delta
+	scale.y += 5*delta
+	coll.shape.radius += 4*delta
+	global_position += direction*speed*delta
 
 func _on_body_entered(body):
 	if body.has_method("player_take_damage"):
@@ -33,4 +34,3 @@ func _on_switch_color_timer_timeout() -> void:
 	else:
 		sprite.modulate = Color.WHITE
 		colorFlag = true
-	pass # Replace with function body.

@@ -187,11 +187,14 @@ frame_progress = 0.62798554
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=98542697]
 shape = SubResource("CircleShape2D_4vxq2")
-debug_color = Color(11.246898, 0, 0, 0.41960785)
+debug_color = Color(11.246898, 0, 0, 0.15686275)
 
 [node name="EliminationTimer" type="Timer" parent="." unique_id=1241472372]
 wait_time = 0.65
 autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1731358237]
+zoom = Vector2(3.995, 3.995)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="EliminationTimer" to="." method="_on_elimination_timer_timeout"]

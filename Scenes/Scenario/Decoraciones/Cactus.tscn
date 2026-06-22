@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://c8gx35uod4mc3" path="res://Scripts/Map/cactus.gd" id="1_nb21d"]
 [ext_resource type="Texture2D" uid="uid://dvhh22j7x2ght" path="res://Assets/Decoration/cactus.png" id="2_pu8r4"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nb21d"]
+size = Vector2(14, 28.666668)
+
 [node name="Cactus" type="StaticBody2D" unique_id=623417008 groups=["Cactus", "Organic"]]
 texture_filter = 1
 scale = Vector2(1.5, 1.5)
@@ -12,6 +15,6 @@ script = ExtResource("1_nb21d")
 position = Vector2(0, -16)
 texture = ExtResource("2_pu8r4")
 
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=1815322030]
-position = Vector2(1.5, -16)
-polygon = PackedVector2Array(-3.5, -14.666668, 1.1666667, -12, 1.1666667, 0, 3.8333335, -4, 6.5, -2, 3.8333335, 4.666666, 0.5, 3.333333, -0.16666663, 15.333333, -5.5, 15.333333, -5.5, 9.333333, -8.166667, 8, -8.166667, 5.333333, -4.166667, 5.333333, -4.166667, 1.333333, -5.5, -1.333334, -5.5, -11.333334)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2126942392]
+position = Vector2(0.33333337, -14.333334)
+shape = SubResource("RectangleShape2D_nb21d")
