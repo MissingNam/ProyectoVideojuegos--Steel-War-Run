@@ -45,6 +45,7 @@ animations = [{
 radius = 5.0
 
 [node name="StreetCleanerFire" type="Area2D" unique_id=773400211]
+scale = Vector2(2.5, 2.5)
 script = ExtResource("1_o77p8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1845816107]
