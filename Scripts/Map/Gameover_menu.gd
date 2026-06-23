@@ -41,7 +41,7 @@ func _on_dramatic_effect_timer_timeout() -> void:
 		"Level":
 			showLevel()
 		"Xp":
-			showXp()
+			showUpdates()
 		"Kills":
 			showKills()
 		"Bosses":
@@ -63,12 +63,12 @@ func showLevel():
 		effectCounter = 0
 		timer.start(0.1)
 
-func showXp():
-	XPLabel.text = str("xp: ",effectCounter)
-	if(effectCounter < GlobalGamePlayVariables.totalXp):
-		effectCounter += 2
-		XPLabel.text = str("xp: ",effectCounter)
-		timer.start(0.001)
+func showUpdates():
+	XPLabel.text = str("improvements: ",effectCounter)
+	if(effectCounter < GlobalGamePlayVariables.improvements):
+		effectCounter += 1
+		XPLabel.text = str("improvements: ",effectCounter)
+		timer.start(0.01)
 	else:
 		AudioManager.play_sfx("impact")
 		score += 10 * effectCounter

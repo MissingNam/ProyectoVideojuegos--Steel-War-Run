@@ -31,7 +31,7 @@ var missileFirerateMultiplier: float = 0.0
 
 #Contadores
 var kills: int = 0
-var totalXp : int = 0
+var improvements : int = 0
 var bosses : int = 0
 
 #Mapa
@@ -59,7 +59,6 @@ func playerHealthAlterated():
 	xpGUI.update_health()
 
 func addExpirience(exp : int):
-	totalXp += exp
 	player_xp += exp
 	updateUi.emit()
 	if player_xp >= xp_to_next_level:
@@ -126,6 +125,7 @@ func apply_upgrade(option: Dictionary) -> void:
 			var var_name = option["variable"]
 			set(var_name, get(var_name) + option["amount"])
 	get_tree().paused = false
+	improvements += 1
 
 func pauseGame():
 	gamePaused.emit()
@@ -157,7 +157,7 @@ func restartVariables():
 	activeHubris = false
 	#Contadores
 	kills = 0
-	totalXp = 0
+	improvements = 0
 	bosses = 0
 	#Mapa
 	if randi_range(0,1) == 0:
