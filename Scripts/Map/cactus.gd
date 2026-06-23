@@ -10,6 +10,8 @@ func _ready():
 		sprite.texture = bush
 		collision.scale.x = collision.scale.x*2
 		collision.scale.y = collision.scale.y/2
+		sprite.offset.y += 16
+		collision.global_position.y += 23
 
 func take_damage(damage: float):
 	health -= damage

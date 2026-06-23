@@ -99,10 +99,15 @@ func _input(event):
 	if event.is_action_pressed("weapon5"):
 		currentGun = "Knife"
 		mouseWeapon = 4
-
+	
+	if event.is_action_pressed("AddLevel"):
+		GlobalGamePlayVariables.addExpirience(GlobalGamePlayVariables.xp_to_next_level)
+		GlobalGamePlayVariables.usedCheats = true
+		
 	if event.is_action_pressed("SpawnBoss"):
 		get_tree().get_first_node_in_group("EnemySpawner").spawnBoss()
 		MusicManager.stop()
+		GlobalGamePlayVariables.usedCheats = true
 		GlobalGamePlayVariables.player_BasicBullet += 1000
 		GlobalGamePlayVariables.player_shotGunBullet += 1000
 		GlobalGamePlayVariables.player_FlameBullet += 1000

@@ -55,7 +55,7 @@ func showLevel():
 	if(effectCounter < GlobalGamePlayVariables.level):
 		effectCounter += 1
 		levelLabel.text = str("level: ",effectCounter)
-		timer.start(0.1)
+		timer.start(0.01)
 	else:
 		AudioManager.play_sfx("impact", -10)
 		score += 100 * effectCounter
@@ -66,7 +66,7 @@ func showLevel():
 func showXp():
 	XPLabel.text = str("xp: ",effectCounter)
 	if(effectCounter < GlobalGamePlayVariables.totalXp):
-		effectCounter += 1
+		effectCounter += 2
 		XPLabel.text = str("xp: ",effectCounter)
 		timer.start(0.001)
 	else:
@@ -109,7 +109,7 @@ func showScore():
 	if(effectCounter < score):
 		effectCounter += 10
 		ScoreLabel.text = str("score: ",effectCounter)
-		timer.start(0.001)
+		timer.start(0.0001)
 	else:
 		AudioManager.play_sfx("impact")
 		button.disabled = false
@@ -118,7 +118,7 @@ func showScore():
 
 
 func checkLeaderboard():
-	if Leaderboard.is_high_score(score):
+	if Leaderboard.is_high_score(score) and not GlobalGamePlayVariables.usedCheats:
 		highScoreLabel.show()
 		nameLine.show()
 		nameButton.disabled = false

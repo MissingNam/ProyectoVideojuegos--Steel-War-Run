@@ -110,6 +110,8 @@ func spawn_enemy():
 			spawn_radius_max
 		)
 	var angle = randf() * TAU
+	if(enemy_type == "hubris"):
+		angle = 180
 	var offset = Vector2.RIGHT.rotated(angle) * distance
 	enemy.global_position = global_position + offset
 	get_tree().current_scene.add_child(enemy)

@@ -17,6 +17,7 @@ var chunkRandSeed = Time.get_time_dict_from_system()
 var maxPlayerhealth: int = 3
 var PlayerHealth : int = 0
 var i_frames : float = 0.5
+var usedCheats : bool = false
 
 #Multiplicadores de Armas:
 var gunDamageMultiplier: float = 1.0
