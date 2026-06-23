@@ -99,8 +99,8 @@ func generate_upgrade_options() -> Array:
 		var weapon_name = WEAPON_NAMES[weapon_index]
 		var var_prefix = WEAPON_VAR_PREFIX[weapon_index]
 		var is_damage = randf() < 0.5
-		var percent = randf_range(0.05, 0.1)
-		var percent_rounded = roundf(percent * 100)  # para mostrar "23%" en vez de "0.234234"
+		var percent = randf_range(0.05, 0.25)
+		var percent_rounded = roundf(percent * 100)  
 		
 		var stat_text = "Daño de Arma" if is_damage else "Frecuencia de Disparo"
 		var var_suffix = "DamageMultiplier" if is_damage else "FirerateMultiplier"

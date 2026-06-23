@@ -28,7 +28,6 @@ func checkWeather():
 		weather_timer.start()
 	
 	weather_change.emit(current_weather)
-	
 
 func is_raining() -> bool:
 	return current_weather == "Rain"

@@ -18,11 +18,11 @@ func _ready() -> void:
 		5: loot = "Upgrade"
 	
 	if(index != 3 and index != 4 and index !=2):
-		amount = int(randf_range(5, 30))
+		amount = randi_range(5, 30)
 	elif(index == 3):
-		amount = int(randf_range(1,5))
+		amount = randi_range(1,5)
 	elif(index == 2):
-		amount = int(randf_range(10,45))
+		amount = randf_range(10,45)
 	else:
 		amount = 1
 
