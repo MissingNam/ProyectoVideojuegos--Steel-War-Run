@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dytiq5ecshv08"]
 
 [ext_resource type="Texture2D" uid="uid://dryhq4aquq3mx" path="res://Assets/LootBox/box_particle.png" id="1_6gf82"]
-[ext_resource type="Script" uid="uid://d15s7qwfof4if" path="res://Scripts/box_particles.gd" id="1_vk25s"]
+[ext_resource type="Script" uid="uid://d15s7qwfof4if" path="res://Scripts/Particles/box_particles.gd" id="1_vk25s"]
 
 [node name="BoxParticles" type="Node2D" unique_id=371132567]
 script = ExtResource("1_vk25s")

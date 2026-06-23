@@ -14,6 +14,7 @@ func _on_level_up(options: Array) -> void:
 	for i in options.size():
 		buttons[i].text = options[i]["text"]
 	show()
+	MusicManager.reproducer.volume_db = -5.0
 
 func _on_button_1_pressed() -> void:
 	_select(0)
@@ -27,3 +28,4 @@ func _on_button_3_pressed() -> void:
 func _select(index: int) -> void:
 	GlobalGamePlayVariables.apply_upgrade(current_options[index])
 	hide()
+	MusicManager.reproducer.volume_db = 0.0

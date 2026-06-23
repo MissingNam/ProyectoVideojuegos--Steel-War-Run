@@ -27,6 +27,9 @@ func _physics_process(_delta: float):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 
 	velocity = direction.normalized() * SPEED
+	
+	if(ClimeManager.is_sandStorm()):
+		velocity = velocity * 0.75
 
 	if direction != Vector2.ZERO:
 		if sprite.animation != "Walking":

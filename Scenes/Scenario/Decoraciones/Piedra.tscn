@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dk3vp4efv3c3f"]
 
-[ext_resource type="Script" uid="uid://c4f8f6jmylo3v" path="res://Scripts/piedra.gd" id="1_qqpov"]
+[ext_resource type="Script" uid="uid://c4f8f6jmylo3v" path="res://Scripts/Map/piedra.gd" id="1_qqpov"]
 [ext_resource type="Texture2D" uid="uid://ce1h4wl05wqd5" path="res://Assets/Decoration/rock.png" id="2_0hwmd"]
 
 [node name="Piedra" type="StaticBody2D" unique_id=2022234594 groups=["Rock"]]

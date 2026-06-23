@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://d1tbncc06oxj6" path="res://Assets/Buttons/Normal.png" id="2_kehbi"]
 [ext_resource type="Texture2D" uid="uid://teorg2uv0h0f" path="res://Assets/Buttons/Pressed.png" id="3_wrsc1"]
 [ext_resource type="Texture2D" uid="uid://dc2heqanyn3cm" path="res://Assets/Buttons/Selected.png" id="4_h2q0p"]
+[ext_resource type="Texture2D" uid="uid://b41qhdroynwrq" path="res://Assets/Decoration/sand.png" id="6_wrsc1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_f7ayc"]
 font = ExtResource("1_02ybj")
@@ -41,8 +42,10 @@ label_settings = SubResource("LabelSettings_f7ayc")
 z_index = -2
 texture_filter = 2
 layout_mode = 0
-offset_right = 1267.0
-offset_bottom = 947.0
+offset_right = 1284.0
+offset_bottom = 973.0
+texture = ExtResource("6_wrsc1")
+stretch_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=771050885]
 layout_mode = 0

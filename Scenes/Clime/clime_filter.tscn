@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cv53n1pxpmara"]
+
+[ext_resource type="Script" uid="uid://deaknke6i4lsm" path="res://Scripts/Map/clime_filter.gd" id="1_v6qyl"]
+
+[node name="ClimeFilter" type="CanvasLayer" unique_id=61893671]
+script = ExtResource("1_v6qyl")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1931023392]
+z_index = 3
+offset_left = -203.0
+offset_top = -155.0
+offset_right = 1597.0
+offset_bottom = 1229.0
+mouse_filter = 1
+color = Color(0.25882354, 0.25490198, 0, 0)
+
+[node name="Rain" type="CPUParticles2D" parent="." unique_id=1861720085]
+position = Vector2(515, -55)
+emitting = false
+amount = 200
+lifetime = 1.5
+emission_shape = 3
+emission_rect_extents = Vector2(800, 20)
+direction = Vector2(50, 150)
+spread = 21.26
+initial_velocity_min = 362.21
+initial_velocity_max = 503.94
+scale_amount_min = 3.5
+scale_amount_max = 5.0
+
+[node name="Sand" type="CPUParticles2D" parent="." unique_id=1999549661]
+position = Vector2(1369, 460)
+emitting = false
+amount = 150
+lifetime = 1.5
+emission_shape = 3
+emission_rect_extents = Vector2(30, 518)
+direction = Vector2(-100, 0)
+gravity = Vector2(0, 200)
+initial_velocity_min = 1000.0
+initial_velocity_max = 1000.0
+angle_min = 232.4
+angle_max = 368.5
+scale_amount_min = 5.0
+scale_amount_max = 7.0
+color = Color(0.5019608, 0.44313726, 0.2784314, 1)

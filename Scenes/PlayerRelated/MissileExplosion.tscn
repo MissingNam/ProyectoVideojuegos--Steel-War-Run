@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b06qh85tuga2g"]
 
-[ext_resource type="Script" uid="uid://6ielsq30ldai" path="res://Scripts/missile_explosion.gd" id="1_614kh"]
+[ext_resource type="Script" uid="uid://6ielsq30ldai" path="res://Scripts/Player/missile_explosion.gd" id="1_614kh"]
 [ext_resource type="Texture2D" uid="uid://36k13s2iu48a" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one1.png" id="2_v8rv1"]
 [ext_resource type="Texture2D" uid="uid://cvboyjn8oa5ht" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one2.png" id="3_pu7t2"]
 [ext_resource type="Texture2D" uid="uid://bpqupjwwtpvtf" path="res://Assets/ProtagonistRelated/Missile_Explosion/bk_explo_one3.png" id="4_4qkw0"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c407wo4w48rhr"]
 
 [ext_resource type="Texture2D" uid="uid://df34epjrmewea" path="res://Assets/Decoration/cactus_particle.png" id="1_l5is4"]
-[ext_resource type="Script" uid="uid://184o6dmxkl60" path="res://Scripts/cactus_particles.gd" id="1_ph4yb"]
+[ext_resource type="Script" uid="uid://184o6dmxkl60" path="res://Scripts/Particles/cactus_particles.gd" id="1_ph4yb"]
 
 [node name="CactusParticles" type="Node2D" unique_id=346014857]
 script = ExtResource("1_ph4yb")

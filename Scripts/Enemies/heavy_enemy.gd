@@ -60,6 +60,10 @@ func _physics_process(delta: float) -> void:
 		sprite.flip_h = false
 		#arm.sprite.offset.y = 6
 		arm.sprite.flip_v = false
+	
+	if(ClimeManager.is_sandStorm()):
+		velocity = velocity * 0.75
+	
 	move_and_slide()
 
 

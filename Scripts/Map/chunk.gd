@@ -2,13 +2,21 @@ extends Node2D
 
 @export var object_scenes: Array[PackedScene] = []  # cactus, roca, caja
 @export var object_weights: Array[float] = [35.0, 20.0, 10.0]
+@onready var floor = $TextureRect
+
+@export var sandTexture = preload("res://Assets/Decoration/sand.png")
+@export var soilTexture = preload("res://Assets/Decoration/soil3.png")
 
 func generate(coord: Vector2i):
 	var rng = RandomNumberGenerator.new()
 	rng.seed = hash(coord * GlobalGamePlayVariables.getRandSeed())  # determinístico: mismo coord = mismo seed
 	
 	place_objects(rng)
-#	setup_terrain_shader(coord)
+	if(GlobalGamePlayVariables.currentMap == "Desert"):
+		floor.texture = sandTexture
+	elif(GlobalGamePlayVariables.currentMap == "Mountain"):
+		floor.texture = soilTexture
+	
 
 func pick_weighted_object(rng: RandomNumberGenerator) -> PackedScene:
 	var total_weight = 0.0

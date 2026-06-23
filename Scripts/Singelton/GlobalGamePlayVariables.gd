@@ -33,6 +33,8 @@ var kills: int = 0
 var totalXp : int = 0
 var bosses : int = 0
 
+#Mapa
+var currentMap = "Mountain"
 
 var activeHubris = false
 
@@ -44,6 +46,11 @@ var xpGUI : xpGUIIndicator
 func _ready():
 	var xpGUITree = get_tree().get_nodes_in_group("XPGUI")
 	if(xpGUITree): xpGUI = xpGUITree[0]
+	#Mapa
+	if randi_range(0,1) == 0:
+		currentMap = "Mountain"
+	else:
+		currentMap = "Desert"
 	
 	
 func playerHealthAlterated():
@@ -147,3 +154,12 @@ func restartVariables():
 	missileDamageMultiplier = 1.0
 	missileFirerateMultiplier = 0.0
 	activeHubris = false
+	#Contadores
+	kills = 0
+	totalXp = 0
+	bosses = 0
+	#Mapa
+	if randi_range(0,1) == 0:
+		currentMap = "Mountain"
+	else:
+		currentMap = "Desert"

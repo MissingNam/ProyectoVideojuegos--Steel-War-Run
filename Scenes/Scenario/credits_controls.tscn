@@ -62,6 +62,7 @@ offset_bottom = 955.0
 texture = ExtResource("2_tf71q")
 expand_mode = 2
 stretch_mode = 1
+flip_v = true
 
 [node name="Controls" type="Label" parent="." unique_id=977927161]
 layout_mode = 0

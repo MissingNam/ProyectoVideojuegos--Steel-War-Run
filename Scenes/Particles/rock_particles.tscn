@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://3bhp4juaa2tk"]
 
-[ext_resource type="Script" uid="uid://dwt03rqa5a5mh" path="res://Scripts/rock_particles.gd" id="1_4pqvw"]
+[ext_resource type="Script" uid="uid://dwt03rqa5a5mh" path="res://Scripts/Particles/rock_particles.gd" id="1_4pqvw"]
 [ext_resource type="Texture2D" uid="uid://dxbuv4hcyxm23" path="res://Assets/Decoration/rock_particle.png" id="1_kep0s"]
 
 [node name="RockParticles" type="Node2D" unique_id=824539404]
