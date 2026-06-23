@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c5omuy160eptw"]
 
-[ext_resource type="Script" uid="uid://tdmjvhn2eile" path="res://Scripts/loot_box.gd" id="1_rpvfx"]
+[ext_resource type="Script" uid="uid://tdmjvhn2eile" path="res://Scripts/Map/loot_box.gd" id="1_rpvfx"]
 [ext_resource type="Texture2D" uid="uid://dxqxlas0gk6i6" path="res://Assets/LootBox/box.png" id="7_oih5g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c5xdh"]

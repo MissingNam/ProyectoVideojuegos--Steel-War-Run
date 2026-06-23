@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 	else:
 		move_speed = 2
 	
-	global_position.y = move_toward(global_position.y,player_ref.global_position.y - 300,move_speed) 
+	global_position.y = move_toward(global_position.y,player_ref.global_position.y - 250,move_speed) 
 	global_position.x = move_toward(global_position.x,player_ref.global_position.x,move_speed)
 
 func hubris_take_damage(damage: float):
