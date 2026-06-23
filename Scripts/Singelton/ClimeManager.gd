@@ -39,8 +39,10 @@ func is_sandStorm() -> bool:
 func is_clear() -> bool:
 	return current_weather == "Clear"
 	
-func _process(_delta: float):
-	if(Input.is_action_just_pressed("ui_down")):
+
+
+func _input(event: InputEvent) -> void:
+	if(event.is_action_pressed("ui_down")):
 		if(is_clear()):
 			if(GlobalGamePlayVariables.currentMap == "Desert"):
 				current_weather = "Sand"
@@ -48,7 +50,7 @@ func _process(_delta: float):
 				current_weather = "Rain"
 		else:
 			current_weather = "Clear"
-			
 		weather_timer.wait_time = randf_range(60.0,120.0)
 		weather_timer.start()
 		weather_change.emit(current_weather)
+		
