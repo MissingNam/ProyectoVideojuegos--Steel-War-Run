@@ -33,7 +33,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3qgqv"]
 size = Vector2(27, 39)
 
-[node name="HeavyEnemy" type="CharacterBody2D" unique_id=792180502]
+[node name="HeavyEnemy" type="CharacterBody2D" unique_id=792180502 groups=["Enemies", "Human", "Organic"]]
 texture_filter = 1
 script = ExtResource("1_pcsg0")
 

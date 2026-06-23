@@ -3,16 +3,16 @@ extends Area2D
 @onready var sprite = $AnimatedSprite2D
 @onready var collision = $CollisionShape2D
 
-var damage: float = 30
+var damage : float = 5
+var original_damage : float = damage
 
 func _ready() -> void:
 	sprite.play("default")
 	collision.shape.radius = 3.5
 	
-
 func _process(delta: float) -> void:
 	collision.shape.radius += 35*delta
-	damage = damage/collision.shape.radius*delta
+	damage -= (original_damage/2)*delta
 
 func _on_elimination_timer_timeout() -> void:
 	queue_free()
