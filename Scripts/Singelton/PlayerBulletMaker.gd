@@ -4,6 +4,7 @@ extends Node
 @export var flame = preload("res://Scenes/PlayerRelated/PlayerFlameThrower.tscn")
 @export var missile = preload("res://Scenes/PlayerRelated/Missile.tscn")
 @export var slash = preload("res://Scenes/PlayerRelated/knifeSlash.tscn")
+@export var cannon = preload("res://Scenes/PlayerRelated/player_rail_cannon.tscn")
 
 func createBasicPlayerBullet(location : Vector2, angle : Vector2): 
 	var newBullet = basicB.instantiate()
@@ -50,4 +51,11 @@ func createKnifeSlash(location: Vector2, direction: float, creator):
 	newSlash.direction = direction
 	newSlash.creator = creator
 	get_tree().root.add_child(newSlash)
+
+func createRailCannon(location: Vector2, Bdirection: Vector2, origin: Node2D):
+	var newRail = cannon.instantiate()
+	newRail.global_position = location
+	newRail.origin = origin
+	newRail.direction = Bdirection
+	get_tree().root.add_child(newRail)
 	

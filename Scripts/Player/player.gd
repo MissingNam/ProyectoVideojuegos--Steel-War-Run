@@ -9,6 +9,8 @@ signal game_paused()
 @onready var cooldownTimer = $Timer
 @onready var iframeTimer = $IFrameTimer
 @onready var scrollTimer = $WeaponScrollTimer
+@onready var cannonTimer = $RailCannonTimer
+@onready var cannonParticles = $CannonParticles
 
 const SPEED = 200.0
 
@@ -22,6 +24,7 @@ var mouseWeapon = 0
 var mouseChangeLimiter = false
 
 var canShoot: bool = true
+var chargedRailCannon = false
 
 func _physics_process(_delta: float):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -77,6 +80,10 @@ func _input(event):
 
 			"Knife":
 				shootSlash()
+				
+			"RailCannon":
+				if chargedRailCannon:
+					shootRailCannon()
 
 		GlobalGamePlayVariables.actualizeAmmo()
 
@@ -99,6 +106,11 @@ func _input(event):
 	if event.is_action_pressed("weapon5"):
 		currentGun = "Knife"
 		mouseWeapon = 4
+		
+	if event.is_action_pressed("weapon6"):
+		if(GlobalGamePlayVariables.hubirsDefeated):
+			currentGun = "RailCannon"
+			mouseWeapon = 5
 	
 	if event.is_action_pressed("AddLevel"):
 		GlobalGamePlayVariables.addExpirience(GlobalGamePlayVariables.xp_to_next_level)
@@ -122,19 +134,21 @@ func _input(event):
 		
 	if event.is_action_pressed("pause"):
 		GlobalGamePlayVariables.pauseGame()
+	
+	var limit = 5 if GlobalGamePlayVariables.hubirsDefeated else 4
 
 	if event.is_action("changeWeapondown") and !mouseChangeLimiter:
 		mouseWeapon -= 1
 		if mouseWeapon < 0:
-			mouseWeapon = 4
+			mouseWeapon = limit
 		changedByMouse = true
 		mouseChangeLimiter = true
-		scrollTimer.start(0.25)
+		scrollTimer.start(0.1)
 		
 	
 	if event.is_action("changeWeaponUp") and !mouseChangeLimiter:
 		mouseWeapon += 1
-		if mouseWeapon > 4:
+		if mouseWeapon > limit:
 			mouseWeapon = 0
 		changedByMouse = true
 		mouseChangeLimiter = true
@@ -148,6 +162,9 @@ func _input(event):
 			2: currentGun = "Rocketlauncher"
 			3: currentGun = "Flamethrower"
 			4: currentGun = "Knife"
+			5: 
+				if(GlobalGamePlayVariables.hubirsDefeated):
+					currentGun = "RailCannon"
 
 func _process(_delta: float) -> void:
 	arm.playerCurrentWeapon = currentGun
@@ -259,6 +276,16 @@ func shootSlash():
 
 	cooldownTimer.start(cooldown)
 
+func shootRailCannon():
+	var location : Vector2 = arm.weaponSprite.global_position
+	location.y -= 5
+	var Bdirectional = location.direction_to(get_global_mouse_position())
+	PlayerBulletMaker.createRailCannon(location,Bdirectional, self)
+	chargedRailCannon = false
+	AudioManager.play_sfx("hubirsLaser")
+	cannonTimer.start(30.0)
+	
+
 func _on_timer_timeout() -> void:
 	canShoot = true
 
@@ -269,3 +296,9 @@ func _on_i_frame_timer_timeout() -> void:
 
 func _on_weapon_scroll_timer_timeout() -> void:
 	mouseChangeLimiter = false
+
+
+func _on_rail_cannon_timer_timeout() -> void:
+	cannonParticles.emitting = true
+	AudioManager.play_sfx("railCharge",3.0)
+	chargedRailCannon = true

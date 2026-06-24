@@ -38,6 +38,7 @@ var bosses : int = 0
 var currentMap = "Mountain"
 
 var activeHubris = false
+var hubirsDefeated = false
 
 const WEAPON_NAMES := ["Basic", "Shotgun", "Flamethrower", "Rocketlauncher"]
 const WEAPON_VAR_PREFIX := ["gun", "shotgun", "flamethrower", "missile"]
@@ -105,12 +106,20 @@ func generate_upgrade_options() -> Array:
 		var stat_text = "Daño de Arma" if is_damage else "Frecuencia de Disparo"
 		var var_suffix = "DamageMultiplier" if is_damage else "FirerateMultiplier"
 		
-		options.append({
-			"text": "Incremento de \n %s \n en: %s +%d%%" % [stat_text, weapon_name, percent_rounded],
-			"type": "weapon_stat",
-			"variable": var_prefix + var_suffix,  # ej: "gunDamageMultiplier"
-			"amount": percent
-		})
+		if(weapon_name == "Flamethrower" and not is_damage):
+			options.append({
+				"text": "Incremento de \n Daño por Segundo \n en: Fuego +%d%%" % [percent_rounded],
+				"type": "weapon_stat",
+				"variable": var_prefix + var_suffix,  # ej: "gunDamageMultiplier"
+				"amount": percent
+			})
+		else:
+			options.append({
+				"text": "Incremento de \n %s \n en: %s +%d%%" % [stat_text, weapon_name, percent_rounded],
+				"type": "weapon_stat",
+				"variable": var_prefix + var_suffix,  # ej: "gunDamageMultiplier"
+				"amount": percent
+			})
 	return options
 	
 	
@@ -126,6 +135,7 @@ func apply_upgrade(option: Dictionary) -> void:
 			set(var_name, get(var_name) + option["amount"])
 	get_tree().paused = false
 	improvements += 1
+	print(GlobalGamePlayVariables.flamethrowerFirerateMultiplier)
 
 func pauseGame():
 	gamePaused.emit()

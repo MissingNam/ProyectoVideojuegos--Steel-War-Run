@@ -10,7 +10,8 @@ var sfx_library = {
 	"pDamage": preload("res://SFX/damage.mp3"),
 	"hubirsLaser": preload("res://SFX/hubrisLaser.mp3"),
 	"dead": preload("res://SFX/DeadSound.mp3"),
-	"impact": preload("res://SFX/Impact.mp3")
+	"impact": preload("res://SFX/Impact.mp3"),
+	"railCharge" : preload("res://SFX/Whoosh.mp3")
 }
 
 # Pool de reproductores

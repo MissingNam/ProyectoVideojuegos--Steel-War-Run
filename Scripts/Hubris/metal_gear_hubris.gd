@@ -48,6 +48,8 @@ func hubris_take_damage(damage: float):
 		explode.global_position = global_position
 		explode.global_position.y += 20
 		get_tree().root.add_child(explode)
+		GlobalGamePlayVariables.hubirsDefeated = true
+		player_ref.cannonTimer.start(15.0)
 		queue_free()
 		GlobalGamePlayVariables.bosses += 1
 		var mejoras = GlobalGamePlayVariables.generate_upgrade_options()

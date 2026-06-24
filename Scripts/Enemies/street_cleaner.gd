@@ -20,7 +20,7 @@ var health : float = 1.0 * (1.05 * (GlobalGamePlayVariables.level - 4))
 func _ready() -> void:
 	sprite.play("default")
 	hitbox.add_to_group("Enemy")
-	player_ref = get_tree().get_nodes_in_group("Player")[0]
+	player_ref = get_tree().get_first_node_in_group("Player")
 	
 
 func take_damage(damage: float) -> void:

@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cqyof23abqbbd" path="res://Assets/ProtagonistRelated/ProtagonistaWalk/Protagonista_Walk3.png" id="5_tx1dd"]
 [ext_resource type="Texture2D" uid="uid://tepfuxadoty8" path="res://Assets/ProtagonistRelated/ProtagonistaWalk/Protagonista_Walk4.png" id="6_gymyn"]
 [ext_resource type="PackedScene" uid="uid://cn1lgd5kd123p" path="res://Scenes/PlayerRelated/player_arm.tscn" id="7_n3pt7"]
+[ext_resource type="Texture2D" uid="uid://hybu420fahjc" path="res://Assets/ProtagonistRelated/RailCannon/ThunderParticle.png" id="9_0ynbw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pu2lt"]
 animations = [{
@@ -78,6 +79,24 @@ autostart = true
 
 [node name="WeaponScrollTimer" type="Timer" parent="." unique_id=1762131374]
 
+[node name="RailCannonTimer" type="Timer" parent="." unique_id=1857095240]
+wait_time = 30.0
+one_shot = true
+
+[node name="CannonParticles" type="CPUParticles2D" parent="." unique_id=1250936677]
+emitting = false
+amount = 10
+texture = ExtResource("9_0ynbw")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 19.84
+initial_velocity_max = 178.58
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="IFrameTimer" to="." method="_on_i_frame_timer_timeout"]
 [connection signal="timeout" from="WeaponScrollTimer" to="." method="_on_weapon_scroll_timer_timeout"]
+[connection signal="timeout" from="RailCannonTimer" to="." method="_on_rail_cannon_timer_timeout"]

@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://bd68bth1dhgb"]
+
+[ext_resource type="Script" uid="uid://bvn0wrxdfrw8a" path="res://Scripts/Player/player_rail_cannon.gd" id="1_bwx1e"]
+[ext_resource type="Texture2D" uid="uid://2671lfst6grk" path="res://Assets/ProtagonistRelated/RailCannon/Laser1.png" id="2_q45lv"]
+[ext_resource type="Texture2D" uid="uid://dbq6yqhdpnb81" path="res://Assets/ProtagonistRelated/RailCannon/Laser2.png" id="3_6d4p3"]
+[ext_resource type="Texture2D" uid="uid://cbfqt071o2io4" path="res://Assets/ProtagonistRelated/RailCannon/Laser3.png" id="4_3cl0e"]
+[ext_resource type="Texture2D" uid="uid://b43v58myqp5p0" path="res://Assets/ProtagonistRelated/RailCannon/Laser4.png" id="5_uphaa"]
+[ext_resource type="Texture2D" uid="uid://ynxgia3epa3m" path="res://Assets/ProtagonistRelated/RailCannon/Laser5.png" id="6_q3gee"]
+[ext_resource type="Texture2D" uid="uid://b1fydb7ajyrb7" path="res://Assets/ProtagonistRelated/RailCannon/Laser6.png" id="7_out07"]
+[ext_resource type="Texture2D" uid="uid://bus10mn7qt5c4" path="res://Assets/ProtagonistRelated/RailCannon/Laser7.png" id="8_bue3m"]
+[ext_resource type="Texture2D" uid="uid://d01jhhfjv4pdy" path="res://Assets/ProtagonistRelated/RailCannon/Laser8.png" id="9_xjue0"]
+[ext_resource type="Texture2D" uid="uid://ckl0u20uvmxm4" path="res://Assets/ProtagonistRelated/RailCannon/Laser9.png" id="10_g5en1"]
+[ext_resource type="Texture2D" uid="uid://d0v2tfvd688ph" path="res://Assets/ProtagonistRelated/RailCannon/Laser10.png" id="11_v2b0d"]
+[ext_resource type="Texture2D" uid="uid://cedi76ebiqjyi" path="res://Assets/ProtagonistRelated/RailCannon/Laser11.png" id="12_0knmn"]
+[ext_resource type="Texture2D" uid="uid://bdmgdkr04deyw" path="res://Assets/ProtagonistRelated/RailCannon/Laser12.png" id="13_k5rsa"]
+[ext_resource type="Texture2D" uid="uid://bopxo8bdw5nmx" path="res://Assets/ProtagonistRelated/RailCannon/Laser13.png" id="14_e01hr"]
+[ext_resource type="Texture2D" uid="uid://b53fbw4ybdp8v" path="res://Assets/ProtagonistRelated/RailCannon/Laser14.png" id="15_d360w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_out07"]
+size = Vector2(1271, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bue3m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_q45lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6d4p3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3cl0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uphaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_q3gee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_out07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bue3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xjue0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_g5en1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_v2b0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_0knmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_k5rsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_e01hr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_d360w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="PlayerRailCannon" type="Area2D" unique_id=222694288]
+z_index = -2
+texture_filter = 1
+script = ExtResource("1_bwx1e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1062309609]
+position = Vector2(631.5, 0)
+shape = SubResource("RectangleShape2D_out07")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1074913676]
+position = Vector2(-2, 1)
+scale = Vector2(4.9492188, 2.0625)
+sprite_frames = SubResource("SpriteFrames_bue3m")
+frame_progress = 0.9163319
+offset = Vector2(128, 0)
+
+[node name="Timer" type="Timer" parent="." unique_id=1210977216]
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
