@@ -18,6 +18,11 @@
 position = Vector2(576, 320)
 
 [node name="EnemySpawner2" parent="Player" unique_id=350958665 instance=ExtResource("2_fk6t8")]
+spawn_radius_min = null
+spawn_radius_max = null
+sniper_spawn_radius_min = null
+sniper_spawn_radius_max = null
+cleanup_radius = null
 
 [node name="ClimeFilter" parent="." unique_id=61893671 instance=ExtResource("3_dffi8")]
 layer = 0

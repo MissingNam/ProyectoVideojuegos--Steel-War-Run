@@ -137,7 +137,7 @@ func _input(event):
 	
 	var limit = 5 if GlobalGamePlayVariables.hubirsDefeated else 4
 
-	if event.is_action("changeWeapondown") and !mouseChangeLimiter:
+	if event.is_action_pressed("changeWeapondown") and !mouseChangeLimiter:
 		mouseWeapon -= 1
 		if mouseWeapon < 0:
 			mouseWeapon = limit
@@ -146,7 +146,7 @@ func _input(event):
 		scrollTimer.start(0.1)
 		
 	
-	if event.is_action("changeWeaponUp") and !mouseChangeLimiter:
+	if event.is_action_pressed("changeWeaponUp") and !mouseChangeLimiter:
 		mouseWeapon += 1
 		if mouseWeapon > limit:
 			mouseWeapon = 0

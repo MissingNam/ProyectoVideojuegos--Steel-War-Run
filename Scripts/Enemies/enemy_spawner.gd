@@ -14,6 +14,7 @@ extends Node2D
 
 @export var cleanup_radius := 3000.0
 
+var hasLevel8Hubris = false
 
 func _ready():
 	randomize()
@@ -24,6 +25,10 @@ func _ready():
 
 func _process(_delta: float):
 	global_position = get_parent().global_position
+	if(GlobalGamePlayVariables.level == 8 and !hasLevel8Hubris):
+		MusicManager.stop()
+		spawnBoss()
+		hasLevel8Hubris = true
 
 func get_max_enemies() -> int:
 	return min(GlobalGamePlayVariables.level * 4, 100)

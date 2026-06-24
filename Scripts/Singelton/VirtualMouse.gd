@@ -4,7 +4,7 @@ signal input_mode_changed(mode: InputMode)
 
 enum InputMode { MOUSE, GAMEPAD }
 
-@export var gamepad_cursor_speed: float = 1200.0
+@export var gamepad_cursor_speed: float = 2400.0
 
 ## Deadzone del stick derecho para evitar drift
 @export var stick_deadzone: float = 0.2
