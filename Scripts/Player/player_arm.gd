@@ -31,4 +31,4 @@ func _process(delta: float) -> void:
 			else:
 				weaponSprite.texture = unloadRailcannon
 			
-	look_at(get_global_mouse_position())
+	look_at(VirtualMouse.get_aim_position())

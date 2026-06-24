@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://teorg2uv0h0f" path="res://Assets/Buttons/Pressed.png" id="3_wrsc1"]
 [ext_resource type="Texture2D" uid="uid://dc2heqanyn3cm" path="res://Assets/Buttons/Selected.png" id="4_h2q0p"]
 [ext_resource type="Texture2D" uid="uid://b41qhdroynwrq" path="res://Assets/Decoration/sand.png" id="6_wrsc1"]
+[ext_resource type="PackedScene" uid="uid://dcip7ttas2m1j" path="res://Scenes/Scenario/FakeMouse.tscn" id="7_h2q0p"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_f7ayc"]
 font = ExtResource("1_02ybj")
@@ -138,6 +139,10 @@ vertical_alignment = 1
 
 [node name="DramaticEffectTimer" type="Timer" parent="." unique_id=1857550548]
 one_shot = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1023791376]
+
+[node name="FakeMouse" parent="CanvasLayer" unique_id=739257055 instance=ExtResource("7_h2q0p")]
 
 [connection signal="mouse_entered" from="VBoxContainer/Start" to="." method="_on_start_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]

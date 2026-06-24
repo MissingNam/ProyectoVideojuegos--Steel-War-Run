@@ -5,12 +5,20 @@ extends Control
 @onready var scoreButton = $VBoxContainer/Scores
 @onready var exitButton = $VBoxContainer/Exit
 @onready var timer = $DramaticEffectTimer
+@onready var textureR = $TextureRect
+
+@export var sand = preload("res://Assets/Decoration/sand.png")
+@export var soil = preload("res://Assets/Decoration/soil3.png")
 
 var toDo: String
 
 func _ready() -> void:
 	if(MusicManager.stopMusic):
 		MusicManager.resumeMusic()
+	if GlobalGamePlayVariables.currentMap == "Desert":
+		textureR.texture = sand  
+	else:
+		textureR.texture = soil 
 
 func _on_start_pressed() -> void:
 	MusicManager.pauseMusic()

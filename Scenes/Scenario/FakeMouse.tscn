@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dcip7ttas2m1j"]
+
+[ext_resource type="Script" uid="uid://brtc6v53fq0mh" path="res://Scripts/Player/fake_mouse.gd" id="1_gmefn"]
+[ext_resource type="Texture2D" uid="uid://dndawbmvuytny" path="res://Assets/Buttons/FakeMouse.png" id="2_a2j8m"]
+
+[node name="FakeMouse" type="Node2D" unique_id=739257055]
+script = ExtResource("1_gmefn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=701081993]
+texture_filter = 1
+texture = ExtResource("2_a2j8m")

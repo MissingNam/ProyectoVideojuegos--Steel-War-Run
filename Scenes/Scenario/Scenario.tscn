@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c5omuy160eptw" path="res://Scenes/Items/loot_box.tscn" id="4_k0ud8"]
 [ext_resource type="PackedScene" uid="uid://dqh1e7or1cacw" path="res://Scenes/Scenario/ChunkRelated/chunk_manager.tscn" id="7_88f4q"]
 [ext_resource type="Script" uid="uid://mr167m7y7wkp" path="res://Scripts/camera.gd" id="7_qurfv"]
+[ext_resource type="PackedScene" uid="uid://dcip7ttas2m1j" path="res://Scenes/Scenario/FakeMouse.tscn" id="11_12ivn"]
 
 [node name="Scenario" type="Node2D" unique_id=1107656438]
 
@@ -47,3 +48,7 @@ position = Vector2(469.00003, 393.00003)
 position = Vector2(570, 320)
 zoom = Vector2(2, 2)
 script = ExtResource("7_qurfv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1306019135]
+
+[node name="FakeMouse" parent="CanvasLayer" unique_id=739257055 instance=ExtResource("11_12ivn")]

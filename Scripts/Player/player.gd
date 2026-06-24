@@ -45,7 +45,7 @@ func _physics_process(_delta: float):
 	arm.global_position.x = global_position.x
 	arm.global_position.y = global_position.y
 
-	if get_global_mouse_position().x < global_position.x:
+	if VirtualMouse.get_aim_position().x < global_position.x:
 		sprite.flip_h = true
 		arm.sprite.offset.y = -5
 		arm.sprite.flip_v = true
@@ -211,8 +211,8 @@ func shootBasic():
 	var location = arm.weaponSprite.global_position
 	location.y += 3
 
-	var Bdirection = (get_global_mouse_position() - arm.global_position).normalized()
-
+	var Bdirection = (VirtualMouse.get_aim_position() - arm.global_position).normalized()
+	
 	PlayerBulletMaker.createBasicPlayerBullet(location, Bdirection)
 
 	cooldownTimer.start(cooldown)
@@ -225,7 +225,7 @@ func shootShotGun():
 	var location = arm.weaponSprite.global_position
 	location.y += 3
 
-	var Bdirection = (get_global_mouse_position() - arm.global_position).normalized()
+	var Bdirection = (VirtualMouse.get_aim_position() - arm.global_position).normalized()
 
 	PlayerBulletMaker.createShotGunBullets(location, Bdirection, shootGunPellets)
 
@@ -239,7 +239,7 @@ func shootFire():
 	var location = arm.weaponSprite.global_position
 	location.y += 3
 
-	var Bdirection = (get_global_mouse_position() - arm.global_position).normalized()
+	var Bdirection = (VirtualMouse.get_aim_position() - arm.global_position).normalized()
 
 	PlayerBulletMaker.createFlameThrowerFlame(location, Bdirection)
 
@@ -253,9 +253,9 @@ func shootMissile():
 	var location = arm.weaponSprite.global_position
 	location.y += 3
 
-	var Bdirection = (get_global_mouse_position() - arm.global_position).normalized()
+	var Bdirection = (VirtualMouse.get_aim_position() - arm.global_position).normalized()
 
-	location += 25 * global_position.direction_to(get_global_mouse_position())
+	location += 25 * global_position.direction_to(VirtualMouse.get_aim_position())
 
 	PlayerBulletMaker.createPlayerMissile(location, Bdirection, 500.0)
 
@@ -270,7 +270,7 @@ func shootSlash():
 
 	PlayerBulletMaker.createKnifeSlash(
 		location,
-		int(get_global_mouse_position().x > global_position.x),
+		int(VirtualMouse.get_aim_position().x > global_position.x),
 		arm
 	)
 
@@ -279,7 +279,7 @@ func shootSlash():
 func shootRailCannon():
 	var location : Vector2 = arm.weaponSprite.global_position
 	location.y -= 5
-	var Bdirectional = location.direction_to(get_global_mouse_position())
+	var Bdirectional = location.direction_to(VirtualMouse.get_aim_position())
 	PlayerBulletMaker.createRailCannon(location,Bdirectional, self)
 	chargedRailCannon = false
 	AudioManager.play_sfx("hubirsLaser")

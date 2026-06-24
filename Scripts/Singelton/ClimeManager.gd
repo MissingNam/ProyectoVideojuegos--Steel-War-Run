@@ -41,7 +41,7 @@ func is_clear() -> bool:
 
 
 func _input(event: InputEvent) -> void:
-	if(event.is_action_pressed("ui_down")):
+	if(event.is_action_pressed("changeClime")):
 		GlobalGamePlayVariables.usedCheats = true
 		if(is_clear()):
 			if(GlobalGamePlayVariables.currentMap == "Desert"):
