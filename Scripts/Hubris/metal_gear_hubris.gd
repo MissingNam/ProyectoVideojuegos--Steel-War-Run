@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var player_ref : Player
 @onready var sprite = $AnimatedSprite2D
+@onready var timer = $Timer
 @export var explotion = preload("res://Scenes/BossRelated/hubris_explotion.tscn")
 var move_speed = 2
 
@@ -35,6 +36,8 @@ func _process(delta: float) -> void:
 	global_position.x = move_toward(global_position.x,player_ref.global_position.x,move_speed)
 
 func hubris_take_damage(damage: float):
+	sprite.modulate = Color.ORANGE_RED
+	timer.start(0.05)
 	health -= damage
 	if(health <= ogHealth/2 and not halfway):
 		halfway = true
@@ -56,4 +59,10 @@ func hubris_take_damage(damage: float):
 		GlobalGamePlayVariables.activeHubris = false
 		GlobalGamePlayVariables.level_up_triggered.emit(mejoras)
 		get_tree().paused = true
+	
 	pass
+
+
+func _on_timer_timeout() -> void:
+	sprite.modulate = Color.WHITE
+	pass 

@@ -81,3 +81,9 @@ position = Vector2(-193, 122)
 position = Vector2(-1, 32)
 shape = SubResource("RectangleShape2D_ryw20")
 debug_color = Color(0.47843137, 0.22352941, 0.31764707, 0.41960785)
+
+[node name="Timer" type="Timer" parent="." unique_id=347286523]
+wait_time = 0.05
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
