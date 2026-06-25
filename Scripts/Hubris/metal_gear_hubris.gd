@@ -33,6 +33,8 @@ func _process(delta: float) -> void:
 	elif (distanceToPlayer >= 250):
 		move_speed = 2
 	
+	if(player_ref.global_position.y - global_position.y < 200):
+		move_speed = 10
 	
 	global_position.y = move_toward(global_position.y,player_ref.global_position.y - 250,move_speed) 
 	global_position.x = move_toward(global_position.x,player_ref.global_position.x,move_speed)
@@ -41,7 +43,7 @@ func hubris_take_damage(damage: float):
 	sprite.modulate = Color.ORANGE_RED
 	timer.start(0.05)
 	health -= damage
-	AudioManager.play_sfx("impact",-2.0)
+	AudioManager.play_sfx("impact",-5.0)
 	if(health <= ogHealth/2 and not halfway):
 		halfway = true
 		var explode = explotion.instantiate()

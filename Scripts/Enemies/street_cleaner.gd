@@ -63,6 +63,9 @@ func _physics_process(_delta: float) -> void:
 	if(ClimeManager.is_sandStorm()):
 		velocity = velocity * 0.75
 		
+	if(cooldown.time_left <= 0.5):
+		velocity = Vector2.ZERO
+		
 	move_and_slide()
 
 

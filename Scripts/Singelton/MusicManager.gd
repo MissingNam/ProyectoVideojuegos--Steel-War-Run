@@ -9,8 +9,9 @@ var desert_music_library = {
 }
 
 var mountain_music_library = {
-	0: preload("res://Music/ClairDeLune.mp3"),
-	1: preload("res://Music/Graze.mp3")
+	0: preload("res://Music/SFTDP.mp3"),
+	1: preload("res://Music/Graze.mp3"),
+	2: preload("res://Music/SBR.mp3")
 }
 
 var boss_music = {
@@ -29,7 +30,7 @@ func _ready() -> void:
 	if(GlobalGamePlayVariables.currentMap == "Desert"):
 		reproducer.stream = desert_music_library[randi_range(1,4)]
 	else:
-		reproducer.stream = mountain_music_library[randi_range(0,1)]
+		reproducer.stream = mountain_music_library[randi_range(0,2)]
 	reproducer.volume_db = 0.0
 	reproducer.play()
 
@@ -39,7 +40,7 @@ func _process(_delta:float) -> void:
 			if(GlobalGamePlayVariables.currentMap == "Desert"):
 				reproducer.stream = desert_music_library[randi_range(1,4)]
 			else:
-				reproducer.stream = mountain_music_library[randi_range(0,1)]
+				reproducer.stream = mountain_music_library[randi_range(0,2)]
 			reproducer.play()
 		elif not reproducer.playing and GlobalGamePlayVariables.activeHubris:
 			reproducer.stream = boss_music[randi_range(0,2)]

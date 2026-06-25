@@ -44,9 +44,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_twogs"]
 size = Vector2(165, 148)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ryw20"]
-size = Vector2(427, 208)
-
 [node name="MetalGearHubris" type="CharacterBody2D" unique_id=769466230]
 z_index = 2
 texture_filter = 1
@@ -79,10 +76,9 @@ position = Vector2(191, 124)
 [node name="HubrisCannon2" parent="." unique_id=1789538998 instance=ExtResource("9_ryw20")]
 position = Vector2(-193, 122)
 
-[node name="NormalHitbox" type="CollisionShape2D" parent="." unique_id=471649390]
+[node name="NormalHitbox" type="CollisionPolygon2D" parent="." unique_id=682896094]
 position = Vector2(-1, 32)
-shape = SubResource("RectangleShape2D_ryw20")
-debug_color = Color(0.47843137, 0.22352941, 0.31764707, 0.41960785)
+polygon = PackedVector2Array(-206, 78, -209, -22, -109, -110, 114, -109, 211, -13, 208, 78, 181, 78, 177, 7, 120, -15, 172, 40, 166, 51, 110, 19, 113, 52, 99, 60, 100, 90, 66, 92, 60, 65, 18, 107, -18, 107, -63, 70, -63, 92, -97, 98, -102, 58, -115, 50, -115, 15, -161, 48, -177, 32, -124, -8, -155, -1, -158, -7, -183, 15, -182, 77)
 
 [node name="Timer" type="Timer" parent="." unique_id=347286523]
 wait_time = 0.05
