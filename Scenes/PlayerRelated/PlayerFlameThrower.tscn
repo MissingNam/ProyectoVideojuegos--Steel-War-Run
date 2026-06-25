@@ -46,6 +46,7 @@ radius = 4.7999997
 
 [node name="PlayerFlameThrower" type="Area2D" unique_id=237628581 groups=["Flame"]]
 scale = Vector2(2.5, 2.5)
+collision_mask = 3
 script = ExtResource("1_u2vxy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=711669673]

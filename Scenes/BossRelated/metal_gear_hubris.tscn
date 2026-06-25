@@ -48,7 +48,9 @@ size = Vector2(165, 148)
 size = Vector2(427, 208)
 
 [node name="MetalGearHubris" type="CharacterBody2D" unique_id=769466230]
+z_index = 2
 texture_filter = 1
+collision_layer = 2
 script = ExtResource("1_4aexw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=705393214]

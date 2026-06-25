@@ -174,8 +174,9 @@ animations = [{
 radius = 3.5
 
 [node name="MissileExplosion" type="Area2D" unique_id=1822763600]
-z_index = 1
+z_index = 3
 scale = Vector2(4, 4)
+collision_mask = 3
 script = ExtResource("1_614kh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1993762393]

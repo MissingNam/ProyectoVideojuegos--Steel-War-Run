@@ -10,6 +10,7 @@ var health = 1000 * pow(1.05,GlobalGamePlayVariables.level-17)
 var ogHealth = health
 var halfway := false
 
+var chargingLaser = false
 
 
 var resolucion_base = Vector2i(
@@ -27,10 +28,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if(!player_ref): return
 	var distanceToPlayer = global_position.distance_to(player_ref.global_position)
-	if(distanceToPlayer > 350 or distanceToPlayer < 250):
+	if(distanceToPlayer > 650 or distanceToPlayer < 200):
 		move_speed = 10
-	else:
+	elif (distanceToPlayer >= 250):
 		move_speed = 2
+	
 	
 	global_position.y = move_toward(global_position.y,player_ref.global_position.y - 250,move_speed) 
 	global_position.x = move_toward(global_position.x,player_ref.global_position.x,move_speed)
@@ -39,6 +41,7 @@ func hubris_take_damage(damage: float):
 	sprite.modulate = Color.ORANGE_RED
 	timer.start(0.05)
 	health -= damage
+	AudioManager.play_sfx("impact",-2.0)
 	if(health <= ogHealth/2 and not halfway):
 		halfway = true
 		var explode = explotion.instantiate()
