@@ -12,7 +12,7 @@ func _on_delete_timer_timeout() -> void:
 func _on_hit_cooldown_timeout() -> void:
 	if get_parent().has_method("take_damage"):
 		get_parent().take_damage(0.5 * (1+GlobalGamePlayVariables.flamethrowerFirerateMultiplier))
-	if get_parent().has_method("player_take_damage"):
+	if get_parent().has_method("player_take_damage") and get_parent().is_in_group("Player"):
 		get_parent().player_take_damage(1)
 		queue_free()
 

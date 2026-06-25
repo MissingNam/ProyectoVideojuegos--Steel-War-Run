@@ -29,3 +29,4 @@ func _select(index: int) -> void:
 	GlobalGamePlayVariables.apply_upgrade(current_options[index])
 	hide()
 	MusicManager.reproducer.volume_db = 0.0
+	AudioManager.play_sfx("shotgun_forend", 5)

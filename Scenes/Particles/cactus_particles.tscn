@@ -7,7 +7,7 @@
 script = ExtResource("1_ph4yb")
 
 [node name="Particles" type="CPUParticles2D" parent="." unique_id=323524832]
-position = Vector2(0, -23)
+position = Vector2(-1, -6)
 emitting = false
 amount = 3
 texture = ExtResource("1_l5is4")
@@ -16,7 +16,7 @@ one_shot = true
 explosiveness = 1.0
 lifetime_randomness = 0.5
 emission_shape = 3
-emission_rect_extents = Vector2(7.435, 23.835)
+emission_rect_extents = Vector2(6.15, 22.735)
 direction = Vector2(0, -1)
 spread = 30.0
 gravity = Vector2(0, 490)

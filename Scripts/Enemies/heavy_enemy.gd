@@ -26,6 +26,7 @@ func _ready() -> void:
 	
 
 func take_damage(damage: float) -> void:
+	AudioManager.play_sfx("hit", -3)
 	health -= damage
 	if(health <= 0.0):
 		createXP()

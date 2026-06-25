@@ -1,20 +1,17 @@
-[gd_scene format=3 uid="uid://dmvr87u5dwcpo"]
+[gd_scene format=3 uid="uid://8ak681ccbm0f"]
 
-[ext_resource type="Script" uid="uid://c8gx35uod4mc3" path="res://Scripts/Map/cactus.gd" id="1_nb21d"]
-[ext_resource type="Texture2D" uid="uid://dvhh22j7x2ght" path="res://Assets/Decoration/cactus.png" id="2_pu8r4"]
+[ext_resource type="Texture2D" uid="uid://dvhh22j7x2ght" path="res://Assets/Decoration/cactus.png" id="1_2picn"]
+[ext_resource type="Script" uid="uid://c8gx35uod4mc3" path="res://Scripts/Map/cactus.gd" id="1_g48cw"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nb21d"]
-size = Vector2(14, 28.666668)
+[node name="Cactus" type="StaticBody2D" unique_id=1696365258 groups=["Cactus", "Organic"]]
+script = ExtResource("1_g48cw")
 
-[node name="Cactus" type="StaticBody2D" unique_id=623417008 groups=["Cactus", "Organic"]]
-texture_filter = 1
-scale = Vector2(1.5, 1.5)
-script = ExtResource("1_nb21d")
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1738035440]
+position = Vector2(0.06666756, -6.4666634)
+scale = Vector2(1.672301, 1.672301)
+texture = ExtResource("1_2picn")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1973164901]
-position = Vector2(0, -16)
-texture = ExtResource("2_pu8r4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2126942392]
-position = Vector2(0.33333337, -14.333334)
-shape = SubResource("RectangleShape2D_nb21d")
+[node name="Collision" type="CollisionPolygon2D" parent="." unique_id=715134394]
+position = Vector2(0.40000057, -4.799999)
+scale = Vector2(1.672301, 1.672301)
+polygon = PackedVector2Array(-1.6666667, -17, 2.3333335, -13.666666, 2.3333335, -2.333334, 5, -5.666666, 7.6666665, -4.333334, 7, 0.33333397, 4.3333335, 3, 1.6666666, 2.333334, 1.6666666, 13.666667, -4.3333335, 13.666667, -4.3333335, 8.333334, -7.0000005, 5.666667, -5.666667, 3, -3, 3.666667, -3, -0.33333302, -4.3333335, -2.333334, -4.3333335, -13)

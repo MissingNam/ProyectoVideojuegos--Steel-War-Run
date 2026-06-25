@@ -22,10 +22,11 @@ func _process(delta: float) -> void:
 func _on_body_entered(body):
 	if body.has_method("player_take_damage"):
 		body.player_take_damage(damage)
+	if body.is_in_group("Player") and !body.has_node("Fire"):
+		ParticlesSpawner.create_fire(body)
 
 func _on_remove_timer_timeout() -> void:
 	queue_free()
-
 
 func _on_switch_color_timer_timeout() -> void:
 	if(colorFlag):

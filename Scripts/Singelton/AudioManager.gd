@@ -1,17 +1,21 @@
 extends Node
 
 var sfx_library = {
-	"gun": preload("res://SFX/pistol_shot.wav"),
-	"shotgun": preload("res://SFX/shotgun_shot.wav"),
-	"flame": preload("res://SFX/Flame.wav"),
-	"launch": preload("res://SFX/Launcher.wav"),
-	"explotion": preload("res://SFX/Explotion.wav"),
-	"ding": preload("res://SFX/ding.mp3"),
-	"pDamage": preload("res://SFX/damage.mp3"),
-	"hubirsLaser": preload("res://SFX/hubrisLaser.mp3"),
-	"dead": preload("res://SFX/DeadSound.mp3"),
-	"impact": preload("res://SFX/Impact.mp3"),
-	"railCharge" : preload("res://SFX/Whoosh.mp3")
+	"gun" : preload("res://SFX/pistol_shot.wav"),
+	"shotgun" : preload("res://SFX/shotgun_shot.wav"),
+	"shotgun_forend" : preload("res://SFX/shotgun_forend.wav"),
+	"flame" : preload("res://SFX/Flame.wav"),
+	"launch" : preload("res://SFX/Launcher.wav"),
+	"explotion" : preload("res://SFX/Explotion.wav"),
+	"ding" : preload("res://SFX/ding.mp3"),
+	"pDamage" : preload("res://SFX/damage.mp3"),
+	"hubirsLaser" : preload("res://SFX/hubrisLaser.mp3"),
+	"dead" : preload("res://SFX/DeadSound.mp3"),
+	"impact" : preload("res://SFX/Impact.mp3"),
+	"railCharge" : preload("res://SFX/Whoosh.mp3"),
+	"knife" : preload("res://SFX/knife.mp3"),
+	"planks" : preload("res://SFX/planks.mp3"),
+	"hit" : preload("res://SFX/hit.mp3")
 }
 
 # Pool de reproductores

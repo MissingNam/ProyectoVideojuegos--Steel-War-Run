@@ -103,7 +103,7 @@ size = Vector2(16, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rpvfx"]
 size = Vector2(16, 16)
 
-[node name="LootBox" type="StaticBody2D" unique_id=1047696868]
+[node name="LootBox" type="StaticBody2D" unique_id=1047696868 groups=["Box"]]
 texture_filter = 1
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_rpvfx")

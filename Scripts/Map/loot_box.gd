@@ -37,6 +37,7 @@ func take_damage(damage: float) -> void:
 		"Upgrade": sprite.play("Upgrade")
 	broken = true
 	ParticlesSpawner.create_box_particles(global_position)
+	AudioManager.play_sfx("planks", -3)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if(body.is_in_group("Player") and broken == true):
@@ -53,4 +54,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 				GlobalGamePlayVariables.level_up_triggered.emit(options)
 				get_tree().paused = true
 		GlobalGamePlayVariables.actualizeAmmo()
+		if loot != "Upgrade":
+			AudioManager.play_sfx("shotgun_forend", 5)
 		queue_free()

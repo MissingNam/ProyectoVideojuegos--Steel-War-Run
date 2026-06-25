@@ -9,6 +9,7 @@ func _ready() -> void:
 	sprite.play("default")
 	if direction == 0 : direction = -1
 	scale.x = direction
+	AudioManager.play_sfx("knife", -5)
 
 func _process(_delta: float) -> void:
 	if creator:
@@ -27,6 +28,7 @@ func _on_body_entered(body: Node2D) -> void:
 		ParticlesSpawner.create_blood(body.global_position)
 	if body.is_in_group("Cactus"):
 		ParticlesSpawner.create_cactus_particles(body.global_position)
+	if body.is_in_group("Bush"):
+		ParticlesSpawner.create_bush_particles(body.global_position)
 	if body.is_in_group("Rock"):
 		ParticlesSpawner.create_rock_particles(body.global_position)
-	

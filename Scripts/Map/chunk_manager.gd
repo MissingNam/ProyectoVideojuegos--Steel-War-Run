@@ -2,9 +2,9 @@ extends Node2D
 
 class_name ChunkManager
 
-const CHUNK_SIZE := 512  # tamaño en píxeles de cada chunk
-const RADIUS := 2        # 1 = grid de 3x3 (8 alrededor + el central)
-const UNLOAD_DISTANCE := 3  # en unidades de chunk
+const CHUNK_SIZE := 512    # tamaño en píxeles de cada chunk
+const RADIUS := 2          # 1 = grid de 3x3 (8 alrededor + el central)
+const UNLOAD_DISTANCE := 3 # en unidades de chunk
 
 var player: Node2D
 var loaded_chunks := {}  # Vector2i -> Node2D

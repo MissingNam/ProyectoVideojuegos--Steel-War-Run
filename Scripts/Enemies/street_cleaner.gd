@@ -24,13 +24,14 @@ func _ready() -> void:
 	
 
 func take_damage(damage: float) -> void:
+	AudioManager.play_sfx("hit", -3)
 	health -= damage
 	if(health <= 0.0):
 		createXP()
 		GlobalGamePlayVariables.kills += 1
 		queue_free()
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	# Moverse
 	if(!player_ref): return
 	var to_player = player_ref.global_position - global_position

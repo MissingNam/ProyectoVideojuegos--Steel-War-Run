@@ -20,19 +20,23 @@ func blowUp():
 	get_tree().root.add_child(explode)
 	
 func _on_body_entered(body):
-	if body.has_method("take_damage") and !hasExploded:
-		body.take_damage(damage)
-		blowUp()
-		hasExploded = true
-		queue_free()
-	if body.has_method("player_take_damage") and !hasExploded:
-		blowUp()
-		hasExploded = true
-		queue_free()
-	if(body.has_method("hubris_take_damage")) and !hasExploded:
-		blowUp()
-		hasExploded = true
-		queue_free()
+	if !body.is_in_group("Bush"):
+		if body.has_method("take_damage") and !hasExploded:
+			body.take_damage(damage)
+			blowUp()
+			hasExploded = true
+			queue_free()
+		if body.has_method("player_take_damage") and !hasExploded:
+			blowUp()
+			hasExploded = true
+			queue_free()
+		if(body.has_method("hubris_take_damage")) and !hasExploded:
+			blowUp()
+			hasExploded = true
+			queue_free()
+	else:
+		ParticlesSpawner.create_bush_particles(body.global_position)
+		ParticlesSpawner.create_fire(body)
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free()

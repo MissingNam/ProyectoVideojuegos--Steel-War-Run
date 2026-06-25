@@ -17,7 +17,7 @@ colors = PackedColorArray(1, 0.95500004, 0.55, 1, 1, 0.70949996, 0.17000002, 1, 
 script = ExtResource("1_8ncsx")
 
 [node name="FireParticles" type="CPUParticles2D" parent="." unique_id=1999313749]
-z_index = 1
+z_index = 5
 amount = 150
 lifetime = 0.4
 lifetime_randomness = 1.0

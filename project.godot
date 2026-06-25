@@ -40,8 +40,10 @@ window/size/maximize_disabled=true
 Enemies=""
 Organic=""
 Human=""
-Cactus=""
 Rock=""
+Cactus=""
+Bush=""
+Box=""
 
 [input]
 

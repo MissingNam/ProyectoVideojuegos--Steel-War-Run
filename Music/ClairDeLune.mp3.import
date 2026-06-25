@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/ClairDeLune.mp3-3e5aea34f59be1b6bb93e9306ca9e
 [params]
 
 loop=false
-loop_offset=0
-bpm=0
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

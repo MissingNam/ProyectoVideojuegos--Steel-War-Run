@@ -37,10 +37,11 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	time_till_shot = shotTimer.time_left
 
 func take_damage(damage: float) -> void:
+	AudioManager.play_sfx("hit", -3)
 	health -= damage
 	if(health <= 0.0):
 		createXP()

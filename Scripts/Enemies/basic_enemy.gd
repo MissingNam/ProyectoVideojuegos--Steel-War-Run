@@ -23,6 +23,7 @@ func _ready() -> void:
 	player_ref = get_tree().get_nodes_in_group("Player")[0]
 	
 func take_damage(damage: float) -> void:
+	AudioManager.play_sfx("hit", -3)
 	health -= damage
 	if(health <= 0.0):
 		createXP()

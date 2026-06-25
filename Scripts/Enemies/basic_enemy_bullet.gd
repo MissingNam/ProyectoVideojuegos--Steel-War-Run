@@ -21,13 +21,15 @@ func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("player_take_damage"):
 		body.player_take_damage(damage)
-		queue_free()
+	
 	if body.is_in_group("Human") and !body.is_in_group("Enemies"):
 		ParticlesSpawner.create_blood(global_position)
 		queue_free()
 	if body.is_in_group("Cactus"):
 		ParticlesSpawner.create_cactus_particles(body.global_position)
 		queue_free()
+	if body.is_in_group("Bush"):
+		ParticlesSpawner.create_bush_particles(body.global_position)
 	if body.is_in_group("Rock"):
 		ParticlesSpawner.create_rock_particles(global_position)
 		queue_free()
