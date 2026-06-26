@@ -6,6 +6,7 @@ extends Node
 @export var cactus_particles_scene = preload("res://Scenes/Particles/cactus_particles.tscn")
 @export var bush_particles_scene = preload("res://Scenes/Particles/bush_particles.tscn")
 @export var rock_particles_scene = preload("res://Scenes/Particles/rock_particles.tscn")
+@export var ash_particle_scene = preload("res://Scenes/Particles/ash_particles.tscn")
 
 func create_blood(pos : Vector2) -> void:
 	var blood = blood_scene.instantiate()
@@ -36,3 +37,10 @@ func create_rock_particles(pos : Vector2) -> void:
 	var rock_particles = rock_particles_scene.instantiate()
 	rock_particles.global_position = pos
 	get_tree().root.add_child(rock_particles)
+	
+func create_ash_particles(pos: Vector2, direccion: Vector2):
+	var ash_particles = ash_particle_scene.instantiate()
+	ash_particles.global_position = pos
+	ash_particles.direccion = -direccion
+	get_tree().root.add_child(ash_particles)
+	

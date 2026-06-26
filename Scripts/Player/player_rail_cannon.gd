@@ -25,4 +25,5 @@ func _on_timer_timeout() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if(body.has_method("take_damage")):
+		ParticlesSpawner.create_ash_particles(body.global_position, body.global_position.direction_to(global_position))
 		body.queue_free()

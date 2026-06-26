@@ -6,7 +6,7 @@ extends Node2D
 @export var explotion = preload("res://Scenes/BossRelated/hubris_explotion.tscn")
 var move_speed = 2
 
-var health = 1000 * pow(1.05,GlobalGamePlayVariables.level-17)
+var health = 500 * pow(1.05,GlobalGamePlayVariables.level-17)
 var ogHealth = health
 var halfway := false
 
@@ -22,6 +22,7 @@ var resolucion_base = Vector2i(
 func _ready() -> void:
 	GlobalGamePlayVariables.activeHubris = true
 	sprite.play("Fase1")
+	print(str(health))
 	player_ref = get_tree().get_first_node_in_group("Player")
 
 

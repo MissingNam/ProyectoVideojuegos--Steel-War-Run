@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://d3wi4aqa62w0h"]
+
+[ext_resource type="Script" uid="uid://d1t8bxkud5sk2" path="res://Scripts/Particles/ash_particles.gd" id="1_et2s8"]
+
+[node name="ash_particles" type="Node2D" unique_id=780584287]
+script = ExtResource("1_et2s8")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=601449619]
+emitting = false
+amount = 25
+lifetime = 0.2
+emission_shape = 1
+emission_sphere_radius = 28.0
+direction = Vector2(20, 0)
+gravity = Vector2(0, 0)
+initial_velocity_min = 1000.0
+initial_velocity_max = 1000.0
+scale_amount_max = 3.0
+color = Color(0.1893278, 0.18932775, 0.18932796, 1)
+
+[node name="Timer" type="Timer" parent="." unique_id=2006991527]
+wait_time = 0.5
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

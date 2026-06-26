@@ -9,7 +9,7 @@ var origin : Node2D
 var redSprite = false
 
 var pdamage = 1.0
-var damage = 3.0
+var damage = 5.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -31,8 +31,10 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if(collision.disabled == false):
 		if(body.has_method("player_take_damage")):
+			ParticlesSpawner.create_ash_particles(body.global_position, body.global_position.direction_to(global_position))
 			body.player_take_damage(pdamage)
 		elif(body.has_method("take_damage")):
+			ParticlesSpawner.create_ash_particles(body.global_position, body.global_position.direction_to(global_position))
 			body.take_damage(damage)
 	pass # Replace with function body.
 
