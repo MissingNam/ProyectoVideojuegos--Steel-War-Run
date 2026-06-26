@@ -6,6 +6,7 @@ signal playerDied()
 signal updateUi()
 signal boss_started()
 signal boss_finished()
+signal end_game()
 
 # Jugador
 var level : int = 1
@@ -171,6 +172,7 @@ func restartVariables():
 	kills = 0
 	improvements = 0
 	bosses = 0
+	usedCheats = false
 	#Mapa
 	if randi_range(0,1) == 0:
 		currentMap = "Mountain"

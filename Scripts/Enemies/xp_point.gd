@@ -8,6 +8,7 @@ var creator
 func _ready() -> void:
 	global_position = creator.global_position
 	sprite.play("default")
+	GlobalGamePlayVariables.end_game.connect(kms)
 	pass # Replace with function body.
 
 
@@ -15,6 +16,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+func kms():
+	queue_free()
 
 func _on_body_entered(body: Node2D) -> void:
 	if(body.is_in_group("Player")):

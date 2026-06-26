@@ -26,7 +26,6 @@ func _ready() -> void:
 	GlobalGamePlayVariables.boss_started.emit()
 
 	sprite.play("Fase1")
-	print(health)
 
 	player_ref = get_tree().get_first_node_in_group("Player")
 
