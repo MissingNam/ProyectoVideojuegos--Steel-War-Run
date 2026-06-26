@@ -4,6 +4,8 @@ signal level_up_triggered(options: Array)
 signal gamePaused()
 signal playerDied()
 signal updateUi()
+signal boss_started()
+signal boss_finished()
 
 # Jugador
 var level : int = 1

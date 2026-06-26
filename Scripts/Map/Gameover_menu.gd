@@ -57,7 +57,7 @@ func showLevel():
 		levelLabel.text = str("level: ",effectCounter)
 		timer.start(0.01)
 	else:
-		AudioManager.play_sfx("impact", -5)
+		AudioManager.play_sfx("impact")
 		score += 100 * effectCounter
 		current = "Xp"
 		effectCounter = 0
@@ -70,7 +70,7 @@ func showUpdates():
 		XPLabel.text = str("improvements: ",effectCounter)
 		timer.start(0.01)
 	else:
-		AudioManager.play_sfx("impact", -5)
+		AudioManager.play_sfx("impact")
 		score += 10 * effectCounter
 		current = "Kills"
 		effectCounter = 0
@@ -84,7 +84,7 @@ func showKills():
 		KillsLabel.text = str("kills: ",effectCounter)
 		timer.start(0.001)
 	else:
-		AudioManager.play_sfx("impact", -5)
+		AudioManager.play_sfx("impact")
 		score += 10 * effectCounter
 		current = "Bosses"
 		effectCounter = 0
@@ -98,7 +98,7 @@ func showBosses():
 		BossLabel.text = str("bosses: ",effectCounter)
 		timer.start(0.1)
 	else:
-		AudioManager.play_sfx("impact", -5)
+		AudioManager.play_sfx("impact")
 		score += 1000 * effectCounter
 		current = "Score"
 		effectCounter = 0
@@ -111,7 +111,7 @@ func showScore():
 		ScoreLabel.text = str("score: ",effectCounter)
 		timer.start(0.0001)
 	else:
-		AudioManager.play_sfx("impact", -5)
+		AudioManager.play_sfx("impact")
 		button.disabled = false
 		checkLeaderboard()
 		pass
