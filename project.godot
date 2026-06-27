@@ -14,7 +14,7 @@ config/name="SteelWarRun"
 config/version="0.1"
 run/main_scene="uid://co6cfurgyk50n"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="uid://xfh5i3grirye"
+config/icon="uid://cyfyn1dlygubd"
 
 [autoload]
 

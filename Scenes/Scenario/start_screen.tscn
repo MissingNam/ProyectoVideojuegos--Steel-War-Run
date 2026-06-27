@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://co6cfurgyk50n"]
 
 [ext_resource type="Script" uid="uid://dnns8i4co2kuh" path="res://Scripts/start_screen.gd" id="1_3o8ea"]
-[ext_resource type="Texture2D" uid="uid://cjaxwdvuxd37m" path="res://Assets/LOGO.png" id="2_8tjfx"]
-[ext_resource type="Texture2D" uid="uid://dmd61bie0578r" path="res://Assets/vankos.png" id="3_8tjfx"]
+[ext_resource type="Texture2D" uid="uid://cjaxwdvuxd37m" path="res://Assets/Sunburn Games.png" id="2_8tjfx"]
+[ext_resource type="Texture2D" uid="uid://dmd61bie0578r" path="res://Assets/Vanko's Throne.png" id="3_8tjfx"]
 
 [node name="StartScreen" type="Control" unique_id=565936439]
 layout_mode = 3
@@ -22,18 +22,24 @@ offset_bottom = 1067.0
 color = Color(0, 0, 0, 1)
 
 [node name="SunBurn" type="Sprite2D" parent="." unique_id=40466078]
-position = Vector2(294.00003, 455)
-scale = Vector2(2.75, 2.75)
+position = Vector2(364.00003, 471)
+scale = Vector2(3.6249998, 3.6249998)
 texture = ExtResource("2_8tjfx")
 
-[node name="Vanks" type="Sprite2D" parent="." unique_id=1851212174]
-position = Vector2(888, 459)
-scale = Vector2(1.3269231, 1.1984127)
+[node name="Vankos" type="Sprite2D" parent="." unique_id=1851212174]
+position = Vector2(949.9999, 456.00003)
+scale = Vector2(5.2361107, 4.729002)
 texture = ExtResource("3_8tjfx")
 
-[node name="Timer" type="Timer" parent="." unique_id=1453982685]
-wait_time = 5.0
+[node name="DisappearTimer" type="Timer" parent="." unique_id=636993596]
+wait_time = 3.0
 one_shot = true
 autostart = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="QuitTimer" type="Timer" parent="." unique_id=1453982685]
+wait_time = 4.5
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="DisappearTimer" to="." method="_on_disappear_timer_timeout"]
+[connection signal="timeout" from="QuitTimer" to="." method="_on_timer_timeout"]
