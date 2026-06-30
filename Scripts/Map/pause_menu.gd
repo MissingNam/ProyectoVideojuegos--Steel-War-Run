@@ -20,6 +20,7 @@ func _on_menu_button_pressed() -> void:
 	hide()
 	get_tree().paused = false
 	MusicManager.pauseMusic()
+	GlobalGamePlayVariables.end_game.emit()
 	get_tree().change_scene_to_file("res://Scenes/Scenario/main_menu.tscn")
 
 
